@@ -1,9 +1,0 @@
-Your usage is disappearing somewhere. /usage now names the place.
-
-On a Pro, Max, Team or Enterprise plan, the /usage breakdown attributes your recent usage to skills, subagents, plugins and individual MCP servers, each as a percentage of the total. Press d or w to switch between the last 24 hours and the last 7 days.
-
-It also flags a behavior when it accounts for 10% or more of recent usage, such as long context or cache misses, with a tip for each.
-
-Worth it because "I burn a lot of tokens" becomes "one MCP server is 30% of my week", which you can act on today.
-
-Source: code.claude.com/docs/en/costs
