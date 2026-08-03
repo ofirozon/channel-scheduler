@@ -1,0 +1,9 @@
+Extended thinking is on by default, and thinking tokens bill as output tokens.
+
+That is the right default for planning and hard reasoning. It is pure waste on "rename this variable everywhere" work, where the default budget can still be tens of thousands of tokens per request.
+
+Three dials, cheapest first: lower the effort level with /effort or inside /model, turn thinking off in /config, or on models with a fixed thinking budget set `MAX_THINKING_TOKENS=8000`.
+
+Two cautions from the docs: adaptive-reasoning models ignore a nonzero budget, so use effort levels there, and Fable 5 always thinks, so it cannot be switched off.
+
+Source: code.claude.com/docs/en/costs
