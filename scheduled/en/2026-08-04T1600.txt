@@ -1,0 +1,19 @@
+Stop asking Claude to go read the state. Ship the state with the prompt.
+
+Inside a skill, the !`<command>` syntax runs a shell command before the content reaches Claude, and the output replaces the line. A three-line skill:
+
+```
+---
+description: Summarizes uncommitted changes and flags anything risky.
+---
+
+## Current changes
+
+!`git diff HEAD`
+```
+
+Now /summarize-changes arrives with your actual working tree already inlined, instead of Claude spending turns discovering it. Same trick with !`gh pr diff` for a pull request, or a curl to your own status endpoint.
+
+Grounded in real data, and it costs one command instead of several file reads.
+
+Source: code.claude.com/docs/en/skills
