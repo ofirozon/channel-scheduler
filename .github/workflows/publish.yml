@@ -1,0 +1,60 @@
+name: publish due posts
+
+on:
+  schedule:
+    # Hourly at :01 UTC. Any post whose slot time has passed goes out on the
+    # next run, so a delayed or skipped run self-heals instead of losing a post.
+    - cron: "1 * * * *"
+    # Daily buffer alarm at 09:01 UTC (12:01 Israel).
+    - cron: "1 9 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print what would be sent, send nothing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish due posts
+        env:
+          EN_CHANNEL_BOT_TOKEN: ${{ secrets.EN_CHANNEL_BOT_TOKEN }}
+          EN_CHANNEL_ID: ${{ vars.EN_CHANNEL_ID }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+        run: python3 publish.py
+
+      - name: Check buffer depth
+        if: github.event.schedule == '1 9 * * *'
+        env:
+          ALERT_BOT_TOKEN: ${{ secrets.ALERT_BOT_TOKEN }}
+          ALERT_CHAT_ID: ${{ vars.ALERT_CHAT_ID }}
+        run: python3 buffer_check.py
+
+      - name: Commit what was published
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git config user.name "channel-scheduler"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -qm "publish run $(date -u +%FT%TZ)"
+          # The Mac pushes to this branch too; rebase instead of failing.
+          for i in 1 2 3; do
+            git pull --rebase -q && git push -q && exit 0
+            sleep 5
+          done
+          echo "push failed after retries" >&2
+          exit 1
