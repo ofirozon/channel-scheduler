@@ -1,0 +1,15 @@
+Claude decided your code looked ready and deployed it. Fix that in one line.
+
+Add `disable-model-invocation: true` to a skill's frontmatter and only you can run it. Claude can no longer trigger it on its own, and the skill's description stops being loaded into context at all.
+
+```
+---
+name: deploy
+description: Deploy the application to production
+disable-model-invocation: true
+---
+```
+
+The docs recommend exactly this for anything with side effects: /commit, /deploy, /send-slack-message. The mirror image is `user-invocable: false`, for background knowledge that Claude should read but you would never type as a command.
+
+Source: code.claude.com/docs/en/skills
