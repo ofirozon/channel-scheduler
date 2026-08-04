@@ -1,9 +1,14 @@
-Extended thinking is on by default, and thinking tokens bill as output tokens.
+🧠 Renaming a variable shouldn't cost you thousands of thinking tokens.
 
-That is the right default for planning and hard reasoning. It is pure waste on "rename this variable everywhere" work, where the default budget can still be tens of thousands of tokens per request.
+Extended thinking is on by default, and thinking tokens bill as output. That's the right call for planning and hard debugging. It's pure waste on mechanical edits, where the default budget can still run to tens of thousands of tokens per request.
 
-Three dials, cheapest first: lower the effort level with /effort or inside /model, turn thinking off in /config, or on models with a fixed thinking budget set `MAX_THINKING_TOKENS=8000`.
+Cheapest dial first: drop the effort level with `/effort` or inside `/model`. Turn thinking off entirely in `/config`.
 
-Two cautions from the docs: adaptive-reasoning models ignore a nonzero budget, so use effort levels there, and Fable 5 always thinks, so it cannot be switched off.
+One catch: Fable 5 always thinks, so there's nothing to switch off there.
+
+Worth it because: you stop paying reasoning prices for find and replace.
 
 Source: code.claude.com/docs/en/costs
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips

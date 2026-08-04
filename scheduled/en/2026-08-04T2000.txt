@@ -1,9 +1,14 @@
-Custom commands and skills are now the same feature.
+🧩 Still keeping `.claude/commands/` and `.claude/skills/` straight in your head?
 
-Per the docs: a file at `.claude/commands/deploy.md` and a skill at `.claude/skills/deploy/SKILL.md` both create /deploy and work the same way. Your existing `.claude/commands/` files keep working and support the same frontmatter.
+You don't have to. A file at `.claude/commands/deploy.md` and a skill at `.claude/skills/deploy/SKILL.md` both give you /deploy, and they behave the same. Your existing command files keep working, same frontmatter, nothing to migrate today.
 
-Two things worth knowing. If a skill and a command share a name, the skill wins. And skills add what commands never had: a directory for supporting files, frontmatter that controls whether you or Claude invokes them, and automatic loading when Claude decides they are relevant.
+One rule to remember: if a skill and a command share a name, the skill wins.
 
-No migration needed today. Just create the next one as a skill.
+Write the next one as a skill and you also get a directory for supporting files, plus the option to let Claude load it on its own when it's relevant.
+
+Worth it because: one concept to learn instead of two.
 
 Source: code.claude.com/docs/en/skills
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips

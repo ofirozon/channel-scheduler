@@ -1,9 +1,16 @@
-You can stack skills in a single message now.
+⛓️ Typing one slash command, waiting for it, then typing the next one?
 
-Type `/write-tests /fix-issue 123` and both skills load, with the trailing `123` passed as $ARGUMENTS to each of them. Claude Code expands the first skill plus up to five more after it.
+Stack them in a single message:
 
-Expansion stops at the first token that is not an inline user-invocable skill. A skill that runs as a forked subagent, such as /code-review from v2.1.218, ends the run there, and that token and everything after it becomes the argument text.
+/write-tests /fix-issue 123
 
-Requires v2.1.199 or later. Before that, only the first skill loaded and the rest arrived as literal text.
+Both skills load, and the trailing `123` reaches each of them as $ARGUMENTS. Claude Code expands the first skill plus up to five more after it.
+
+Expansion stops at the first token that isn't an inline skill, and everything from there becomes argument text. You need v2.1.199 or later; before that only the first skill loaded and the rest arrived as literal text.
+
+Worth it because: a two step routine becomes one line.
 
 Source: code.claude.com/docs/en/skills
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips

@@ -1,9 +1,14 @@
-You came back from lunch, asked one small question, and it cost you a lot.
+☕ Ever come back from lunch, ask one small question, and watch it cost a fortune?
 
-Claude Code sends your whole conversation with every request. Prompt caching normally makes that cheap, but the cache has a lifetime: one hour on a subscription, five minutes once you are drawing on usage credits, and five minutes by default on an API key or a cloud provider.
+Claude Code resends your whole conversation with every request. Prompt caching usually makes that cheap, but the cache expires: one hour on a subscription, five minutes once you're drawing on usage credits, five minutes by default on an API key.
 
-Come back after a longer break and your first message misses the cache and reprocesses the entire context at full price.
+Come back after a longer break and your first message misses, reprocessing the entire context at full price.
 
-So before you step away from a big session, finish the thought. After a long break, /clear and start clean unless you truly need the history.
+Finish the thought before you step away. After a long break, `/clear` unless you genuinely need the history.
+
+Worth it because: the priciest message of your day is the one right after lunch.
 
 Source: code.claude.com/docs/en/costs
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
