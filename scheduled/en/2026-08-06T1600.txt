@@ -1,0 +1,7 @@
+Your permission allowlist had a hole, and zsh could walk through it.
+
+Claude Code 2.1.221 shipped on August 3, ten days after the previous release. The changelog entry: fixes "a Bash tool permission-check bypass where zsh could execute hidden commands in `[[ ]]` regex conditionals". Affected commands now prompt for permission.
+
+Run `claude --version`, and `claude update` if you are behind. Native installs pull this in the background and apply it on restart. If you set `DISABLE_AUTOUPDATER` to pin a scheduled job, you are not getting it at all until you update by hand.
+
+Source: Claude Code changelog, 2.1.221.
