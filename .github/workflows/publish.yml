@@ -31,6 +31,8 @@ jobs:
         env:
           EN_CHANNEL_BOT_TOKEN: ${{ secrets.EN_CHANNEL_BOT_TOKEN }}
           EN_CHANNEL_ID: ${{ vars.EN_CHANNEL_ID }}
+          HE_CHANNEL_BOT_TOKEN: ${{ secrets.HE_CHANNEL_BOT_TOKEN }}
+          HE_CHANNEL_ID: ${{ vars.HE_CHANNEL_ID }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
         run: python3 publish.py
 

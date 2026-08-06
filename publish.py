@@ -34,6 +34,7 @@ LOG = ROOT / "published-log.jsonl"
 
 CHANNELS = {
     "en": {"token_env": "EN_CHANNEL_BOT_TOKEN", "id_env": "EN_CHANNEL_ID"},
+    "he": {"token_env": "HE_CHANNEL_BOT_TOKEN", "id_env": "HE_CHANNEL_ID"},
 }
 
 MAX_LATE_HOURS = float(os.environ.get("MAX_LATE_HOURS", "20"))
