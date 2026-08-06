@@ -1,0 +1,16 @@
+🧠 You've corrected Claude on the same thing three times this week.
+
+It's probably already writing that down. Claude Code keeps an auto memory per repository: build commands, debugging insights, preferences it picks up from your corrections. It's on by default and decides for itself what's worth keeping.
+
+It lives in `~/.claude/projects/<project>/memory/`, with a `MEMORY.md` index that loads at the start of every session.
+
+Run `/memory` to see what it saved. That's also where you toggle it off.
+
+The split is simple: you write CLAUDE.md, Claude writes the memory.
+
+Worth it because: it's plain markdown, so you can read every line it chose to remember and delete the wrong ones.
+
+Source: code.claude.com/docs/en/memory
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips

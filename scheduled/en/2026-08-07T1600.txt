@@ -1,0 +1,16 @@
+📎 Is your CLAUDE.md a 400-line wall nobody wants to edit?
+
+Split it. A CLAUDE.md can pull other files in with `@path/to/import`, anywhere in the text:
+
+`- git workflow @docs/git-instructions.md`
+
+Relative paths resolve from the file doing the importing, not from your working directory, and imports nest up to four hops deep.
+
+Don't expect a smaller context, though. Imported files still load at launch, so what you're buying is organization, not tokens. And if you want to name a path without importing it, wrap it in backticks.
+
+Worth it because: five short topic files stay current. One 400-line wall doesn't.
+
+Source: code.claude.com/docs/en/memory
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips

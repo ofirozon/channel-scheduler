@@ -1,0 +1,12 @@
+⚖️ Two settings files disagree. Which one actually wins?
+
+Claude Code layers them. Highest to lowest: managed policy, then command line flags, then `.claude/settings.local.json`, then `.claude/settings.json`, then `~/.claude/settings.json`.
+
+Read that backwards and it's obvious what belongs where. Your personal defaults go in the user file. Anything the team should share goes in the project file and gets committed. Machine-specific paths, and anything you'd hate to leak, go in the local file, which is the one you gitignore.
+
+Worth it because: "why is it still asking me for this permission" is nearly always a lower file losing to one you forgot you wrote.
+
+Source: code.claude.com/docs/en/settings
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips

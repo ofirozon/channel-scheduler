@@ -1,0 +1,14 @@
+🛑 Your hook printed a warning, and Claude ignored it. Of course it did.
+
+A hook that exits 0 sends its stderr to the debug log and nowhere else. Claude never sees it. If you want a hook to actually stop something, exit 2.
+
+On exit 2, Claude Code throws away stdout and feeds your stderr back to Claude as an error. For a `PreToolUse` hook that blocks the tool call outright. Any other non-zero code just prints a notice and lets the action run.
+
+It comes down to one number. `exit 2` guards. `exit 1` decorates.
+
+Worth it because: your "never commit straight to main" hook stops being a suggestion.
+
+Source: code.claude.com/docs/en/hooks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips

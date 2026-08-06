@@ -1,0 +1,16 @@
+🔌 Your MCP server works in the terminal and vanishes in your cron job.
+
+`claude mcp add` defaults to local scope. The server gets written into `~/.claude.json` under the current project's path, so it exists in that one directory and nowhere else. Start Claude from somewhere else and it simply isn't there.
+
+For personal tooling you almost always want user scope:
+
+`claude mcp add --transport http hubspot --scope user https://mcp.hubspot.com/anthropic`
+
+That one follows you into every project. `--scope project` is the third option, writing a `.mcp.json` your team commits.
+
+Worth it because: you stop debugging a server that "broke" when it was never loaded.
+
+Source: code.claude.com/docs/en/mcp
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips

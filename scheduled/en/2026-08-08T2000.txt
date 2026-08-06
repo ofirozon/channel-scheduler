@@ -1,0 +1,21 @@
+📁 Half your project rules are irrelevant to whatever you're doing right now.
+
+Move them into `.claude/rules/`. One markdown file per topic: `testing.md`, `api-design.md`, `security.md`. A file with no frontmatter loads every session, same as `.claude/CLAUDE.md`.
+
+The good part is scoping. Put this at the top of a rule file and it only enters context when Claude touches a matching file:
+
+```
+---
+paths:
+  - "src/api/**/*.ts"
+---
+```
+
+There's a `~/.claude/rules/` too, for personal rules that follow you across every project.
+
+Worth it because: your API conventions stop burning context in sessions that never open the API.
+
+Source: code.claude.com/docs/en/memory
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
