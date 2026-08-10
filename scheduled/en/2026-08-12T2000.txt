@@ -1,0 +1,20 @@
+🕳️ Your allow rule might approve more than you think.
+
+Claude Code strips a fixed set of wrappers before matching Bash rules, which is why `Bash(npm test *)` matches `timeout 30 npm test`. Handy.
+
+The trap is what isn't on that list. Environment runners like `devbox run`, `mise exec`, `npx`, and `docker exec` aren't stripped, so a rule written as:
+
+    "allow": ["Bash(devbox run *)"]
+
+matches whatever follows `run`. Including `devbox run rm -rf .`.
+
+Write the runner and the inner command together instead, one rule per command you actually want:
+
+    "allow": ["Bash(devbox run npm test)"]
+
+Worth it because: one convenience wildcard can silently auto-approve every command in your repo.
+
+Source: code.claude.com/docs/en/permissions
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
