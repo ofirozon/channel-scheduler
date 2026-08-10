@@ -1,0 +1,14 @@
+⚡ Debugging live and waiting on every single response?
+
+`/fast` makes Opus up to 2.5x faster. Not a smaller model, not lower effort: same Opus, same quality, a different API configuration that trades cost for latency.
+
+The catch is the whole decision: it bills to usage credits at $10/$50 per MTok, outside your plan's included usage. And the first time you flip it on mid-conversation, you pay that rate for the entire context you've piled up so far.
+
+So turn it on at the start of a session, not forty messages in.
+
+Worth it because: you choose latency deliberately instead of just feeling the tool is slow.
+
+Source: code.claude.com/docs/en/fast-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
