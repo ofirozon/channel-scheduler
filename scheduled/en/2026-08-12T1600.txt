@@ -1,0 +1,18 @@
+🔁 Pushed a PR, went to lunch, came back to a red lint check?
+
+From the branch with the open PR:
+
+    /autofix-pr
+
+Claude finds the PR with `gh` and spawns a cloud session that watches it. When CI fails or a reviewer comments, it investigates and pushes a fix if the fix is clear. When a comment is ambiguous, it asks instead of guessing.
+
+You can narrow the mandate: `/autofix-pr only fix lint and type errors`.
+
+It replies to review threads under your GitHub account, so repos where a comment triggers a deploy are the wrong place for it.
+
+Worth it because: the trivial half of PR review stops needing you at all.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
