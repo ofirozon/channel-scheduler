@@ -1,0 +1,16 @@
+🧭 Paying Opus prices to rename a variable?
+
+There's a model alias most people never find:
+
+    /model opusplan
+
+It runs Opus while you're in plan mode, then drops to Sonnet the moment execution starts. The expensive thinking happens once, up front, where it actually changes the outcome. The forty tool calls that follow run on the cheaper model.
+
+Typing `/model <name>` also saves it as your default for future sessions. Want it just for this one? Open `/model` with no argument and press `s` instead of Enter.
+
+Worth it because: you stop paying premium rates for the mechanical half of every task.
+
+Source: code.claude.com/docs/en/model-config
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
