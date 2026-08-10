@@ -4,13 +4,19 @@ on:
   schedule:
     # Hourly at :01 UTC. Any post whose slot time has passed goes out on the
     # next run, so a delayed or skipped run self-heals instead of losing a post.
+    # The buffer alarm rides on this same run and picks its own hours; it used
+    # to have a dedicated "1 9 * * *" line, but that collides with the hourly
+    # one and GitHub delivers only a single schedule event, so the alarm step
+    # was skipped every day it was supposed to fire.
     - cron: "1 * * * *"
-    # Daily buffer alarm at 09:01 UTC (12:01 Israel).
-    - cron: "1 9 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
         description: "Print what would be sent, send nothing"
+        type: boolean
+        default: false
+      force_buffer_alert:
+        description: "Send the queue-depth alert now, whatever the hour"
         type: boolean
         default: false
 
@@ -37,10 +43,10 @@ jobs:
         run: python3 publish.py
 
       - name: Check buffer depth
-        if: github.event.schedule == '1 9 * * *'
         env:
           ALERT_BOT_TOKEN: ${{ secrets.ALERT_BOT_TOKEN }}
           ALERT_CHAT_ID: ${{ vars.ALERT_CHAT_ID }}
+          FORCE_CHECK: ${{ inputs.force_buffer_alert && '1' || '0' }}
         run: python3 buffer_check.py
 
       - name: Commit what was published
