@@ -1,0 +1,16 @@
+🔀 Two terminals open, and you're the one copy-pasting between them?
+
+Your Claude Code sessions can message each other now. You don't call any tool yourself, you just say what the other session needs:
+
+`Ask the session running in my other terminal whether the migration finished`
+
+Run `/list-agents` to see who's reachable. A session is named after its folder unless you `/rename` it, so rename the ones you'll address often.
+
+It sends text only, never your conversation or your files. Needs v2.1.224 or later, and it's macOS and Linux only.
+
+Worth it because: a finding in one session reaches the other without you retyping it.
+
+Source: code.claude.com/docs/en/cross-session-messaging
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
