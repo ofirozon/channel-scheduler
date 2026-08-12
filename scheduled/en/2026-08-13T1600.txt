@@ -1,0 +1,28 @@
+🧩 Rebuilding the same slash commands in every new project?
+
+Plugins bundle skills, agents and hooks so you install them once. The whole flow, about five minutes:
+
+1. Add a marketplace. Anthropic's demo one:
+`/plugin marketplace add anthropics/claude-code`
+
+2. Run `/plugin` and press Tab until you reach the Discover tab. A plugin's detail pane lists everything it will install, plus what it adds to your context every turn.
+
+3. Install one. `commit-commands` adds git workflow skills:
+`/plugin install commit-commands@claude-code-plugins`
+Then pick a scope: user for all your projects, project to share it with collaborators, local for this repo only.
+
+4. Check the install summary. If it says `Run /reload-plugins to activate.`, run that.
+
+5. Use it. Plugin skills are namespaced:
+`/commit-commands:commit`
+
+`/plugin list` shows what you've got. For third-party plugins, add `anthropics/claude-plugins-community` the same way and install from it as `name@claude-community`.
+
+One caution: a plugin runs code on your machine with your privileges. Install what you trust.
+
+Worth it because: the commit workflow you rewrite in every repo becomes one command that follows you everywhere.
+
+Source: code.claude.com/docs/en/discover-plugins
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
