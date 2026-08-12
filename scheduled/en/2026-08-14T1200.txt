@@ -1,0 +1,16 @@
+🔑 Noticed your permission prompts going quiet?
+
+As of August 14, 2026, new sessions on Pro, Max and Team plans start in auto mode. It isn't a blanket yes. A separate classifier vets each action and blocks anything that escalates past what you asked or looks driven by content Claude just read. Your own ask rules still force a prompt, and `Shift+Tab` cycles modes any time.
+
+To keep reviewing every action, set your own default in `~/.claude/settings.json`:
+
+`{"permissions": {"defaultMode": "manual"}}`
+
+That sticks, with one catch: you'll still get a one-time prompt offering the switch, and accepting it overrides you.
+
+Worth it because: you choose who approves your commands, instead of finding out mid-task.
+
+Source: code.claude.com/docs/en/permission-modes
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
