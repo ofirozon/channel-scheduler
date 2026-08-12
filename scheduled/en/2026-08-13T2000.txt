@@ -1,0 +1,16 @@
+🐌 Asked for a big parallel sweep and watched your laptop crawl?
+
+Claude Code lets 20 subagents run at once in a session. Past that, the next spawn fails with `Concurrent subagent limit reached`, and Claude is told not to retry rather than to queue. Twenty is generous if your machine is modest.
+
+Set your own ceiling in `~/.claude/settings.json`:
+
+`{ "env": { "CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS": "5" } }`
+
+Any positive whole number works, and it's read straight from the file, so it applies however you launched `claude`. Needs v2.1.217 or later.
+
+Worth it because: you decide how much of your machine one fan-out can take, instead of finding out at 20.
+
+Source: code.claude.com/docs/en/sub-agents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
