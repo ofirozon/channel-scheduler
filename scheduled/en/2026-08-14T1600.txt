@@ -1,0 +1,16 @@
+📂 Switching repos mid-task, and quitting Claude to do it?
+
+You don't have to. `/cd` moves the current session to another directory and takes the conversation and the prompt cache with it:
+
+`/cd ../other-repo`
+
+Type a partial path and press `Tab` to complete it. If you've never worked in that directory before, Claude Code asks you to trust the workspace first, and `--resume` still finds the session afterward.
+
+If you only need Claude to read files somewhere else without moving, that's `/add-dir`, not `/cd`.
+
+Worth it because: you keep a warm cache and the whole conversation instead of re-explaining the task in a fresh session.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
