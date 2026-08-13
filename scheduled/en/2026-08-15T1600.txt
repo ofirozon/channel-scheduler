@@ -1,0 +1,14 @@
+🔒 How often do you approve a domain you've never heard of?
+
+Sandboxed commands prompt for each new host, and three hours in you wave through things you wouldn't have at the start. You can take the choice away. In `~/.claude/settings.json`:
+
+`"sandbox": { "enabled": true, "network": { "strictAllowlist": true, "allowedDomains": ["github.com", "*.npmjs.org"] } }`
+
+Anything off that list is denied outright now, no prompt to click through. One trap: this counts only from your user settings, managed settings, or `--settings`. A repo's own `.claude/settings.json` has no effect, so set it in yours or nothing changes.
+
+Worth it because: your allowlist stays the one you wrote when you were paying attention.
+
+Source: code.claude.com/docs/en/sandboxing
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
