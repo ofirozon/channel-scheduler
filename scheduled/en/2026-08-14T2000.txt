@@ -1,0 +1,14 @@
+🌿 Two ways to solve it, and you can only try one?
+
+`/fork` copies the whole conversation into a background session and leaves you working here:
+
+`/fork try the raw SQL version of this migration instead`
+
+The copy carries your context, so you don't re-explain a thing. It also won't touch the files under you: on v2.1.221 and later, Claude Code tells the copy to make its code changes in a worktree of its own. You keep going on your approach while the other one is built for real, then you read both and keep the better one.
+
+Worth it because: you compare two finished attempts instead of picking one on a hunch.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
