@@ -1,0 +1,14 @@
+📱 Killed your Remote Control server and lost the phone session?
+
+It's probably still alive. From the same directory it was started in, run:
+
+`claude remote-control --continue`
+
+That brings back the session the last server there started with, and exits when that session ends, so you pick up the conversation you left on the couch instead of re-explaining it. You've got about four hours from when the server stopped. Miss that and plain `claude remote-control` just starts you a new one.
+
+Worth it because: an accidental Ctrl+C costs you a reconnect, not the whole conversation.
+
+Source: code.claude.com/docs/en/remote-control
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
