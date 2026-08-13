@@ -21,3 +21,4 @@
 {"channel": "he", "slot_utc": "2026-08-12T17:30:00+00:00", "sent_utc": "2026-08-12T15:54:16+00:00", "late_hours": -1.6, "message_id": 206, "file": "2026-08-12T1730.txt", "note": "published early by hand: Ofir asked by voice for today's single post now"}
 {"channel": "en", "slot_utc": "2026-08-12T16:00:00+00:00", "sent_utc": "2026-08-12T16:03:45.712670+00:00", "late_hours": 0.06, "message_id": 47, "file": "2026-08-12T1600.txt"}
 {"channel": "he", "slot_utc": "2026-08-13T06:00:00+00:00", "sent_utc": "2026-08-13T06:17:56.560564+00:00", "late_hours": 0.3, "message_id": 207, "file": "2026-08-13T0600.txt"}
+{"channel": "he", "slot_utc": "2026-08-13T10:00:00+00:00", "sent_utc": "2026-08-13T10:08:37.071833+00:00", "late_hours": 0.14, "message_id": 208, "file": "2026-08-13T1000.txt"}
