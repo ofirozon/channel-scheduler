@@ -1,0 +1,14 @@
+🎯 Tired of typing "keep going" after every turn?
+
+`/goal` sets a completion condition, and Claude keeps starting new turns until it holds:
+
+`/goal all tests in test/auth pass and npm run lint exits 0`
+
+After each turn a small fast model reads the conversation and answers yes or no. It can't run commands or open files, so the condition has to be something Claude's own output proves. "Tests in test/auth pass" works: the test run lands in the transcript. "The code is clean" never resolves. `/goal clear` stops it early.
+
+Worth it because: a long migration ends on a checked result, not wherever Claude decided it was done.
+
+Source: code.claude.com/docs/en/goal
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
