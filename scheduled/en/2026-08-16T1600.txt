@@ -1,0 +1,16 @@
+🔁 What happens to your session when the model you picked is overloaded?
+
+Right now, the request just fails. You can give Claude Code a list to walk instead. In `~/.claude/settings.json`:
+
+`"fallbackModel": ["claude-sonnet-5", "claude-haiku-4-5"]`
+
+It tries them in order and tells you when it switches, and the switch lasts one turn, so your next message goes back to the primary. For a single session, `claude --fallback-model sonnet,haiku` does the same.
+
+One thing it won't do: rescue you from your plan limit. Rate-limit, auth and billing errors never trigger a switch.
+
+Worth it because: a long unattended run finishes on the backup model instead of dying on one overloaded request.
+
+Source: code.claude.com/docs/en/model-config
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
