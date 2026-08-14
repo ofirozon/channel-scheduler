@@ -1,0 +1,16 @@
+🧹 Ever had Claude summarize the conversation at the worst moment?
+
+By default, compaction waits until the conversation reaches the model's context limit. On a 1M-token model that's a long wait, and every message until then carries the whole history. You can move that line:
+
+`/autocompact 400k`
+
+Anything from 100K to 1M works, and `/autocompact auto` puts it back.
+
+One catch: the command saves to your user settings, so it applies to later sessions too. For a single run, start with `claude --autocompact 400k` instead.
+
+Worth it because: every message pays for the context it carries, so a smaller ceiling is cheaper all day, not just when it compacts.
+
+Source: code.claude.com/docs/en/model-config
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
