@@ -1,0 +1,16 @@
+🔍 Which of Claude's twelve turns actually touched that file?
+
+There's a viewer for that, and it's one command:
+
+`/diff`
+
+Left and right arrows walk your uncommitted changes turn by turn instead of showing one merged blob. Up/down browses files, Enter opens one, Esc goes back. It also refreshes itself when you commit or switch branches in another terminal.
+
+It reads raw git blobs, so a `textconv` filter in `.gitattributes` won't shape the output here.
+
+Worth it because: you find the turn that broke something in seconds, instead of re-reading the whole change.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
