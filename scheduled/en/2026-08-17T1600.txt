@@ -1,0 +1,14 @@
+🩺 Ever audited what your Claude Code install is quietly carrying?
+
+`/doctor`
+
+It reports before it changes anything: settings files that don't parse, duplicate or leftover installs, skills, MCP servers and plugins you never use against what they cost in context, and duplicate subagent names in the same directory.
+
+Read the proposed fixes instead of accepting them all. One of them trims your checked-in `CLAUDE.md` by cutting what Claude could work out from the codebase, and that's a file your team shares.
+
+Worth it because: one command surfaces the config problems you'd otherwise meet only when something silently stops working.
+
+Source: code.claude.com/docs/en/debug-your-config
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
