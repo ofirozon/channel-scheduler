@@ -1,0 +1,14 @@
+🗒️ Wondered where Claude's running checklist went?
+
+As of v2.1.233, the todo tools (TodoWrite, plus TaskCreate/Get/Update/List) are no longer available on Opus 4.8, Sonnet 5, Fable 5, Mythos 5 and newer models. One variable brings them back:
+
+`CLAUDE_CODE_ENABLE_TODO_TOOLS=1`
+
+The cutoff is by model, not by anything in your config, so an older model in the same install still has them. If your checklist vanished after an update and you're about to go digging through settings.json, that's your answer.
+
+Worth it because: it ends a config hunt that has no bug at the end of it, and restores the checklist in one line.
+
+Source: Claude Code changelog, v2.1.233
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
