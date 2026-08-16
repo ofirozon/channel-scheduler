@@ -1,0 +1,14 @@
+🔔 שלחתם משימה ארוכה, ואתם חוזרים לבדוק כל דקה אם היא נגמרה.
+
+ל-Claude Code יש התראה מובנית שנשלחת כשהוא מסיים משימה או עוצר ומבקש הרשאה, אם נראה שהתרחקתם מהטרמינל. הבעיה: כברירת מחדל היא מגיעה כהתראת מערכת רק בשלושה טרמינלים, Ghostty, Kitty ו-iTerm2. בכל השאר לא קורה כלום עד שמוסיפים ל-~/.claude/settings.json את השורה:
+
+"preferredNotifChannel": "terminal_bell"
+
+ואז נשמע צליל הטרמינל בסיום. ב-iTerm2 צריך גם לאפשר את ההעברה: Settings, אחר כך Profiles, אחר כך Terminal, לסמן Notification Center Alerts, ואז Filter Alerts ולסמן Send escape sequence-generated alerts. מי שעובד ב-tmux צריך גם את השורה set -g allow-passthrough on בקובץ ההגדרות שלו, אחרת ההתראה נבלעת בדרך.
+
+למה זה שווה את הזמן: משימה שרצה חמש דקות מפסיקה לגזול מכם חמש דקות של המתנה.
+
+מקור: code.claude.com/docs/en/terminal-config
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew
