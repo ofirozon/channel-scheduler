@@ -1,0 +1,16 @@
+🧠 Ever asked a quick side question and watched it eat your context?
+
+You spent an hour building this session. Then you need one small thing: what was that config file called? Ask normally and it lives in the history forever.
+
+`/btw what was the name of that config file again?`
+
+The answer opens in an overlay and never enters the conversation.
+
+One catch: side questions get no tools. Claude answers from what's already in context, so it can't go read a file it hasn't opened yet.
+
+Worth it because: your context stays exactly as big as you left it.
+
+Source: code.claude.com/docs/en/interactive-mode#side-questions-with-btw
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
