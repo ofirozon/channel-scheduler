@@ -39,3 +39,4 @@
 {"channel": "he", "slot_utc": "2026-08-15T17:30:00+00:00", "sent_utc": "2026-08-15T18:31:18.446754+00:00", "late_hours": 1.02, "message_id": 215, "file": "2026-08-15T1730.txt"}
 {"channel": "en", "slot_utc": "2026-08-15T20:00:00+00:00", "sent_utc": "2026-08-15T20:23:25.372285+00:00", "late_hours": 0.39, "message_id": 57, "file": "2026-08-15T2000.txt"}
 {"channel": "he", "slot_utc": "2026-08-16T06:00:00+00:00", "sent_utc": "2026-08-16T06:41:49.443335+00:00", "late_hours": 0.7, "message_id": 216, "file": "2026-08-16T0600.txt"}
+{"channel": "he", "slot_utc": "2026-08-16T10:00:00+00:00", "sent_utc": "2026-08-16T10:24:06.868056+00:00", "late_hours": 0.4, "message_id": 217, "file": "2026-08-16T1000.txt"}
