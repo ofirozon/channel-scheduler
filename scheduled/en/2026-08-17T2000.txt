@@ -1,0 +1,16 @@
+🐚 Test fails, and you paste the output back into the chat anyway?
+
+You don't have to. Start a line with `!` and it runs in your shell, with the output landing in the session:
+
+`! npm test`
+
+Claude answers that output on its own, so the explanation of the failure shows up without a second prompt.
+
+That reply costs what any prompt costs. If you'd rather have the output sitting in context and nothing else, set `respondToBashCommands` to `false` in `settings.json`.
+
+Worth it because: a failing test goes from run, copy, paste, ask down to one line.
+
+Source: code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
