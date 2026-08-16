@@ -1,0 +1,30 @@
+🗺️ Ever watched Claude confidently build the wrong thing?
+
+Four phases, from Anthropic's own best-practices guide. Try it on your next change that touches more than one file.
+
+1. Explore. Press `Shift+Tab` until the status bar shows `⏸ plan mode on`. Claude reads and answers, but can't edit anything.
+
+`read /src/auth and understand how we handle sessions and login.`
+
+2. Plan. Still in plan mode, ask for the plan itself:
+
+`I want to add Google OAuth. What files need to change? What's the session flow? Create a plan.`
+
+Press `Ctrl+G` to open that plan in your editor and fix it by hand before a single line runs.
+
+3. Implement. Approve the plan or press `Shift+Tab` to leave plan mode:
+
+`implement the OAuth flow from your plan. write tests for the callback handler, run the test suite and fix any failures.`
+
+4. Commit.
+
+`commit with a descriptive message and open a PR`
+
+Skip all of it when the scope is obvious. Planning a typo fix is pure overhead: if you could describe the diff in one sentence, just ask for the diff.
+
+Worth it because: rejecting a bad plan takes 30 seconds, rejecting a bad implementation takes the afternoon.
+
+Source: code.claude.com/docs/en/best-practices
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
