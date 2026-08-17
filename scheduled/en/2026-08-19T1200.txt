@@ -1,0 +1,18 @@
+📈 Which project has quietly eaten most of your Claude Code time?
+
+Run this and it'll tell you:
+
+`/insights`
+
+It reads your recent sessions on this machine, up to 200 it hasn't analyzed before, and writes an HTML report to `~/.claude/usage-data/report.html`: what you work on, where things go wrong, requests it misunderstood, and features you've never touched.
+
+This isn't `/usage`. That one counts tokens. This one reads habits.
+
+One catch worth knowing: the analysis runs through your own account, so a run costs tokens against your plan like any other request.
+
+Worth it because: it names the friction you've stopped noticing, from your own transcripts.
+
+Source: code.claude.com/docs/en/costs#analyze-your-usage-patterns
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
