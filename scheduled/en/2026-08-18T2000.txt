@@ -1,0 +1,16 @@
+🔄 Enabled skills on claude.ai, then found none of them in your terminal?
+
+They don't come across on their own. One non-interactive run pulls them down:
+
+`CLAUDE_CODE_SYNC_SKILLS=1 claude -p "List the skills you have available"`
+
+That downloads every skill you enabled into `~/.claude/skills/synced/` and exits. Your normal sessions load them from disk afterwards, and `/skills` lists them under `claude.ai sync`.
+
+It's a download, not a live sync. Enable or change a skill on claude.ai later and nothing moves until you run that line again.
+
+Worth it because: the skills you already wrote once on the web stop being web-only.
+
+Source: code.claude.com/docs/en/skills
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
