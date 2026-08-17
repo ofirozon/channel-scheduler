@@ -1,0 +1,16 @@
+🧭 Ever hit the context limit with no warning you were close?
+
+Give yourself a permanent readout. Type this in any session:
+
+`/statusline show model name and context percentage with a progress bar`
+
+Claude writes the script into `~/.claude/`, points the `statusLine` setting at it, and a bar appears above the footer. It re-runs on session events, so it moves while you work.
+
+Fair warning: with a custom status line, Claude Code drops most of the footer's keyboard hints, including `esc to interrupt`. The key still works, the reminder's gone.
+
+Worth it because: you watch the context fill instead of discovering it when answers go vague.
+
+Source: code.claude.com/docs/en/statusline
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
