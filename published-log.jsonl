@@ -45,3 +45,4 @@
 {"channel": "he", "slot_utc": "2026-08-16T17:30:00+00:00", "sent_utc": "2026-08-16T18:30:50.185172+00:00", "late_hours": 1.01, "message_id": 218, "file": "2026-08-16T1730.txt"}
 {"channel": "en", "slot_utc": "2026-08-16T20:00:00+00:00", "sent_utc": "2026-08-16T20:23:36.388396+00:00", "late_hours": 0.39, "message_id": 60, "file": "2026-08-16T2000.txt"}
 {"channel": "he", "slot_utc": "2026-08-17T06:00:00+00:00", "sent_utc": "2026-08-17T06:58:04.400292+00:00", "late_hours": 0.97, "message_id": 219, "file": "2026-08-17T0600.txt"}
+{"channel": "he", "slot_utc": "2026-08-17T10:00:00+00:00", "sent_utc": "2026-08-17T10:33:27.898483+00:00", "late_hours": 0.56, "message_id": 220, "file": "2026-08-17T1000.txt"}
