@@ -1,0 +1,16 @@
+⌨️ Hit Ctrl+S out of pure habit and watched your prompt vanish?
+
+That's `chat:stash` doing its job, and every key in Claude Code is yours to change. Run `/keybindings`, which opens `~/.claude/keybindings.json`:
+
+`{"bindings":[{"context":"Chat","bindings":{"ctrl+s":null}}]}`
+
+`null` unbinds it. Save the file and it applies right away, no restart.
+
+One trap: don't reach for `cmd+`. Most terminals never send that modifier, so the binding quietly never fires. Use `ctrl` or `meta` and it works everywhere.
+
+Worth it because: the shortcut that keeps eating your prompt is one line away from gone.
+
+Source: code.claude.com/docs/en/keybindings
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
