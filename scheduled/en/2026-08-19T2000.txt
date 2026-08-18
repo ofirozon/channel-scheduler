@@ -1,0 +1,21 @@
+⚙️ Running the same Claude Code session by hand every morning?
+
+That's a script pretending to be a conversation. Same engine, called from code:
+
+`npm install @anthropic-ai/claude-agent-sdk tsx`
+
+Save as `agent.mts`:
+
+`import { query } from "@anthropic-ai/claude-agent-sdk";`
+`for await (const m of query({ prompt: "fix the crashes in utils.py", options: { allowedTools: ["Read", "Edit"], permissionMode: "acceptEdits" } })) console.log(m.type);`
+
+Then `npx tsx agent.mts`. Nothing else to install, the package bundles the binary.
+
+The part that surprises people: it runs on an `ANTHROPIC_API_KEY` and bills the API. Your Pro or Max subscription doesn't cover it.
+
+Worth it because: the loop you babysit every morning becomes a cron line.
+
+Source: code.claude.com/docs/en/agent-sdk/quickstart
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
