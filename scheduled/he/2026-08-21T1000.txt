@@ -1,0 +1,16 @@
+🗺️ נחתתם על קוד שאף אחד לא כתב עליו תיעוד.
+
+יש דרך מסודרת יותר להיכנס לפרויקט חדש עם Claude Code, והיא מהרחב לצר. מפעילים אותו מתיקיית הפרויקט ושואלים בשלושה שלבים:
+1. "give me an overview of this codebase"
+2. "explain the main architecture patterns used here"
+3. מסלול אחד מקצה לקצה, למשל "trace the login process from front-end to database"
+
+וטיפ ששומר על ההקשר נקי: כשהחקירה גדולה, בקשו במפורש "use a subagent to investigate...". סוכן המשנה קורא את הקבצים בחלון נפרד ומחזיר רק סיכום, במקום למלא את השיחה הראשית בקריאות קבצים.
+
+למה זה שווה: היום הראשון בפרויקט זר נגמר בהבנה של המסלול המרכזי, לא ברשימת שמות קבצים.
+
+מקור: התיעוד הרשמי של Claude Code
+https://code.claude.com/docs/en/common-workflows
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew
