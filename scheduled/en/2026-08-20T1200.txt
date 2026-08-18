@@ -1,0 +1,14 @@
+🕐 Ever hit your usage limit and come back to a dead session?
+
+Claude Code now picks your session back up on its own, the moment your claude.ai limit resets. Nothing to retype, and you don't have to be there when it does.
+
+It's on by default, and that's the part worth a thought: a long unattended run will restart itself in the middle of the night. If you'd rather it stayed stopped, open `/config` and switch off "Continue automatically at usage limit".
+
+Requires v2.1.234 or later.
+
+Worth it because: a limit you hit at 2am costs you the reset window, not the whole night.
+
+Source: Claude Code changelog, v2.1.234
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
