@@ -1,0 +1,16 @@
+🧩 Want one extra rule for today's session, not forever?
+
+There's a launch flag for exactly that:
+
+`claude --append-system-prompt "Always use TypeScript"`
+
+Your text lands at the end of the default system prompt, for that session only. Nothing is written to disk, and tomorrow's session knows nothing about it. Good for poking around a legacy folder with "explain before you edit" attached, no permanent line in CLAUDE.md.
+
+It isn't a headless-only flag. No `-p` required, it works in an ordinary interactive session too.
+
+Worth it because: your project memory stops collecting one-off rules you'll never get around to deleting.
+
+Source: code.claude.com/docs/en/cli-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
