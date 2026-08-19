@@ -1,0 +1,16 @@
+📸 Still typing out what the broken screen looks like?
+
+Copy the screenshot and paste it straight into the prompt:
+
+`Ctrl+V`
+
+Then ask "here's the error, what's causing it?" and Claude reads the picture: the stack trace in the corner, the button that's two pixels off. No clipboard? Give it a path instead: "Analyze this image: ~/Desktop/bug.png".
+
+The part that trips up Mac users: `Cmd+V` only works in iTerm2. Everywhere else on macOS it's `Ctrl+V`, and yes, that feels wrong for the first week.
+
+Worth it because: a screenshot carries the detail you'd never think to describe.
+
+Source: code.claude.com/docs/en/common-workflows
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
