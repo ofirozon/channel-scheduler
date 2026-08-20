@@ -1,0 +1,14 @@
+🔍 Review comments land days later. Where's the session that wrote that PR?
+
+Still on your machine. When you open a PR with `gh pr create`, Claude Code links that session to it. Point it back at the PR number:
+
+`claude --from-pr 1234`
+
+You get the session picker filtered to that PR, so you pick up with the reasoning that produced the diff instead of re-explaining it.
+
+Worth it because: answering review feedback starts from the context that wrote the code, not a cold read of your own diff.
+
+Source: code.claude.com/docs/en/common-workflows, "Create pull requests"
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
