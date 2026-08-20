@@ -1,0 +1,16 @@
+📓 Ever wish your notes folder had the same assistant your repo does?
+
+Claude Code doesn't need a git repo. Point it at any folder of markdown and it searches, edits and reorganizes the same way it does code:
+
+`cd ~/notes && claude`
+
+Then ask what you'd never scroll for: "find every note where I decided something about pricing, and list the dates."
+
+It reads each file fresh, so an edit you just made in your notes app is already there.
+
+Worth it because: you can find a note by what you meant, not by remembering the exact word you typed.
+
+Source: code.claude.com/docs/en/common-workflows, "Work in notes and non-code folders"
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
