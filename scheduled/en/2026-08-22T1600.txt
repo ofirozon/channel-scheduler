@@ -1,0 +1,18 @@
+✏️ Ever sent a prompt with a typo in the word that mattered?
+
+Claude Code can underline misspelled words in the prompt box as you type. It's off by default and wants a checker on your `PATH` first: `aspell`, `hunspell` or `ispell`, whichever you have.
+
+Then add this to `~/.claude/settings.json`:
+
+`{ "spellcheck": { "enabled": true } }`
+
+If nothing ever gets underlined, that's a missing checker, not a clean prompt. `aspell --version` tells you which.
+
+Requires v2.1.235 or later.
+
+Worth it because: you catch the typo before you press Enter, not after Claude goes looking for a file that doesn't exist.
+
+Source: code.claude.com/docs/en/interactive-mode, "Check spelling as you type"
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
