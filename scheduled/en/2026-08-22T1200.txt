@@ -1,0 +1,16 @@
+🧳 Coming from Codex or Gemini CLI and dreading the setup again?
+
+Don't retype any of it. Claude Code reads the other tool's config straight off your machine:
+
+`/import codex`
+
+It finds instruction files, MCP servers, commands, subagents and skills, then hands you a picker so you choose what actually comes over. `/import gemini` does the same for Gemini CLI.
+
+Not sure what it will touch? Run `/import codex --dry-run` first and nothing gets written.
+
+Worth it because: the setup you spent months tuning follows you in one command instead of one evening.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
