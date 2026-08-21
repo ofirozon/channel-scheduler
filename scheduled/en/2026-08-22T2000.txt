@@ -1,0 +1,16 @@
+📁 Does one CLAUDE.md at your repo root try to explain every package?
+
+Give each package its own. `packages/api/CLAUDE.md` holds only what's true there:
+
+`Run tests: npm test (Vitest). Queries go through Knex in src/db/, never raw SQL in route handlers.`
+
+The root file loads at launch, so keep it repo-wide. A subdirectory's file loads on demand, only when Claude reads a file in there, so an API task never carries the frontend's conventions.
+
+Run `/context` and check Memory files to see what actually loaded.
+
+Worth it because: Claude gets the conventions for the code you're touching, not a wall covering four packages you aren't.
+
+Source: code.claude.com/docs/en/large-codebases
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
