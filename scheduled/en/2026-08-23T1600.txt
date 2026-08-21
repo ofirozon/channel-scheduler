@@ -1,0 +1,38 @@
+🪝 What if Claude formatted every file it touched, without you asking?
+
+Five minutes of setup and it does.
+
+1. Install `jq`, which the hook uses to read its input. `brew install jq` on macOS, `apt-get install jq` on Debian or Ubuntu.
+
+2. Open `.claude/settings.json` in your project root, or create it, and add:
+
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command",
+            "command": "jq -r '.tool_input.file_path' | xargs npx prettier --write" }
+        ]
+      }
+    ]
+  }
+}
+
+`Edit|Write` is what keeps it cheap: the hook fires only after a file-editing tool, not after every Read and Bash call.
+
+3. Confirm it registered. Type `/hooks` and select PostToolUse: you'll see the matcher, the command, and which settings file it came from. The menu is read-only, so edits go in the JSON.
+
+4. Test it. Ask Claude to add a line with single-quoted strings to a JavaScript file, then open the file. Prettier's defaults turn them into double quotes.
+
+5. Expect silence. A hook that succeeds prints nothing, so the reformatted file is your only confirmation.
+
+One limit: if a Bash command rewrites the file instead of the Edit tool, PostToolUse never sees it. That's what a `FileChanged` hook is for.
+
+Worth it because: formatting stops being something you catch in review, because it already happened.
+
+Source: code.claude.com/docs/en/hooks-guide, "Auto-format code after edits"
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
