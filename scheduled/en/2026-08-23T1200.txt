@@ -1,0 +1,16 @@
+🗜️ How much of Claude's answer do you actually read?
+
+There's now a built-in output style for that. Run `/config`, open Output style, pick Concise.
+
+Claude leads with the result and skips the preamble and narration, while doing the engineering just as thoroughly. Ask for detail and you get it in full. Error reports, security warnings and destructive-action confirmations are never trimmed.
+
+The catch: output style is read once at session start, so it won't apply until you `/clear` or open a new session.
+
+Requires v2.1.237 or later.
+
+Worth it because: the answer sits in the first line instead of the fifth paragraph.
+
+Source: code.claude.com/docs/en/output-styles
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
