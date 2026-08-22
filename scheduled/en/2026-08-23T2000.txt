@@ -1,0 +1,12 @@
+⏳ Ever sat waiting for Claude to finish so you could type?
+
+You don't have to. Type your next message and press Enter while Claude is still working: Claude Code queues it and lists it above the input box. Queue it during tool calls and Claude picks it up the moment those finish, inside the same turn.
+
+Changed your mind? Press `Up` from the first line of the input box. Your queued messages come back into the box, one per line, ready to edit or delete.
+
+Worth it because: the thought you had at minute two doesn't wait until minute four.
+
+Source: code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
