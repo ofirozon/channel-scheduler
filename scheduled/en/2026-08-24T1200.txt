@@ -1,0 +1,18 @@
+🎨 Ever described a UI in words and got back the first guess?
+
+Give Claude a brief instead:
+
+`/design a settings panel for a team billing page`
+
+It publishes a canvas of editable artboards to claude.ai and prints the link. Pick the one that's closest, tweak it, then say which option to implement.
+
+Research preview, and artboards ride on artifacts: your session has to be signed in with `/login`. On an API key or Bedrock you get a local file instead of a link.
+
+Requires v2.1.233 or later, on a paid plan.
+
+Worth it because: you choose between layouts side by side instead of talking one into existence.
+
+Source: code.claude.com/docs/en/whats-new/2026-w34
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
