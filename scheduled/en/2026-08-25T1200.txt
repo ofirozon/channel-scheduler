@@ -1,0 +1,16 @@
+🔗 What if your incident runbook opened the right repo for you?
+
+It can. Claude Code registers a `claude-cli://` URL handler the first time you send a prompt in an interactive session. Put one anywhere a link goes:
+
+`claude-cli://open?repo=acme/payments&q=Investigate%20the%20failed%20deploy`
+
+Click it and a terminal opens in your clone of that repo, prompt already typed. Nothing runs until you press Enter, and a `Prompt from an external link` warning sits there until you do.
+
+The catch: GitHub strips custom URL schemes, so a README link renders as plain text. Use a code block there.
+
+Worth it because: whoever's triaging at 3am starts in the right repo with the right question.
+
+Source: code.claude.com/docs/en/deep-links
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
