@@ -1,0 +1,14 @@
+⌨️ Ever hit Enter for a newline and sent the prompt instead?
+
+`Ctrl+J` inserts a line break without submitting. Every terminal, no setup.
+
+Shift+Enter does it too in Ghostty, Kitty, iTerm2, WezTerm, Warp, Apple Terminal and Windows Terminal. In VS Code, Cursor, Alacritty and Zed it takes one run of `/terminal-setup`, which writes the binding into the terminal's own config file.
+
+The part worth knowing before you go hunting for a fix: gnome-terminal and JetBrains IDEs can't send Shift+Enter at all. There, Ctrl+J isn't a workaround, it's the answer.
+
+Worth it because: the thought you're still typing stops getting sent as a question.
+
+Source: code.claude.com/docs/en/terminal-config
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
