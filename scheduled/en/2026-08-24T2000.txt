@@ -1,0 +1,14 @@
+🎓 What shipped last month that you're still not using?
+
+Run `/powerup`.
+
+It's a set of short interactive lessons built into Claude Code, each one teaching a feature through an animated demo that plays right in your terminal. Nothing to install, nothing to read: you watch the thing work, then go use it.
+
+Claude Code releases constantly, and a feature that would have changed how you work in March sits buried under months of changelog by now.
+
+Worth it because: you find out what you've been doing the hard way.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
