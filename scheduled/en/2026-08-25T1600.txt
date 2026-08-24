@@ -1,0 +1,16 @@
+🎙️ Ever typed a long prompt you could have said out loud?
+
+Turn on dictation in tap mode:
+
+`/voice tap`
+
+Tap `Space` with an empty prompt box, talk, then tap again. Claude Code inserts the transcript and sends it. A tap that catches fewer than three words gets inserted but not submitted, so a stray tap won't fire off half a sentence.
+
+You'll need a Claude.ai login and a local microphone. An API key session, Bedrock, or SSH can't record.
+
+Worth it because: transcription costs no messages or tokens and doesn't count toward your `/usage` limits.
+
+Source: code.claude.com/docs/en/voice-dictation
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
