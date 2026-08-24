@@ -1,0 +1,20 @@
+🐙 That issue nobody on your team has time for?
+
+Let Claude take it from inside GitHub. In the repo, run:
+
+`/install-github-app`
+
+It installs the GitHub App, saves your credential as a repo secret and prepares a pull request with the workflow file. Merge that, then comment on the issue:
+
+`@claude implement this feature based on the issue description`
+
+Claude works in the thread and pushes a branch.
+
+The part that trips people up: whoever comments needs write access to the repo, so a drive-by contributor's `@claude` won't do anything.
+
+Worth it because: an issue becomes a reviewable PR while you're doing something else.
+
+Source: code.claude.com/docs/en/github-actions
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
