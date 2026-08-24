@@ -1,0 +1,16 @@
+⏳ Back from lunch, and Claude has been sitting on a question for 40 minutes?
+
+Put this in `~/.claude/settings.json`:
+
+`{ "askUserQuestionTimeout": "5m" }`
+
+The choices are `60s`, `5m` and `10m`, or use the Question auto-continue timeout row in `/config`. When the timer runs out the dialog closes itself, submits whatever you'd already selected, and tells Claude you may be away, so it uses its own judgment and can re-ask later. You get a countdown for the last 20 seconds, and any keypress restarts it.
+
+This won't make a session unattended: permission prompts, plan approval included, never auto-resolve.
+
+Worth it because: a question you didn't see stops costing you the rest of the hour.
+
+Source: code.claude.com/docs/en/tools-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
