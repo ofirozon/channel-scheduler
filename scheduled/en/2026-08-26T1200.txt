@@ -1,0 +1,18 @@
+🖱️ Some bugs only show up when you actually click the thing.
+
+Claude can drive your Mac. In an interactive session, run `/mcp`, find `computer-use` in the list and enable it. macOS asks for Accessibility and Screen Recording the first time.
+
+Then ask for the GUI work directly:
+
+`Launch the app, click through each tab, and screenshot any error state you hit.`
+
+You approve each app the first time Claude reaches for it, and `Esc` from anywhere stops it mid-click.
+
+Research preview, macOS CLI only, Pro or Max plan.
+
+Worth it because: the UI check you'd otherwise wire up a test harness for is one sentence.
+
+Source: code.claude.com/docs/en/computer-use
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
