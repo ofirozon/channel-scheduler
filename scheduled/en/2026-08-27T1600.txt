@@ -1,0 +1,21 @@
+🔒 Would you let a review agent edit the code it's reviewing?
+
+A subagent you don't restrict gets the whole toolbox, Write and Edit included. One frontmatter line fixes that.
+
+`~/.claude/agents/code-reviewer.md`
+
+`---`
+`name: code-reviewer`
+`description: Reviews code for quality. Use after writing code.`
+`tools: Read, Grep, Glob, Bash`
+`---`
+`For each issue, explain the problem and show the fix.`
+
+`tools` is a strict allowlist: those four and nothing else. That's the part to get right. Leave `Bash` out and your reviewer can't run `git diff`, and it'll look broken rather than restricted.
+
+Worth it because: the agent that reviews your code can't quietly rewrite it.
+
+Source: code.claude.com/docs/en/subagents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
