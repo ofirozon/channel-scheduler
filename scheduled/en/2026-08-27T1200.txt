@@ -1,0 +1,16 @@
+⏳ How many times have you re-typed "is the deploy done yet?"
+
+Hand the question to the session instead:
+
+`/loop 5m check if the deployment finished and tell me what happened`
+
+Claude converts that into a cron job and re-runs the prompt every five minutes. `Esc` stops it. Leave the interval out and Claude picks its own delay each round, short while a build is moving, longer once things go quiet.
+
+One catch: the loop lives in the session. Close the terminal and it won't fire again.
+
+Worth it because: you stop spending a context switch every five minutes on a question the session can ask itself.
+
+Source: code.claude.com/docs/en/scheduled-tasks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
