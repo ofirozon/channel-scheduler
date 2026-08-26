@@ -1,0 +1,16 @@
+🧩 Your IDE knows which file you're staring at. Your terminal doesn't.
+
+Install the Claude Code plugin from the JetBrains Marketplace, restart IntelliJ (PyCharm, WebStorm and GoLand work too), then run `claude` in the IDE's integrated terminal. From a terminal outside the IDE, connect with:
+
+`/ide`
+
+Your current selection and the open file now travel with every prompt, and diffs land in the IDE's diff viewer.
+
+Fix one thing first: in JetBrains terminals `Esc` jumps to the editor instead of interrupting Claude. Settings → Tools → Terminal, uncheck "Move focus to the editor with Escape".
+
+Worth it because: you stop pasting file paths your cursor already knows.
+
+Source: code.claude.com/docs/en/jetbrains
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
