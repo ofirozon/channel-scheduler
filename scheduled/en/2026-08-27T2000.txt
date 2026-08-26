@@ -1,0 +1,16 @@
+📦 Rebuilt your dev container and Claude asked you to sign in again?
+
+Mounting a volume at `~/.claude` looks like the fix, and it isn't quite. Your OAuth account lives in `~/.claude.json`, a separate file outside that directory, so the volume alone won't keep you signed in. Point both at it in `.devcontainer/devcontainer.json`:
+
+`"mounts": ["source=claude-code-config,target=/home/node/.claude,type=volume"],`
+
+`"containerEnv": {"CLAUDE_CONFIG_DIR": "/home/node/.claude"}`
+
+Swap `/home/node` for your `remoteUser`'s home. Same fix in Codespaces, where `~/.claude` survives a stop but not a rebuild.
+
+Worth it because: a container rebuild stops costing you a browser round trip.
+
+Source: code.claude.com/docs/en/devcontainer
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
