@@ -1,0 +1,14 @@
+🔍 Would you pay $10 for a second opinion before merging?
+
+`/code-review ultra`
+
+That bundles your branch to a cloud sandbox and turns a fleet of reviewer agents loose on it. Every finding is independently reproduced before it reaches you, so you get real bugs, not style notes. It runs in the background for 5 to 10 minutes while you keep working.
+
+Now the price. Pro and Max get three free runs and they don't refresh. After that it's roughly $5 to $25 a review, and a run you cancel halfway still burns one.
+
+Worth it because: you get three deep pre-merge passes before it costs you anything.
+
+Source: code.claude.com/docs/en/ultrareview
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
