@@ -1,0 +1,18 @@
+🔍 Your terminal's search stopped finding anything in the conversation?
+
+That's fullscreen rendering. It's drawing on the alternate screen buffer the way vim does, so nothing lands in your terminal's real scrollback and `Cmd+f` has nothing to look at.
+
+Two keys hand it back:
+
+`Ctrl+o` then `[`
+
+That writes the whole conversation into native scrollback with tool output expanded, so `Cmd+f` and tmux copy mode can see it again.
+
+It lasts until you leave transcript mode with `Esc` or `q`, and the next `Ctrl+o` starts fresh.
+
+Worth it because: you can search back through a long session instead of re-running the command that printed the error.
+
+Source: code.claude.com/docs/en/fullscreen
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
