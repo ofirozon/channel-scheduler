@@ -1,0 +1,21 @@
+🌳 Sick of every isolated branch copying your whole monorepo to disk?
+
+Tell Claude Code which directories a task actually touches. In `.claude/settings.json`:
+
+`{`
+`  "worktree": {`
+`    "sparsePaths": [".claude", "packages/api", "packages/shared"],`
+`    "symlinkDirectories": ["node_modules"]`
+`  }`
+`}`
+
+Now a `--worktree` session checks out those directories plus root-level files, and symlinks `node_modules` back to your main checkout instead of duplicating it.
+
+Don't leave `.claude` off that list. Root-level directories aren't checked out on their own, so without it the worktree starts without your repo's own settings, rules and skills.
+
+Worth it because: a worktree in a huge repo starts in seconds on a fraction of the disk.
+
+Source: code.claude.com/docs/en/large-codebases
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
