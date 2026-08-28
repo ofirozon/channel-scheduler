@@ -1,0 +1,14 @@
+🔒 Letting a script drive Claude on a machine you share?
+
+There's a flag for that as of v2.1.248. `--restricted` removes the built-in tools that run commands or code, and WebFetch, confines the file tools to your working directories, and refuses `bypassPermissions`:
+
+`claude --restricted -p "summarize the failing tests"`
+
+The part that'll catch you out: it loads only managed settings and whatever you pass with `--settings`. Your own user and project settings files are ignored, so anything the run depends on has to come from those two places.
+
+Worth it because: an automated run can read your code without being able to execute anything.
+
+Source: code.claude.com/docs/en/cli-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
