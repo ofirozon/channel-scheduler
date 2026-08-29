@@ -1,0 +1,16 @@
+💬 Ever get exactly what you asked for, and it's still wrong?
+
+Make it ask you first:
+
+`I want to build <feature>. interview me about implementation, UX, edge cases, and tradeoffs until we have covered everything, then write the spec to SPEC.md`
+
+You answer questions instead of writing a brief, and the decisions you'd normally hit halfway through the build surface in the first five minutes. The spec lands in the repo, so tomorrow's session starts from it, not from your memory.
+
+In a hurry? Add "ask at most ten questions".
+
+Worth it because: the argument about what you meant happens before the code exists, not after.
+
+Source: code.claude.com/docs/en/prompt-library
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
