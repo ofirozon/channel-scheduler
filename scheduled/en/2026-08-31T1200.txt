@@ -1,0 +1,16 @@
+🧠 Watched a session try the same broken fix four times?
+
+Give it someone to ask:
+
+`claude --advisor opus`
+
+Claude decides when to consult it: before committing to an approach, when an error keeps recurring, before calling a task done. The advisor reads the whole conversation, and `Ctrl+O` on the `Advising` line shows you what it said back. `/advisor opus` saves it as your default. Experimental, and Anthropic API only.
+
+It isn't free: every consultation bills at the advisor's rates and counts toward your plan limits.
+
+Worth it because: Opus judgment lands at the three moments that decide the outcome, not on all forty tool calls.
+
+Source: code.claude.com/docs/en/advisor
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
