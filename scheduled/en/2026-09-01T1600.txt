@@ -1,0 +1,20 @@
+🔎 Certain you had that session yesterday, and now it's nowhere?
+
+It's there. `/resume` only lists sessions from the worktree you're standing in.
+
+From inside the picker:
+
+`Ctrl+W` widens to every worktree of this repo
+`Ctrl+A` widens to every project on this machine
+`Ctrl+B` narrows to your current git branch
+
+Each one toggles, so press it again to go back.
+
+The part that catches people out: pick a session from an unrelated project and Claude Code doesn't open it. It copies a `cd` and resume command to your clipboard instead.
+
+Worth it because: the session you thought you lost is two keystrokes away, not a re-explanation away.
+
+Source: code.claude.com/docs/en/sessions
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
