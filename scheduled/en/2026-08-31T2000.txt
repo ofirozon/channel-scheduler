@@ -1,0 +1,20 @@
+⏪ Spent an hour on an approach you now want to abandon?
+
+`/compact` is the wrong reflex. It spends a model call summarizing the mess, then keeps it.
+
+Run this instead, or press `Esc` twice on an empty prompt:
+
+`/rewind`
+
+Pick the message from before the detour. Your original prompt lands back in the input box, ready to edit.
+
+The next turn's quick: you land on history the cache already holds, even past the cache lifetime.
+
+"Restore conversation" keeps the code Claude wrote. The option above it drops that too.
+
+Worth it because: walking back a bad hour costs two keystrokes, not a summarization call.
+
+Source: code.claude.com/docs/en/prompt-caching
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
