@@ -1,0 +1,18 @@
+⏱️ Does your test suite die ten minutes in, every single time?
+
+That's not a hang. Claude Code caps how long a Bash command runs, and the model can't ask for more than 10 minutes.
+
+Raise the ceiling in `~/.claude/settings.json`:
+
+`{ "env": { "BASH_MAX_TIMEOUT_MS": "1800000" } }`
+
+That's 30 minutes. Its sibling `BASH_DEFAULT_TIMEOUT_MS` covers commands where the model sets no timeout, and defaults to 2 minutes.
+
+One thing to know: the effective ceiling is the larger of the two, so raising the default alone raises the max with it.
+
+Worth it because: a 12-minute suite finishes instead of dying at 10 and taking the turn with it.
+
+Source: code.claude.com/docs/en/env-vars
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
