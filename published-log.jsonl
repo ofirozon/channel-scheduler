@@ -123,3 +123,5 @@
 {"channel": "he", "slot_utc": "2026-08-30T10:00:00+00:00", "sent_utc": "2026-08-30T10:19:01.463393+00:00", "late_hours": 0.32, "message_id": 259, "file": "2026-08-30T1000.txt"}
 {"channel": "he", "slot_utc": "2026-08-30T17:30:00+00:00", "sent_utc": "2026-08-30T19:06:42.082832+00:00", "late_hours": 1.61, "message_id": 260, "file": "2026-08-30T1730.txt"}
 {"channel": "he", "slot_utc": "2026-08-31T06:00:00+00:00", "sent_utc": "2026-08-31T08:15:29.052576+00:00", "late_hours": 2.26, "message_id": 261, "file": "2026-08-31T0600.txt"}
+{"channel": "en", "slot_utc": "2026-08-31T16:00:00+00:00", "sent_utc": "2026-08-31T16:48:17.094102+00:00", "late_hours": 0.8, "message_id": 104, "file": "2026-08-31T1600.txt"}
+{"channel": "he", "slot_utc": "2026-08-31T10:00:00+00:00", "sent_utc": "2026-08-31T16:48:17.094102+00:00", "late_hours": 6.8, "message_id": 262, "file": "2026-08-31T1000.txt"}
