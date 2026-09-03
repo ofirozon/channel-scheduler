@@ -1,0 +1,16 @@
+🧩 Your script parses Claude's prose. How long until that breaks?
+
+A non-interactive run returns text by default, so one reworded sentence and your `grep` is wrong. Ask for a shape instead:
+
+`claude -p "Extract the main function names from auth.py" --output-format json --json-schema '{"type":"object","properties":{"functions":{"type":"array","items":{"type":"string"}}},"required":["functions"]}'`
+
+The answer arrives in the `structured_output` field, so `jq '.structured_output'` hands your script a typed array.
+
+One thing to know: before v2.1.205 an invalid schema was silently ignored and you got prose back anyway. Now the run stops and prints the validator's diagnostic.
+
+Worth it because: your CI step reads a field instead of guessing where the list starts.
+
+Source: code.claude.com/docs/en/headless
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
