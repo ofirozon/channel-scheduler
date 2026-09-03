@@ -1,0 +1,16 @@
+📤 Someone asks what Claude just did, and you reach for a screenshot.
+
+There's a command for that. From inside the session:
+
+`/export handoff.txt`
+
+It writes the whole conversation as plain text, messages and tool outputs rendered readably. With no filename it opens a menu, and copying to your clipboard is one of the options.
+
+Don't go digging for the raw file instead. Transcripts sit in `~/.claude/projects/` as JSONL, but that entry format is internal to Claude Code and changes between releases, so anything you build on it breaks on the next update.
+
+Worth it because: a reviewable record of a session costs one command, not fourteen screenshots.
+
+Source: code.claude.com/docs/en/sessions
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
