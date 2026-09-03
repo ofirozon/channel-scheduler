@@ -1,0 +1,21 @@
+🔎 @-mentions stopped completing and your agents can't find files?
+
+Claude Code ships its own `ripgrep`, and on some systems that binary won't run. Search, `@file` mentions, custom agents and custom skills all go quiet at once. Four steps:
+
+1. Install your platform's ripgrep: `brew install ripgrep` on macOS, `sudo apt install ripgrep` on Ubuntu or Debian, `pacman -S ripgrep` on Arch, `winget install BurntSushi.ripgrep.MSVC` on Windows.
+
+2. Point Claude Code at it, in the `env` block of `~/.claude/settings.json`:
+`{ "env": { "USE_BUILTIN_RIPGREP": "0" } }`
+
+3. Restart the session, then run `claude doctor` from your shell.
+
+4. Read the Search line. It should show the path of your system ripgrep instead of `OK (bundled)`. That's the confirmation, and it's why you run step 3 rather than assuming.
+
+One case this doesn't fix: on WSL, a project under `/mnt/c/` returns fewer matches than it should because of cross-filesystem read performance, and `claude doctor` still reports Search as OK. Move the project to `/home/` if you can.
+
+Worth it because: a lot of what feels like "Claude got worse this week" is one binary that never ran.
+
+Source: code.claude.com/docs/en/troubleshooting
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
