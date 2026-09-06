@@ -1,0 +1,16 @@
+🖥️ Ever pasted a wall of terminal output into Slack for a teammate?
+
+Some of it is easier to look at than to read. Ask for a page:
+
+`Make an artifact that walks through this PR with the diff annotated inline.`
+
+Claude publishes it to claude.ai, prints the link, and updates the same page in place as the session continues. `Ctrl+]` reopens the most recent one.
+
+It needs a session signed in with `/login` on a paid plan. On an API key or Bedrock you'll get a local file instead of a link.
+
+Worth it because: a reviewer opens one link instead of rebuilding your reasoning from pasted text.
+
+Source: code.claude.com/docs/en/artifacts
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
