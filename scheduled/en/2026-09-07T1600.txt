@@ -1,0 +1,16 @@
+🧹 How many of your loaded skills have you never once used?
+
+Each one costs context before you type anything. Run:
+
+`/skill-doctor`
+
+It reports what your own skills cost and how often each gets used, flags the never-invoked ones, and says where to switch them off. Plugins you haven't touched lately, too. Interactively the report opens in the `/plugin` manager's Stats tab; under `claude -p` it prints as plain text.
+
+One catch: it won't run over Remote Control from a phone or browser, only in the terminal on that session's own machine. Needs v2.1.252 or later.
+
+Worth it because: you can't prune context you've never measured.
+
+Source: code.claude.com/docs/en/slash-commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
