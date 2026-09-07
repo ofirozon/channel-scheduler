@@ -1,0 +1,16 @@
+🌙 Who answers Claude's permission prompt at 3am?
+
+Nobody, so an unattended run either waits on it or keeps retrying what it can't get approved. One flag, v2.1.259 or later:
+
+`claude -p "run the tests and fix what fails" --permission-mode auto --permission-prompts none`
+
+Whatever would have prompted is denied on the spot, and Claude is told nobody can approve it and not to retry. Your permission rules and mode still decide every call first.
+
+It also strips the tools that need a person, `AskUserQuestion` included, so keep it out of sessions you're watching.
+
+Worth it because: a scheduled run finishes instead of stalling until you notice.
+
+Source: code.claude.com/docs/en/headless
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
