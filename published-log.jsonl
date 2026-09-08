@@ -152,3 +152,4 @@
 {"channel": "he", "slot_utc": "2026-09-07T17:30:00+00:00", "sent_utc": "2026-09-07T19:39:53.375735+00:00", "late_hours": 2.16, "message_id": 283, "file": "2026-09-07T1730.txt"}
 {"channel": "he", "slot_utc": "2026-09-08T06:00:00+00:00", "sent_utc": "2026-09-08T10:48:23.545821+00:00", "late_hours": 4.81, "message_id": 284, "file": "2026-09-08T0600.txt"}
 {"channel": "he", "slot_utc": "2026-09-08T10:00:00+00:00", "sent_utc": "2026-09-08T10:48:23.545821+00:00", "late_hours": 0.81, "message_id": 285, "file": "2026-09-08T1000.txt"}
+{"channel": "he", "slot_utc": "2026-09-08T17:30:00+00:00", "sent_utc": "2026-09-08T18:25:36.509828+00:00", "late_hours": 0.93, "message_id": 286, "file": "2026-09-08T1730.txt"}
