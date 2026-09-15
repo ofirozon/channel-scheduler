@@ -1,0 +1,12 @@
+📉 Your last three fixes to the same system each held less time.
+
+Anthropic published its own version on September 14. The service deciding which tests a PR runs kept buckling: one patch held 70 days, the next 29, the next less than a day. Behind it, CI jobs up 25x in six months while engineers shipped 8x the code per quarter, Claude authoring 80% of it.
+
+The rewrite took one engineer three weeks. What told them to stop patching wasn't the outage, it was that shrinking lifetime.
+
+Worth it because: you can watch that number on your own systems this week.
+
+Source: claude.com/blog, "Agentic coding is straining CI"
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
