@@ -1,0 +1,16 @@
+🪟 Still opening a diff viewer that hides the conversation behind it?
+
+In fullscreen rendering, `/diff` opens a panel beside the conversation instead:
+
+`/diff`
+
+It lists the changed files with their added and removed line counts, and refreshes every time Claude edits a file or runs a shell command. Select lines in it with the mouse and they ride along with your next prompt.
+
+The requirement that catches people out: a terminal at least 110 columns wide. Narrower than that and you're back to the old viewer.
+
+Worth it because: you review edits as they land without losing your place in the conversation.
+
+Source: code.claude.com/docs/en/interactive-mode#diff-panel
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
