@@ -1,0 +1,14 @@
+🎨 Green means added, red means removed. If you can tell them apart.
+
+Claude Code ships two colorblind-friendly palettes, and they're easy to miss. One line in `~/.claude/settings.json`:
+
+`"theme": "dark-daltonized"`
+
+`light-daltonized` is the light-background twin. It changes the interface colors throughout, diffs included, so the screen you read all day stops resting on a distinction your eyes don't make.
+
+Worth it because: you stop guessing which half of a diff is the part being removed.
+
+Source: code.claude.com/docs/en/accessibility
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
