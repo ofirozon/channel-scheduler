@@ -1,0 +1,16 @@
+🧯 A headless run loops on a flaky test. Who stops it?
+
+`claude -p` has no turn limit by default, so a job that keeps almost-fixing something keeps going, and keeps spending. Put a ceiling on it:
+
+`claude -p --max-turns 3 "fix the failing test"`
+
+Hitting that ceiling isn't a quiet stop. The run exits with an error, so your CI step goes red instead of reporting success on work that never finished.
+
+It's print mode only, so there's nothing to undo for your interactive sessions.
+
+Worth it because: a runaway agent costs you three turns instead of an afternoon.
+
+Source: code.claude.com/docs/en/cli-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
