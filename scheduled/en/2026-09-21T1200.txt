@@ -1,0 +1,16 @@
+💸 Paying full price for context Claude already had cached?
+
+`/cost` will tell you. After a session's first response it adds a line to the Session block:
+
+`Prompt cache (main): 14 requests · 91% of input tokens from cache · 2 misses`
+
+A miss is a request that re-processed content the cache already held. From v2.1.260 the line names a likely cause when it can, such as `likely cause: tool definitions changed`. The line itself needs v2.1.251 or later.
+
+It covers the main conversation only, so subagents don't show up here.
+
+Worth it because: you catch a cache miss while you can still fix what caused it.
+
+Source: code.claude.com/docs/en/costs#prompt-cache-statistics
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
