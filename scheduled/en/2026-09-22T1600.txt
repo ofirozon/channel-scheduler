@@ -1,0 +1,14 @@
+🔗 Yesterday's session published a page. Where did the link go?
+
+Claude Code can publish a session's output as a live page on claude.ai, an artifact. The link prints once and scrolls away, and tomorrow's session, which can't see it, publishes a second page instead of updating the first.
+
+`/artifacts`
+
+lists every one you own. Press `o` to open it in the browser, `c` to copy the link, `Enter` to attach it to the session you're in, so the next change updates the page you already shared. Needs v2.1.216 or later.
+
+Worth it because: the link you sent your team keeps pointing at the current version.
+
+Source: code.claude.com/docs/en/artifacts
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
