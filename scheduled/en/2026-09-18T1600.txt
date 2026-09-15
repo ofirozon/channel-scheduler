@@ -1,0 +1,24 @@
+🗄️ Ever asked your database a question without opening a SQL client?
+
+Claude Code reaches outside systems through MCP servers. Here's one, end to end.
+
+1. Make a read-only database user first. Claude writes whatever query it thinks answers you, and that user is the entire safety story.
+
+2. Add the server:
+
+`claude mcp add --transport stdio db -- npx -y @bytebase/dbhub --dsn "postgresql://readonly:pass@host:5432/analytics"`
+
+3. Run `/mcp` and check that `db` says connected. `claude mcp add` saves your config without testing it, so a wrong DSN surfaces here, not at install time.
+
+4. Then just ask:
+
+`Find customers who haven't made a purchase in 90 days`
+
+One trap worth knowing on day one: that command defaults to local scope, so the server exists in this project only and you'll wonder where it went tomorrow. Add `--scope user` for every project, or `--scope project` to commit a `.mcp.json` your team shares.
+
+Worth it because: schema questions get answered in the terminal you're already in.
+
+Source: code.claude.com/docs/en/mcp
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
