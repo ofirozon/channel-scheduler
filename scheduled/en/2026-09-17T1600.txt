@@ -1,0 +1,14 @@
+📜 Claude runs your test suite, then hands you a file path instead of the output.
+
+A command's result stops arriving inline past roughly 30,000 characters. Claude gets a short preview and a file path, and has to read the file back for the rest. On a verbose build, the rest is where your actual failures are. Raise the ceiling in `~/.claude/settings.json`:
+
+`"bashOutputMaxChars": 128000`
+
+That's the maximum, and it needs v2.1.261 or later. Once you set it, Claude Code ignores `BASH_MAX_OUTPUT_LENGTH`, so don't bother tuning both.
+
+Worth it because: a full test log lands in one turn instead of two.
+
+Source: code.claude.com/docs/en/tools-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
