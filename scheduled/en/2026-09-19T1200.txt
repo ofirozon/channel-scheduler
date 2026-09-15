@@ -1,0 +1,16 @@
+🎚️ Nine rows in your `/model` picker. How many do you actually pick?
+
+One key in `~/.claude/settings.json` cuts it down to what you use:
+
+`"modelPicker": { "options": [{ "model": "opus", "label": "Deep work" }], "replaceBuiltInOptions": true }`
+
+With that Boolean on the built-in lineup is gone: you get your rows, Default, and whatever the session is already on. Needs v2.1.242 or later.
+
+One trap. The key only works in user or managed settings and is ignored in project and local ones, on purpose, so a repo you clone can't relabel your picker.
+
+Worth it because: `/model` lists the models you actually run instead of a lineup you scroll past.
+
+Source: code.claude.com/docs/en/settings-reference#modelpicker
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
