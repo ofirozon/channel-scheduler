@@ -1,0 +1,16 @@
+🩹 Six review findings, and you're pasting them back one at a time?
+
+`/code-review --fix` applies what the review found to your working tree the moment it finishes, instead of handing you a list:
+
+`/code-review high --fix`
+
+It runs as a background subagent with its own context window, so your conversation stays clean while it works.
+
+The catch: a background review's edits land outside your session's checkpoints, so `/rewind` won't undo them. Commit first, and use git if you don't like the result.
+
+Worth it because: the trivial findings are fixed before you've finished reading the list.
+
+Source: code.claude.com/docs/en/code-review
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
