@@ -1,0 +1,28 @@
+🔑 You changed `.env`. Claude's next command still uses the old value.
+
+A hook can reload the environment the moment that file changes on disk. In `.claude/settings.json`:
+
+{
+  "hooks": {
+    "FileChanged": [
+      {
+        "matcher": ".envrc|.env",
+        "hooks": [
+          { "type": "command",
+            "command": "direnv export bash > \"$CLAUDE_ENV_FILE\"" }
+        ]
+      }
+    ]
+  }
+}
+
+Run `direnv allow` once in that directory first, or direnv won't be permitted to load the file.
+
+One thing to get right: that matcher is a list of filenames, not a regex. Claude Code splits it on `|` and watches each name literally.
+
+Worth it because: your session picks up the rotated key without a restart.
+
+Source: code.claude.com/docs/en/hooks-guide, "Reload environment when directory or files change"
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
