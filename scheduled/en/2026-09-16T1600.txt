@@ -1,0 +1,16 @@
+🧱 Your reviewer subagent reads 400 lines of house style before it starts.
+
+Every custom subagent loads your user, project and local CLAUDE.md files, whether it needs them or not. If yours works entirely from the prompt you hand it, one frontmatter line in `.claude/agents/<name>.md` drops them:
+
+`omitClaudeMd: true`
+
+Needs v2.1.271 or later. Managed policy files still load.
+
+One trap: it's ignored when that same agent runs as your main session through `claude --agent`. There, CLAUDE.md comes back.
+
+Worth it because: a narrow subagent starts with a smaller context and a cheaper first turn.
+
+Source: code.claude.com/docs/en/subagents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
