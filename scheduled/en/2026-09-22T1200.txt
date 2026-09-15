@@ -1,0 +1,16 @@
+⏰ Want a review that runs every weeknight whether your laptop's on or not?
+
+Type this in any session:
+
+`/schedule daily PR review at 9am`
+
+Claude asks which repo and what to do, then saves a routine: a prompt and a repository that run as a full Claude Code session on Anthropic's cloud, on schedule. Each run lands in your session list: read the transcript, open the PR yourself.
+
+Check the connectors before you save. Every one you've connected is attached by default, and a routine runs with no approval prompts, writes included.
+
+Worth it because: the nightly chore stops depending on your machine being awake.
+
+Source: code.claude.com/docs/en/routines
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
