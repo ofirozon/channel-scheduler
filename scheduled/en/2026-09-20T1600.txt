@@ -1,0 +1,18 @@
+🏃 Tired of Claude checking in on decisions you'd have made either way?
+
+There's a built-in output style for that. Run `/config`, open Output style, pick Proactive. Claude executes immediately, makes reasonable assumptions on routine calls, and prefers action over planning.
+
+Or set it in a settings file:
+
+`"outputStyle": "Proactive"`
+
+One thing it doesn't touch: permissions. It's guidance to the model, so your permission mode still decides what runs without asking you.
+
+Switch mid-session and it applies from your next message, no `/clear` needed, from v2.1.251.
+
+Worth it because: fewer "would you like me to" turns, with your approvals untouched.
+
+Source: code.claude.com/docs/en/output-styles
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
