@@ -1,0 +1,14 @@
+🔔 Long task, you switch tabs, you come back nine minutes late.
+
+Claude Code does fire a notification when it finishes or needs a permission answer. On the default setting that only reaches iTerm2, Ghostty and Kitty; in Warp or the VS Code terminal, nothing. One line in `~/.claude/settings.json` gets you a sound anywhere:
+
+`"preferredNotifChannel": "terminal_bell"`
+
+It rings the bell character, and whether you hear it is your terminal's business. `/terminal-setup` switches Apple Terminal's audible bell off, so if you accepted that prompt you'll want "Audible bell" back on under Settings, Profiles, Advanced.
+
+Worth it because: you notice Claude is waiting in seconds, not on your next glance.
+
+Source: code.claude.com/docs/en/settings-reference#preferrednotifchannel
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
