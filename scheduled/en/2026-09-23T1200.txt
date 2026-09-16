@@ -1,0 +1,16 @@
+🧭 Running Sonnet to save money, then paying for its bad plan?
+
+Pair it with a stronger model, consulted only at the decision points:
+
+`claude --advisor opus`
+
+Sonnet keeps doing the routine turns. Before it commits to an approach, when the same error keeps recurring, or before it calls the task done, it hands the conversation to Opus and applies the guidance. `Ctrl+O` shows what Opus said.
+
+It's experimental. Update to v2.1.273 first: advisor turns used to count at double their real size, so auto-compact fired at half your window.
+
+Worth it because: Opus-quality planning without paying Opus rates on every routine turn.
+
+Source: code.claude.com/docs/en/advisor, v2.1.273 changelog
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
