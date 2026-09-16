@@ -1,0 +1,16 @@
+🌐 Still copying console errors out of DevTools into your prompt?
+
+Let Claude read them itself. Install the Claude in Chrome extension, then:
+
+`claude --chrome`
+
+Now you can say: open localhost:3000, submit the signup form empty, and tell me what the console says. Claude opens its own tab, reads the console and the DOM, and fixes the code behind the error. It shares your browser logins, so signed-in apps work too.
+
+The catch: it needs `/login`. With an API key or a `claude setup-token` token, Chrome stays off even with `--chrome`.
+
+Worth it because: the error and the fix land in one session, with no copy-paste between windows.
+
+Source: code.claude.com/docs/en/chrome
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
