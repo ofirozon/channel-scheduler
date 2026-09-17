@@ -1,0 +1,18 @@
+🔔 You alt-tab away, and nothing tells you the run finished.
+
+It does try. When a task ends or a permission prompt opens and you're away from the terminal, Claude Code fires a notification event. By default that only lands as a desktop notification in Ghostty, Kitty and iTerm2. In Warp or the VS Code terminal, nowhere.
+
+One line in `~/.claude/settings.json` rings the terminal bell instead:
+
+{
+  "preferredNotifChannel": "terminal_bell"
+}
+
+iTerm2 is on that list and still stays quiet until you enable "Send escape sequence-generated alerts" in its profile settings.
+
+Worth it because: you can walk away from a long task and come back when it needs you.
+
+Source: code.claude.com/docs/en/terminal-config
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
