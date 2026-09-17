@@ -8,7 +8,7 @@ The reason is usually dull. Since v2.1.205, a recursive forced delete aimed at a
 
 The classifier never sees command output, so if an earlier command set that variable, it can't tell what's about to go. Name the literal path and it goes through.
 
-Worth it because: a denial is one keypress from running instead of a reason to leave auto mode.
+A denial is one keypress from running, not a reason to leave auto mode.
 
 Source: code.claude.com/docs/en/permission-modes
 

@@ -1,12 +1,10 @@
-🧩 After a compact, does your skill still remember its own rules?
+🧩 A compact can leave your skill holding its examples and not its rules.
 
 Invoked skill bodies do come back, but they're capped: 5,000 tokens per skill, 25,000 across all of them, and the oldest invoked skill is dropped first once that budget runs out.
 
 Truncation keeps the start of the file. So whatever sits at the bottom of a long `SKILL.md` is exactly what vanishes.
 
-Move the rules you can't afford to lose above the examples.
-
-Worth it because: the part of your skill that survives a compact becomes the part you chose, not the part that happened to be short enough.
+Move the rules you can't afford to lose above the examples. Then the part that survives is the part you chose, not the part that happened to be short enough.
 
 Source: code.claude.com/docs/en/context-window#what-survives-compaction
 

@@ -6,7 +6,7 @@ Claude Code ships two colorblind-friendly palettes, and they're easy to miss. On
 
 `light-daltonized` is the light-background twin. It changes the interface colors throughout, diffs included, so the screen you read all day stops resting on a distinction your eyes don't make.
 
-Worth it because: you stop guessing which half of a diff is the part being removed.
+No guessing about which half of a diff is the part being removed.
 
 Source: code.claude.com/docs/en/accessibility
 

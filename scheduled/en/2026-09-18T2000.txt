@@ -4,9 +4,7 @@ Anthropic studied how people actually run Claude Code sessions. On average you m
 
 The variable is expertise. A novice prompt sets off about five Claude actions and 600 words of output. An expert prompt sets off twelve and 3,200.
 
-Same tool. The difference is how much of the problem you'd settled before you typed.
-
-Worth it because: the study's expert sessions got five times the output per prompt.
+Same tool. The difference is how much of the problem you'd settled before you typed, and in the study that was worth five times the output per prompt.
 
 Source: anthropic.com/research/claude-code-expertise
 

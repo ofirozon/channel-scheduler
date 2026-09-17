@@ -1,10 +1,10 @@
-🚢 Can anything you ship be deployed without a human clicking?
+🚢 Half your deploy path still waits for a human to click something.
 
 Vercel counted its own deployments: as of September 2026, more than half are started by a coding agent, not a person. When that post ran on April 9 the share was over 30%, already a 1000% jump over the six months before.
 
-So go look at the boring path. If your build, migration or rollback step needs somebody in a dashboard, that's where an agent stops and hands the job back.
+So go look at the boring path. If your build, migration or rollback step needs somebody in a dashboard, that's where an agent stops and hands the job back to you.
 
-Worth it because: an agent that can deploy finishes the task instead of parking it on your desk.
+An agent that can deploy finishes the task instead of parking it on your desk.
 
 Source: vercel.com/blog/agentic-infrastructure
 

@@ -6,11 +6,9 @@ Or set it in a settings file:
 
 `"outputStyle": "Proactive"`
 
-One thing it doesn't touch: permissions. It's guidance to the model, so your permission mode still decides what runs without asking you.
+It doesn't touch permissions. This is guidance to the model, so your permission mode still decides what runs without asking you.
 
-Switch mid-session and it applies from your next message, no `/clear` needed, from v2.1.251.
-
-Worth it because: fewer "would you like me to" turns, with your approvals untouched.
+Switch mid-session and it applies from your next message, no `/clear` needed, from v2.1.251. Fewer "would you like me to" turns, with your approvals exactly where they were.
 
 Source: code.claude.com/docs/en/output-styles
 

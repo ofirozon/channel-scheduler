@@ -4,9 +4,7 @@ A rule file in `.claude/rules/` with `paths:` frontmatter loads only when Claude
 
 After compacting, Claude Code re-reads up to five files, most recently modified first, and reloads their matching rules. Yours returns only if one qualifies.
 
-If a rule has to hold all session, drop the `paths:` block or move it into project-root CLAUDE.md. That one is re-injected from disk.
-
-Worth it because: the rule you can't lose survives a compact you never saw.
+If a rule has to hold all session, drop the `paths:` block or move it into project-root CLAUDE.md. That one is re-injected from disk, so the rule you can't lose survives a compact you never saw happen.
 
 Source: code.claude.com/docs/en/context-window
 

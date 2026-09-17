@@ -18,9 +18,9 @@ A hook can reload the environment the moment that file changes on disk. In `.cla
 
 Run `direnv allow` once in that directory first, or direnv won't be permitted to load the file.
 
-One thing to get right: that matcher is a list of filenames, not a regex. Claude Code splits it on `|` and watches each name literally.
+The matcher is the part to get right. It's a list of filenames, not a regex: Claude Code splits it on `|` and watches each name literally.
 
-Worth it because: your session picks up the rotated key without a restart.
+Your session picks up the rotated key without a restart.
 
 Source: code.claude.com/docs/en/hooks-guide, "Reload environment when directory or files change"
 

@@ -6,7 +6,7 @@ Claude Code can publish a session's output as a live page on claude.ai, an artif
 
 lists every one you own. Press `o` to open it in the browser, `c` to copy the link, `Enter` to attach it to the session you're in, so the next change updates the page you already shared. Needs v2.1.216 or later.
 
-Worth it because: the link you sent your team keeps pointing at the current version.
+The link you sent your team keeps pointing at the current version.
 
 Source: code.claude.com/docs/en/artifacts
 

@@ -1,4 +1,4 @@
-⏰ Want a review that runs every weeknight whether your laptop's on or not?
+⏰ Your nightly PR review dies the moment you close the laptop.
 
 Type this in any session:
 

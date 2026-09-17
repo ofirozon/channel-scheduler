@@ -1,4 +1,4 @@
-💸 Paying full price for context Claude already had cached?
+💸 You're paying full price for context Claude already had cached.
 
 `/cost` will tell you. After a session's first response it adds a line to the Session block:
 

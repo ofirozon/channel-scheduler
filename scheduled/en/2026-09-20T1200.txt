@@ -1,4 +1,4 @@
-🔭 Refreshing a CI page in another tab while Claude sits idle?
+🔭 You're refreshing a CI page in another tab while Claude sits idle.
 
 Hand it over. Ask Claude to watch it and a background monitor starts, interjecting when something happens while you keep working:
 
@@ -6,7 +6,7 @@ Hand it over. Ask Claude to watch it and a background monitor starts, interjecti
 
 It'll also tail a log file or watch a directory for changes.
 
-The catch nobody expects: every watch has a deadline. Five minutes by default, thirty at most. Claude gets one notice at the end and can restart it, so an unattended watch won't run all afternoon.
+Every watch has a deadline, and that's the part nobody expects. Five minutes by default, thirty at most. Claude gets one notice at the end and can restart it, so an unattended watch won't run all afternoon.
 
 Worth it because: the thing you were refreshing tells you itself.
 

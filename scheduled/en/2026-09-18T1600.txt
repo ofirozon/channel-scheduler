@@ -14,9 +14,9 @@ Claude Code reaches outside systems through MCP servers. Here's one, end to end.
 
 `Find customers who haven't made a purchase in 90 days`
 
-One trap worth knowing on day one: that command defaults to local scope, so the server exists in this project only and you'll wonder where it went tomorrow. Add `--scope user` for every project, or `--scope project` to commit a `.mcp.json` your team shares.
+The part that trips everyone up on day one is scope. That command defaults to local, so the server exists in this project only and you'll wonder where it went tomorrow. Add `--scope user` for every project, or `--scope project` to commit a `.mcp.json` your team shares.
 
-Worth it because: schema questions get answered in the terminal you're already in.
+After that, schema questions get answered in the terminal you're already in.
 
 Source: code.claude.com/docs/en/mcp
 
