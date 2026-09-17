@@ -1,0 +1,14 @@
+🕵️ Claude says the task is done. Would you know if it wasn't?
+
+Sourcegraph named this in May 2026 and called it the 80% problem: agents reliably do the visible 80% of a task and miss the invisible 20% that lives outside their context window. Auth middleware wrapping the changed function. Frontend guards mirroring backend permissions. Integration tests in a sibling repo.
+
+Their fix is a habit, not a tool:
+
+Search the codebase for every symbol the agent touched. If a usage turns up in a file it never opened, the task isn't done.
+
+The ceiling on an agent isn't the model. It's what the model could see.
+
+Source: sourcegraph.com/blog/agentic-coding, Matt Tanner
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
