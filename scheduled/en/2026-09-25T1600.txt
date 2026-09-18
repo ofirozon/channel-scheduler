@@ -1,0 +1,16 @@
+🗝️ Whatever a tool printed in your session is sitting on your disk.
+
+Every message, tool call and result lands in `~/.claude/projects/<project>/<session>.jsonl`, unencrypted, with file permissions the only thing guarding it. Transcripts age out after 30 days by default. The log of every prompt you've typed doesn't age out at all.
+
+See what one project is actually holding:
+
+`claude project purge ~/work/my-repo --dry-run`
+
+That prints the full deletion plan and removes nothing. Drop `--dry-run` and it still asks before it deletes.
+
+I'd rather know what a year of sessions left behind than assume it evaporated.
+
+Source: code.claude.com/docs/en/claude-directory
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
