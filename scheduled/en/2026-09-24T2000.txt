@@ -1,0 +1,14 @@
+⌨️ Three messages queued, and when the turn ends only one of them goes.
+
+That's the actual rule: a turn that finishes with a queue behind it sends the oldest message next, and the others keep waiting their turn.
+
+`Esc` is the existing way out. It interrupts, and Claude Code sends what you queued right away. From v2.1.275 there's a key that does it without reaching for the stop button:
+
+`Ctrl+Enter`, and `Ctrl+X Ctrl+S` does the same thing.
+
+It sends the whole queue in one go, and everything stays gray until the model actually has it.
+
+Source: Claude Code CHANGELOG v2.1.275, code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
