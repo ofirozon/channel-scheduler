@@ -1,0 +1,20 @@
+🧳 Fresh worktree, clean branch, and the app won't start.
+
+`--worktree` gives a session its own git checkout, and that's the problem: a checkout has your tracked files and nothing else. The local config you never commit isn't in it.
+
+Drop a `.worktreeinclude` in your project root and name what should travel:
+
+`.env`
+`.env.local`
+`config/secrets.json`
+
+Patterns work like `.gitignore`. A file is copied only if it matches and is already gitignored, so nothing tracked gets duplicated behind your back.
+
+Every worktree Claude Code creates picks it up, subagent worktrees included.
+
+Worth it because: the second session starts working instead of erroring on a missing key.
+
+Source: code.claude.com/docs/en/worktrees
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
