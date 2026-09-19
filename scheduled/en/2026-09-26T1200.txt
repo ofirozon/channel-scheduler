@@ -1,0 +1,12 @@
+🫥 You paste an issue into the prompt. Part of it is invisible.
+
+Unicode has characters that draw nothing at all: tag characters, invisible formatting marks. They survive a copy out of a web page or a PDF, your terminal shows you nothing, and to a model they're text like any other text.
+
+From v2.1.277, Claude Code strips them out of your prompt and shows you the cleaned version for review before it's sent.
+
+So read that line when it turns up. It's telling you the thing you pasted wasn't the thing you saw.
+
+Source: Claude Code CHANGELOG v2.1.277
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
