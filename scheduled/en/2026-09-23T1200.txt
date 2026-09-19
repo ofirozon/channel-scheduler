@@ -8,7 +8,7 @@ Sonnet keeps doing the routine turns. Before it commits to an approach, when the
 
 It's experimental. Update to v2.1.273 first: advisor turns used to count at double their real size, so auto-compact fired at half your window.
 
-Worth it because: Opus-quality planning without paying Opus rates on every routine turn.
+You get Opus-quality planning without paying Opus rates on every routine turn.
 
 Source: code.claude.com/docs/en/advisor, v2.1.273 changelog
 

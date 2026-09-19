@@ -12,7 +12,7 @@ Patterns work like `.gitignore`. A file is copied only if it matches and is alre
 
 Every worktree Claude Code creates picks it up, subagent worktrees included.
 
-Worth it because: the second session starts working instead of erroring on a missing key.
+The second session starts working instead of erroring on a missing key.
 
 Source: code.claude.com/docs/en/worktrees
 

@@ -8,7 +8,7 @@ It'll also tail a log file or watch a directory for changes.
 
 Every watch has a deadline, and that's the part nobody expects. Five minutes by default, thirty at most. Claude gets one notice at the end and can restart it, so an unattended watch won't run all afternoon.
 
-Worth it because: the thing you were refreshing tells you itself.
+The thing you were refreshing tells you itself.
 
 Source: code.claude.com/docs/en/tools-reference
 

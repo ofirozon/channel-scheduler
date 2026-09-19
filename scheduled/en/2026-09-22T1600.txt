@@ -1,4 +1,4 @@
-🔗 Yesterday's session published a page. Where did the link go?
+🔗 Yesterday's session published a page, and you've lost the link.
 
 Claude Code can publish a session's output as a live page on claude.ai, an artifact. The link prints once and scrolls away, and tomorrow's session, which can't see it, publishes a second page instead of updating the first.
 

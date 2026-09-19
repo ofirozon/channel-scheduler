@@ -1,4 +1,4 @@
-🏃 Tired of Claude checking in on decisions you'd have made either way?
+🏃 Claude keeps checking in on decisions you'd have made either way.
 
 There's a built-in output style for that. Run `/config`, open Output style, pick Proactive. Claude executes immediately, makes reasonable assumptions on routine calls, and prefers action over planning.
 
