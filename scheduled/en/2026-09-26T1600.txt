@@ -1,0 +1,16 @@
+🪤 That `Write(src/**)` rule in your settings has never been checked. Not once.
+
+File permissions in Claude Code are matched against `Edit(path)` and `Read(path)` rules, and nothing else. Write the same path rule for `Write`, `NotebookEdit` or the legacy `MultiEdit` and it's accepted, saved, and never consulted. You get a startup warning, which is the kind of line everyone scrolls past.
+
+One word fixes it:
+
+`"allow": ["Edit(docs/**)"]`
+
+`Edit` governs writes to those paths too. A bare `Write` with no path is a different thing and does match everywhere, so leave that one alone.
+
+Go look at your own allow list.
+
+Source: code.claude.com/docs/en/permissions
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
