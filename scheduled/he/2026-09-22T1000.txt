@@ -1,0 +1,14 @@
+⚙️ הריפו ענק, וכל עותק עבודה חדש מושך אותו במלואו לדיסק.
+
+ב-Claude Code הדגל --worktree פותח שיחה בעותק גיט נפרד, וכברירת מחדל הוא יוצר עותק של כל הריפו. בקובץ .claude/settings.json אפשר לצמצם:
+
+{"worktree": {"sparsePaths": [".claude", "packages/api"], "symlinkDirectories": ["node_modules"]}}
+
+sparsePaths כותב לדיסק רק את התיקיות שברשימה, ואיתן תמיד גם קבצי השורש כמו package.json. symlinkDirectories יוצר קישור אל node_modules של הריפו הראשי במקום עותק נוסף. שתי מלכודות: הנתיבים נמדדים משורש הריפו ולא מהתיקייה שפתחתם בה, ותיקיית שורש כמו .claude לא נכנסת לבד וצריך לציין אותה.
+
+למה זה שווה את הזמן שלכם: ה-worktree נפתח מהר יותר ותופס פחות מקום, וזה נכון גם לכל worktree שסוכן משנה פותח לעצמו.
+
+מקור: code.claude.com/docs/en/large-codebases
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew
