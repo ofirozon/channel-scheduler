@@ -1,0 +1,12 @@
+🗂️ Does Claude actually read the AGENTS.md your repo already has?
+
+From v2.1.277, yes, with no import and no setting. But only when there's no `CLAUDE.md`, `.claude/CLAUDE.md` or `CLAUDE.local.md` in your working directory or above it. One of those up the tree and your AGENTS.md never loads.
+
+The trap is `CLAUDE.local.md`. Add one for your own uncommitted notes and you've just switched AGENTS.md off for yourself.
+
+Type `/config`, open Project instructions, pick `claude-md-and-agents-md`. Then the file every other agent in your repo reads is the one Claude reads too.
+
+Source: code.claude.com/docs/en/memory
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
