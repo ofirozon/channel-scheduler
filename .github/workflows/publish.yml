@@ -8,15 +8,14 @@ on:
     # to have a dedicated "1 9 * * *" line, but that collides with the hourly
     # one and GitHub delivers only a single schedule event, so the alarm step
     # was skipped every day it was supposed to fire.
-    - cron: "1 * * * *"
-    # A second, dedicated attempt a few minutes after each slot hour (he 06:00,
-    # 10:00, 17:30; en 12:00, 16:00, 20:00). Added 20.9.2026: the hourly line
-    # above is declared hourly but GitHub delivers it every 3 to 5 hours under
-    # load, and on 20.9 both morning Hebrew posts sat in the queue until they
-    # were kicked by hand. The Mac also kicks this workflow after every slot
-    # (~/.local/bin/publish-kick.sh); these extra entries are the fallback for
-    # when the Mac is off. Costs 7 extra runs a day, roughly 7 Actions minutes.
-    - cron: "6 6,10,12,16,17,18,20 * * *"
+    # Every 10 minutes. It used to be hourly, which read as "at worst an hour
+    # late" but was not: GitHub delays or drops schedule events under load, and
+    # on 20.9.2026 the real gap between runs hit 3 to 5 hours twice in one day,
+    # leaving both morning Hebrew posts sitting in the queue. Running this often
+    # is free because the repo is public (public repos get unlimited Actions
+    # minutes), and the Mac kicks this same workflow after each slot on top of
+    # it (~/.local/bin/publish-kick.sh) for the case where GitHub drifts anyway.
+    - cron: "*/10 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -53,7 +52,10 @@ jobs:
       - name: Check buffer depth
         env:
           ALERT_BOT_TOKEN: ${{ secrets.ALERT_BOT_TOKEN }}
-          ALERT_CHAT_ID: ${{ vars.ALERT_CHAT_ID }}
+          # A secret, not a variable: this repo went public on 20.9.2026 and
+          # GitHub masks secrets in logs but prints vars in the clear, which
+          # would have put Ofir's personal Telegram chat id in a public log.
+          ALERT_CHAT_ID: ${{ secrets.ALERT_CHAT_ID }}
           FORCE_CHECK: ${{ inputs.force_buffer_alert && '1' || '0' }}
         run: python3 buffer_check.py
 
