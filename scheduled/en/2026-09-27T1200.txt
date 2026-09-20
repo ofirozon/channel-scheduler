@@ -1,0 +1,14 @@
+🐳 `excludedCommands` is the sandbox setting most likely to be wider than you meant.
+
+It's the standard fix for a tool that won't run under Claude Code's Bash sandbox, `docker` being the usual one:
+
+`"sandbox": { "excludedCommands": ["docker *"] }`
+
+The rule underneath is coarser than that entry looks. When any part of a compound command matches, the whole line runs unsandboxed, so `docker ps | ./parse.sh` takes your script out of the sandbox with it.
+
+I'd keep that list short. When a tool only needs to write somewhere, `filesystem.allowWrite` grants the path and leaves the command inside the sandbox.
+
+Source: code.claude.com/docs/en/settings-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
