@@ -1,0 +1,14 @@
+🧾 Your script greps Claude's answer for a filename, and it works until the wording changes.
+
+Ask for a shape instead. Print mode returns JSON validated against a schema you hand it:
+
+`claude -p "Extract the main function names from auth.py" --output-format json --json-schema '{"type":"object","properties":{"functions":{"type":"array","items":{"type":"string"}}},"required":["functions"]}'`
+
+It lands in `.structured_output`, so `jq '.structured_output.functions'` is the whole parsing layer. A `format` keyword such as `"format": "email"` is accepted and then never enforced, so don't lean on one.
+
+That's the difference between a script that breaks on a rephrase and one that doesn't.
+
+Source: code.claude.com/docs/en/headless
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
