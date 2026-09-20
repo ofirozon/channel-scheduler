@@ -1,0 +1,10 @@
+🧪 Each fix for their CI bought Anthropic less time than the last.
+
+Their engineers ship 8x as much code per quarter as they did from 2021 to 2025, and Claude authors 80% of it. CI jobs, 25x in six months. The service that picks which tests run on a PR couldn't keep up. Doubling its cores was the easy fix. Sharding bought 29 days. Daily restarts lasted under one.
+
+Then one engineer rebuilt it in three weeks, and the line they hand you is worth stealing: assume your architecture will be at 25x load within two quarters.
+
+Source: claude.com/blog, "Agentic coding is straining CI", 14 September 2026
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
