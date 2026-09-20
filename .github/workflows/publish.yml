@@ -9,6 +9,14 @@ on:
     # one and GitHub delivers only a single schedule event, so the alarm step
     # was skipped every day it was supposed to fire.
     - cron: "1 * * * *"
+    # A second, dedicated attempt a few minutes after each slot hour (he 06:00,
+    # 10:00, 17:30; en 12:00, 16:00, 20:00). Added 20.9.2026: the hourly line
+    # above is declared hourly but GitHub delivers it every 3 to 5 hours under
+    # load, and on 20.9 both morning Hebrew posts sat in the queue until they
+    # were kicked by hand. The Mac also kicks this workflow after every slot
+    # (~/.local/bin/publish-kick.sh); these extra entries are the fallback for
+    # when the Mac is off. Costs 7 extra runs a day, roughly 7 Actions minutes.
+    - cron: "6 6,10,12,16,17,18,20 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
