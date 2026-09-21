@@ -1,0 +1,12 @@
+🪦 Look at what died this year, not at what launched.
+
+Relay spent five years building an AI workflow tool against Zapier, and shut down in September 2026. It's on TechCrunch's running list of AI products that didn't make it, and the shape repeats down the page. ChatGPT Atlas, a stand-alone browser, lasted under a year before being discontinued on 9 August 2026, "with its most useful features absorbed into ChatGPT".
+
+What surprised me is how much of that list is big companies burying their own launches, not startups failing.
+
+So ask early: is what you're building already a feature of the platform you build on?
+
+Source: techcrunch.com, "The AI graveyard", 15 September 2026
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
