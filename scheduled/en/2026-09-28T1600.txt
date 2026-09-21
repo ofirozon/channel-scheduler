@@ -1,0 +1,10 @@
+📋 `Copied to clipboard` is not a promise.
+
+Over SSH, outside tmux, Claude Code can't reach a clipboard tool on your laptop, so a selection or a `/copy` goes out as an OSC 52 escape sequence and your terminal decides what to do with it. iTerm2 blocks those until you allow it, and one run of `/terminal-setup` inside iTerm2 sets that for you. Apple's Terminal.app never acts on them, so there you hold `Fn` while you drag and copy the way you always have.
+
+Fix it once per terminal, and what you grab over SSH actually lands.
+
+Source: code.claude.com/docs/en/fullscreen and /troubleshooting
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
