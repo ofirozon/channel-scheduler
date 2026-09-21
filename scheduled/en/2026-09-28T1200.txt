@@ -1,0 +1,12 @@
+💾 Memory has been climbing all afternoon, and the only bug report you can write is "it uses a lot of memory".
+
+`/heapdump` won't show up in the command menu, so type it in full. It prints resident set size, JS heap, native memory and any leak indicators it spotted, an unusually high number of open handles among them, and writes two files to your Desktop.
+
+Attach only the `-diagnostics.json` to an issue. The `.heapsnapshot` beside it holds every string in the process, your conversation and your credentials included.
+
+Numbers a maintainer can act on, and nothing of yours goes with them.
+
+Source: code.claude.com/docs/en/troubleshooting
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
