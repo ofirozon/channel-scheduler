@@ -1,0 +1,12 @@
+💸 On Pro, your sessions don't start on Sonnet any more.
+
+Claude Opus 5.5 shipped on 22 September 2026, and Claude Code v2.1.280 made Opus the default on Pro and Team Standard, matching Max, Team Premium and Enterprise.
+
+It's the cheaper Opus too. $4 per million input tokens and $20 output, against $5 and $25 for Opus 5, and cache reads down from $0.50 to $0.20.
+
+Run `claude update`, then `/model`. Two seconds, and you know which model is answering you.
+
+Source: Claude Code CHANGELOG v2.1.280, anthropic.com/claude-opus-5-5
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
