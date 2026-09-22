@@ -1,0 +1,12 @@
+🧩 Nine of Claude's twelve edits to that file are right. Three aren't.
+
+Accepting takes all twelve. Rejecting throws away the nine. In VS Code there's a third option: under each change in the diff sit Accept this change and Reject this change buttons, from v2.1.275. Reject one and it reverts inside the proposal while the rest stands. The same two actions are on the right-click menu at your cursor.
+
+You'll only see that diff in Manual mode. On Pro, Max and Team the extension starts in Auto, which edits without asking.
+
+So you stop re-prompting for the three you didn't want.
+
+Source: code.claude.com/docs/en/vs-code
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
