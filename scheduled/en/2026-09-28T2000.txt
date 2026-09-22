@@ -1,0 +1,16 @@
+👥 Three Claude sessions reviewing one PR and arguing with each other. That's a real feature you've probably never seen.
+
+Agent teams are experimental and off by default. One entry in `~/.claude/settings.json`:
+
+`"env": { "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1" }`
+
+Then ask: three teammates to review this PR, one of them playing devil's advocate. Each gets its own context window, and they talk to each other, not through you.
+
+It isn't free. While teams are on, any subagent Claude names starts as a teammate, so a team can form unasked, each one a separate Claude instance with its own bill.
+
+I'd switch it on for a review and back to `0` after.
+
+Source: code.claude.com/docs/en/agent-teams
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
