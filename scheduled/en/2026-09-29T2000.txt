@@ -1,0 +1,16 @@
+🚦 I don't want Claude deciding when to deploy, and by default it can.
+
+Every skill hands Claude its name and description, and Claude picks when to use one. Fine for a conventions skill. Not for anything with a side effect.
+
+In `.claude/settings.local.json`:
+
+`"skillOverrides": { "deploy": "user-invocable-only" }`
+
+The skill's own file stays untouched, which is what you want when it's checked into a shared repo. Plugin skills ignore this, and you manage those in `/plugin` instead.
+
+`/deploy` still works when you type it. Claude no longer knows it's there.
+
+Source: code.claude.com/docs/en/skills
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
