@@ -1,0 +1,12 @@
+🛤️ Twenty turns in, how do you try the other approach without losing this one?
+
+`/branch try-streaming-approach`
+
+That copies the conversation and switches you into the copy. The original stays untouched in the session picker, and the confirmation prints both session IDs so you can walk back to it.
+
+`--fork-session` looks like the same thing and isn't. It forks into a separate process, so every "allow for this session" grant you built up is gone and you approve them all over again. `/branch` stays in the same process and keeps them. That's the difference that matters once you're deep in a task.
+
+Source: code.claude.com/docs/en/sessions
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
