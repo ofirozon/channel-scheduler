@@ -1,0 +1,10 @@
+📐 You can't price a big agentic refactor by staring at it.
+
+Anthropic published a guide to large code modernizations on 23 September 2026. Most of it is written for teams with review boards and promotion policies, but one line in it works at any size: complete the change end to end on a small part of the codebase, measure token usage there, then extrapolate for the rest of the run.
+
+An afternoon on one slice turns the budget question into arithmetic. Do that before you commit to the whole migration, not while you're explaining the bill.
+
+Source: claude.com/blog/how-to-prepare-for-ai-driven-code-modernization-projects
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
