@@ -1,0 +1,12 @@
+🚪 How long does it take you to remember where you left off?
+
+Claude Code writes a one-line recap while you're away and has it waiting when you come back. The trigger is fussier than it sounds. It only generates once your terminal window is unfocused and three minutes have passed, so leave the window focused, walk off for lunch, and there's nothing there.
+
+You can also ask for one on demand with `/recap`, and `/config` turns the automatic version off if it's noise to you.
+
+Click away from the terminal before you go, and the catch-up is already written when you sit back down.
+
+Source: code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
