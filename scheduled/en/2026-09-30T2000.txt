@@ -1,0 +1,12 @@
+🪃 Somewhere in your history is the prompt that actually worked.
+
+`Ctrl+R` finds it instead of you retyping it. Type a few words and matches come back newest first, duplicates collapsed. In fullscreen it's a dialog instead, and `Ctrl+S` cycles the scope through this session, this project, all projects.
+
+Watch the accept key though. In the classic renderer `Enter` sends the prompt the second you pick it, while `Tab` puts it in the input so you can edit first.
+
+Up-arrow only reaches back through the project you're sitting in. This reaches the one you got right in another repo last month.
+
+Source: code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
