@@ -1,0 +1,16 @@
+🧷 Open your last commit message. There's a line you didn't write.
+
+Claude Code signs its commits with a trailer, `Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>`, named after whichever model was answering. Some people like having that in the history. Some repos have a linter that won't take it.
+
+v2.1.281 added a one-line off switch to `settings.json`:
+
+`"attribution": false`
+
+Older CLI versions skip an entire settings file that holds that boolean, so in a repo where colleagues run different versions, set `attribution.commit` and `attribution.pr` to empty strings instead.
+
+Either way, nothing you push carries a model's name after that.
+
+Source: Claude Code CHANGELOG v2.1.281, code.claude.com/docs/en/settings-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
