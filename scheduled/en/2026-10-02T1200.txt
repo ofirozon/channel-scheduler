@@ -1,0 +1,12 @@
+🛰️ A repo you clone can't aim Claude Code's telemetry at someone else's server any more.
+
+From v2.1.282, project and local settings files no longer set the OpenTelemetry variables that turn export on, pick the endpoint, or capture your prompts and tool output. Off switches still work from there.
+
+That cuts both ways. If your team configured the collector in `.claude/settings.json`, it went quiet on upgrade, and a `-p` or SDK run prints no notice, so nothing tells you. `claude doctor` lists what was ignored.
+
+Move those variables to user or managed settings, and check your collector is still receiving.
+
+Source: Claude Code CHANGELOG v2.1.282, code.claude.com/docs/en/settings-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
