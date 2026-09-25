@@ -1,0 +1,18 @@
+🌙 Ten retries, then your nightly job goes red.
+
+That's the default, and it's the right call when you're sitting there watching the terminal. At 3am it isn't.
+
+In CI, set this before the run:
+
+`CLAUDE_CODE_RETRY_WATCHDOG=1`
+
+429 and 529 capacity errors then retry until they clear instead of giving up. Other transient failures get 300 attempts instead of 10, roughly three hours of backoff, so set a job timeout you can live with.
+
+A 429 that reports a spend limit still fails on the spot, and it should.
+
+Your scheduled run stops going red for reasons that have nothing to do with your code.
+
+Source: code.claude.com/docs/en/errors
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
