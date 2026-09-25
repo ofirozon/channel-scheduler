@@ -1,0 +1,12 @@
+🧭 Two hundred messages in, Claude stops following the rule you wrote for `src/`.
+
+Compaction summarized it away. Rules with `paths:` frontmatter and nested `CLAUDE.md` files sit in the message history, so they go with it, and come back only when Claude next reads a file they match. Project-root `CLAUDE.md` is re-injected from disk instead, along with auto memory and the plan you wrote in plan mode.
+
+So a rule that has to hold all session belongs in the root file, or without its `paths:` line. Keep scoping for what really is one directory's business.
+
+The instructions you can't afford to lose go in the file that gets re-read.
+
+Source: code.claude.com/docs/en/context-window
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
