@@ -1,0 +1,16 @@
+🔎 Your editor sees the type error Claude just made. Does Claude?
+
+Not unless you give it a language server:
+
+`/plugin install typescript-lsp@claude-plugins-official`
+
+The plugin is only the wiring, it doesn't ship the server. Install that first, `npm install -g typescript-language-server typescript`, and check `which typescript-language-server` finds it, or nothing starts and the only clue is an Errors row in `/plugin`. Go, Rust, Python and nine more have one too.
+
+Then an edit that breaks something comes back with `Found N new diagnostic issues in M files`. Ctrl+O reads them.
+
+It catches the import it just broke without waiting for your build.
+
+Source: code.claude.com/docs/en/plugins/code-intelligence
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
