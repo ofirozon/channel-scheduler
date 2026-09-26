@@ -1,0 +1,16 @@
+🧊 There's no prize for running the newest Claude Code build.
+
+Auto-updates follow the `latest` channel unless you say otherwise. The other channel sits about a week back and skips releases with major regressions:
+
+`"autoUpdatesChannel": "stable"`
+
+in `~/.claude/settings.json`, or `/config` and then Auto-update channel. Switching there asks whether to stay on the build you're on or take the downgrade, and staying pins `minimumVersion` so nothing walks you backwards later.
+
+Homebrew ignores the setting completely. There the cask name is the channel: `claude-code` is stable, `claude-code@latest` is latest.
+
+You still get every feature, a week later, after someone else has found the regression.
+
+Source: code.claude.com/docs/en/setup
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
