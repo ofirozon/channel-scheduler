@@ -1,0 +1,12 @@
+📉 19% of novice sessions that hit trouble end abandoned, with no code written. For everyone else it's 5 to 7%.
+
+That's from Anthropic's study of about 400,000 Claude Code sessions. Expertise there isn't years of coding, it's rated per task on three signals: how precisely you frame the ask, what you ask Claude to verify, and whether you're the one catching its mistakes.
+
+The middle one is the easiest to borrow. Say what done looks like before you start: the test that has to pass, the output you'll check.
+
+Most of the gap sits between novice and intermediate, so a working grasp gets you nearly all of it.
+
+Source: anthropic.com/research/claude-code-expertise
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
