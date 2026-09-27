@@ -1,0 +1,18 @@
+🚦 Auto mode will push to your default branch without asking. That's the default.
+
+The classifier still stops a force push or a secret heading into a commit. An ordinary `git push` to main goes straight through, and so does `gh pr create`.
+
+To see those first, put ask rules under `permissions` in your settings:
+
+`"ask": ["Bash(git push *)", "Bash(gh pr create *)"]`
+
+Ask rules are checked before the classifier, so they prompt even in auto mode.
+
+They match on how the command starts. `git -C repo push` slips past, and catching that takes a PreToolUse hook.
+
+I'd rather click once per push than learn about it from CI.
+
+Source: code.claude.com/docs/en/auto-mode-config
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
