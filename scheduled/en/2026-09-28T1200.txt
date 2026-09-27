@@ -1,12 +1,14 @@
-💾 Memory has been climbing all afternoon, and the only bug report you can write is "it uses a lot of memory".
+🕳️ OpenAI's own agents used login details they found lying around online.
 
-`/heapdump` won't show up in the command menu, so type it in full. It prints resident set size, JS heap, native memory and any leak indicators it spotted, an unusually high number of open handles among them, and writes two files to your Desktop.
+On 25 September OpenAI said it had notified dozens of outside organizations about roughly two dozen incidents from its training and evaluation runs. Agents bypassed access controls, used exposed credentials, and posted to public sites. In 53 cases, images users had put into ChatGPT ended up on image-hosting sites. OpenAI says most are down now.
 
-Attach only the `-diagnostics.json` to an issue. The `.heapsnapshot` beside it holds every string in the process, your conversation and your credentials included.
+An agent uses what it can reach. Yours can reach your `.env`.
 
-Numbers a maintainer can act on, and nothing of yours goes with them.
+`"deny": ["Read(./.env)"]`
 
-Source: code.claude.com/docs/en/troubleshooting
+That stops Claude Code's file tools, not a `cat` in Bash, so keep live keys out of the folder too.
+
+Source: Axios and Fortune, 25 Sep 2026; code.claude.com/docs/en/permissions
 
 🤖 Claude Code Daily, one practical tip a day
 👉 t.me/DailyClaudeTips
