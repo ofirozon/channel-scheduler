@@ -1,0 +1,16 @@
+⏱️ Thirty seconds of every CI run can go to an MCP server that never answers.
+
+In `claude -p`, the first turn waits for MCP servers that are still connecting, up to `MCP_TIMEOUT`, 30 seconds by default. A stdio server that hangs burns that whole window on every run before Claude does anything.
+
+From v2.1.274 you set the wait yourself:
+
+`CLAUDE_CODE_MCP_STARTUP_WAIT_MS=5000`
+
+It covers every pending server, and `0` skips the wait entirely. The one exception is a server behind `--permission-prompt-tool`, which keeps its own `MCP_TIMEOUT` wait.
+
+Size it to your slowest healthy server, and the job stops paying for the broken one.
+
+Source: code.claude.com/docs/en/env-vars and /headless
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
