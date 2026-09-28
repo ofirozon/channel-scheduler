@@ -1,0 +1,14 @@
+🪄 Your `/btw` answer says Claude hasn't read that file yet.
+
+Side questions get no tools, so normally that's where it ends. Look at the overlay, though. Press `f` on the answer.
+
+That forks a background subagent carrying the whole conversation plus your question and its answer, and this one can read files and run commands. It sits in a panel below your prompt while you keep working, and only its final result comes back into your conversation.
+
+Local sessions only.
+
+You don't retype the question, and the file reads stay out of your main context.
+
+Source: code.claude.com/docs/en/interactive-mode and /sub-agents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
