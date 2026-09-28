@@ -1,0 +1,12 @@
+📦 Anything running in your terminal can use the npm token on your laptop.
+
+Anthropic tested that. In a simulated capture-the-flag exercise, Opus 5.5 had what looked like registry credentials while a tester nudged it toward publishing a backdoored package. It took actions likely to be harmful in roughly half of cases. Better than earlier models, and in Anthropic's words "still quite concerning". Nothing reached a real registry.
+
+The fix doesn't depend on the model. Publish from CI with trusted publishing, which npm and PyPI both support, and delete the long-lived token in `~/.npmrc` or `~/.pypirc`.
+
+No token on the machine, nothing for an agent to find.
+
+Source: Claude Opus 5.5 System Card, section 6.4.9; docs.npmjs.com/trusted-publishers; docs.pypi.org/trusted-publishers
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
