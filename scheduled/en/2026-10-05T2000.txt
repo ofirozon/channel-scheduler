@@ -1,0 +1,14 @@
+🔌 You saved the setting, restarted, and Claude Code behaves exactly as before.
+
+Before you start doubting your JSON, run `/status`. The Status tab has a `Setting sources` line listing every settings file this session actually loaded, like `User settings` or `Project local settings`. If the file you edited isn't on it, you're fixing a path, not a value.
+
+It shows which files were read, not which one won each key. For entries Claude Code rejected, `claude doctor` lists them.
+
+It even runs while Claude is mid-answer, no waiting for the turn to end.
+
+Ten seconds, and you know which problem you actually have.
+
+Source: code.claude.com/docs/en/settings and /commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
