@@ -1,12 +1,12 @@
-🛤️ Twenty turns in, how do you try the other approach without losing this one?
+🎵 Your subagents set to `model: sonnet` get a new model after one `claude update`.
 
-`/branch try-streaming-approach`
+Anthropic released Claude Sonnet 5.5 on 28 September 2026, and from Claude Code v2.1.284 the `sonnet` alias resolves to it on the Anthropic API. Older builds keep resolving it to Sonnet 5. Same for `opusplan`, which executes on Sonnet.
 
-That copies the conversation and switches you into the copy. The original stays untouched in the session picker, and the confirmation prints both session IDs so you can walk back to it.
+The price didn't move: $2 in, $10 out per million tokens. Anthropic says it writes 30% faster than Sonnet 5 and costs up to 30% less per task, from fewer tokens and tool calls. Their number, so check it on your own jobs.
 
-`--fork-session` looks like the same thing and isn't. It forks into a separate process, so every "allow for this session" grant you built up is gone and you approve them all over again. `/branch` stays in the same process and keeps them. That's the difference that matters once you're deep in a task.
+Pinned `claude-sonnet-5` somewhere? That stays put until you change it.
 
-Source: code.claude.com/docs/en/sessions
+Source: anthropic.com/claude-sonnet-5-5, code.claude.com/docs/en/model-config
 
 🤖 Claude Code Daily, one practical tip a day
 👉 t.me/DailyClaudeTips
