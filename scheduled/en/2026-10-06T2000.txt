@@ -1,10 +1,10 @@
 🖥️ Some sessions are easier to finish with a diff view and a mouse.
 
-Type `/desktop` in the middle of one. Claude Code saves the session, opens it in the desktop app and exits the CLI. From v2.1.285, `claude --desktop` does it straight from the shell, on the current directory or on an older session with `--continue` or `--resume <id>`.
+Type `/desktop` in the middle of one. Claude Code saves the session, opens it in the desktop app and exits the CLI. From v2.1.285, `claude --desktop` does it from the shell, on the current directory or a session picked with `--continue` or `--resume <id>`.
 
-`/desktop` wants a Claude subscription login on macOS or x64 Windows. API keys, Bedrock, Google Cloud and Foundry don't get it.
+It needs a Claude subscription login on macOS or x64 Windows, so API keys, Bedrock, Google Cloud and Foundry are out.
 
-Going the other way is `/resume` inside Desktop, which lists the sessions you started in the terminal.
+The way back is `/resume` inside Desktop, which lists your terminal sessions.
 
 Start in the terminal, review in the window, and never explain the task twice.
 
