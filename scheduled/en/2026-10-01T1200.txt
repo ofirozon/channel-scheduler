@@ -1,10 +1,16 @@
-🌐 OpenAI launched Dots on September 29, 2026, an always-on agent that goes off and finishes multi-step work on its own. Type dot.com looking for it and you land on the download page for Grok, xAI's chatbot.
+🧷 Open your last commit message. There's a line you didn't write.
 
-Whois says the domain moved to xAI in July, roughly two months before the launch rather than after it. No price has been confirmed by either side, and the figures going around are estimates. The innocent reading is typo traffic from people meaning bot, except xAI doesn't own bot.com or vot.com, which weakens it.
+Claude Code signs its commits with a trailer, `Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>`, named after whichever model was answering. Some people like having that in the history. Some repos have a linter that won't take it.
 
-A product name is also a domain. Check who holds it before you announce one.
+v2.1.281 added a one-line off switch to `settings.json`:
 
-Source: techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/
+`"attribution": false`
+
+Older CLI versions skip an entire settings file that holds that boolean, so in a repo where colleagues run different versions, set `attribution.commit` and `attribution.pr` to empty strings instead.
+
+Either way, nothing you push carries a model's name after that.
+
+Source: Claude Code CHANGELOG v2.1.281, code.claude.com/docs/en/settings-reference
 
 🤖 Claude Code Daily, one practical tip a day
 👉 t.me/DailyClaudeTips
