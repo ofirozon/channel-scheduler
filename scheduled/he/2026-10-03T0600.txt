@@ -1,0 +1,19 @@
+המצב האוטומטי חוסם push לריפו של החברה? חסר לו הקשר.
+
+ב-Claude Code, המסווג של המצב האוטומטי סומך כברירת מחדל רק על תיקיית העבודה ועל ה-remotes של הריפו הנוכחי. כל יעד אחר, דומיין פנימי או באקט בענן, נחשב חיצוני.
+
+איך מלמדים אותו:
+1. מריצים /auto-mode-setup. קלוד סורק את הפרויקט ואת הפקודות שהריץ בו לאחרונה, ומציע טיוטה (Pro, Max או Team).
+2. או ידנית, ב-~/.claude/settings.json:
+"autoMode": {"environment": ["$defaults", "Source control: github.com/my-org"]}
+בלי "$defaults" אתם מוחקים את רשימת ברירת המחדל.
+3. מאמתים עם claude auto-mode config
+
+חסימה חד פעמית? /permissions, לשונית Recently denied, ו-r לניסיון חוזר.
+
+למה זה שווה את הזמן שלכם: פחות חסימות שווא, בלי לכבות את ההגנה.
+
+מקור: code.claude.com/docs/en/auto-mode-config
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew
