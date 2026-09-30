@@ -1,0 +1,12 @@
+🕰️ Claude started your dev server in the background. You came back from lunch and localhost won't connect.
+
+Since v2.1.285, a background Bash command gets 30 minutes, counted from when it went to the background. Claude can ask for a longer `timeout` when it starts one, up to 2 hours. When it hits the limit, Claude Code stops it and tells Claude why, so Claude can restart it.
+
+`BASH_DEFAULT_TIMEOUT_MS` raises the 30 minutes too, but it's also the foreground default, so a hung command would hold your turn just as long.
+
+For a server you want up all day, I'd just run it in a second terminal pane.
+
+Source: code.claude.com/docs/en/tools-reference, Claude Code CHANGELOG v2.1.285
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
