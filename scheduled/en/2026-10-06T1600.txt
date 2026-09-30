@@ -1,0 +1,16 @@
+🎚️ A skill with `effort: max` in its frontmatter runs at max, whatever you picked.
+
+Frontmatter overrides your session level while that skill or subagent is active. What does hold is a ceiling in `~/.claude/settings.json`:
+
+`"maxEffortLevel": "high"`
+
+Anything above it runs at `high` instead, whether it came from `/effort`, `--effort`, `CLAUDE_CODE_EFFORT_LEVEL`, someone's frontmatter or the model's own default. Lower levels stay available. Needs v2.1.267 or later.
+
+If one model has earned the headroom, give it its own `maxEffortLevel` under `modelSettings`.
+
+Set it once, and a plugin you installed yesterday doesn't get to choose how hard every turn works.
+
+Source: code.claude.com/docs/en/settings-reference and /model-config
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
