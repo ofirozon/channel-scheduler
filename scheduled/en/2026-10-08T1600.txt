@@ -1,0 +1,12 @@
+🔗 There's one kind of file `/rewind` won't put back: anything symlinked or hard-linked.
+
+Restore code and Claude Code skips those paths, says `Restored the code, but skipped N files`, and leaves them as they are now. That covers the config your dotfile manager symlinks into the repo, and files pnpm hard-links into place.
+
+Want the list? Turn on `/debug` before you restore, and `~/.claude/debug/<session-id>.txt` names every skipped path.
+
+For those, ask Claude to reverse the edit or fix them yourself. Easy to miss, because the restore still tells you it worked.
+
+Source: code.claude.com/docs/en/checkpointing
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
