@@ -1,0 +1,16 @@
+🚦 קלוד בדק את הקוד ב-CI ומצא באג, והצינור עדיין ירוק.
+
+ב-Claude Code, הפקודה claude -p יוצאת עם קוד 0 כשהריצה הצליחה, ועם קוד אחר כשהיא נכשלה, למשל בלי התחברות. כלומר קוד היציאה אומר שקלוד רץ, לא שהקוד שלכם תקין.
+
+כדי שהשלב ייכשל לפי מה שקלוד מצא, מבקשים תשובה מובנית ובודקים אותה:
+
+claude -p "Review src/auth.js for bugs. Set ok to false if you find one" --output-format json --json-schema '{"type":"object","properties":{"ok":{"type":"boolean"}},"required":["ok"]}' | jq -e '.structured_output.ok'
+
+הדגל -e של jq מחזיר קוד יציאה 1 כשהערך false, והצינור נעצר.
+
+למה זה שווה: שער אוטומטי שבאמת חוסם, ולא דוח שאף אחד לא קורא.
+
+מקור: התיעוד הרשמי, code.claude.com/docs/en/headless
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew
