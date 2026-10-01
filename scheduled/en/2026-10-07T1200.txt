@@ -1,0 +1,16 @@
+✅ Green tests don't mean anyone started the app before that commit.
+
+Since v2.1.286, if your project or user skills include one named `verify`, Claude is told to run it right before committing. Docs-only and tests-only commits skip it.
+
+You don't have to write that skill yourself. Run
+
+`/verify`
+
+on a real change. When it has to work out how to build and drive your app, it saves what worked to `.claude/skills/verify/SKILL.md` at the repo root, and that recorded skill replaces the bundled one.
+
+Commit the file, and every commit after it gets checked against the running app, not only the test suite.
+
+Source: Claude Code CHANGELOG v2.1.286, code.claude.com/docs/en/skills
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
