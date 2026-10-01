@@ -1,0 +1,14 @@
+✍️ Answering a long reply point by point in a one-line prompt box is miserable.
+
+Press `Ctrl+G` and your prompt opens in your text editor. Then turn on Show last response in external editor in `/config`.
+
+Now Claude's previous reply sits above your prompt as `#`-commented lines, so you can read it while you write "point 2, no, keep the cache" and "point 4, yes". Claude Code strips the comment block when you save.
+
+`Ctrl+X Ctrl+E` does the same thing, if your fingers already know readline.
+
+It's the closest thing to replying inline on a code review.
+
+Source: code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
