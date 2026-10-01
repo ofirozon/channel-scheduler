@@ -1,0 +1,17 @@
+📱 I talk to a running Claude Code session from my phone, through a Telegram bot.
+
+That's channels, a research preview. Make a bot with BotFather, install Bun, then in Claude Code:
+
+`/plugin install telegram@claude-plugins-official`
+`/telegram:configure <token>`
+
+Restart with `claude --channels plugin:telegram@claude-plugins-official`, message the bot, and approve the code it replies with using `/telegram:access pair <code>`. Then `/telegram:access policy allowlist` locks it to your account.
+
+Only pair people you'd trust to approve tool use in that session.
+
+Messages arrive only while the session is open, so mine lives in a terminal I never close.
+
+Source: code.claude.com/docs/en/channels
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
