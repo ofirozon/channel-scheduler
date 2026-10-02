@@ -1,0 +1,14 @@
+⏰ Your 9am code review task just fired at 11pm.
+
+That's Desktop's local scheduled tasks working as designed. They only run while the app is open and the machine is awake. Sleep through a slot and, on wake, Desktop starts exactly one catch-up run for the most recent missed time and drops anything older.
+
+So the prompt has to know what time it is. Something like:
+
+`Only review today's commits. If it's after 5pm, skip the review and just post a summary of what was missed.`
+
+If it really has to happen at 9 with the laptop shut, that's a cloud routine, not a local task.
+
+Source: code.claude.com/docs/en/desktop-scheduled-tasks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
