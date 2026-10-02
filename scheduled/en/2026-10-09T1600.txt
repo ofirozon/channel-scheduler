@@ -1,0 +1,16 @@
+🧰 Behind an LLM gateway? Every MCP tool may be loading every turn.
+
+Normally tool search keeps them out of context: definitions stay deferred and Claude looks up the ones it needs. But when `ANTHROPIC_BASE_URL` points at a non-first-party host, Claude Code switches it off, because most proxies don't forward the `tool_reference` blocks it relies on.
+
+If your gateway does forward them, turn it back on:
+
+`ENABLE_TOOL_SEARCH=true claude`
+
+If it doesn't, requests fail outright, so try one session before you put it in your settings `env`.
+
+With a couple of big MCP servers attached, that's a real chunk of context back on every turn.
+
+Source: code.claude.com/docs/en/mcp
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
