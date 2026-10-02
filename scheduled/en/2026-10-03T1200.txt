@@ -1,16 +1,14 @@
-🧹 You're still loading instructions written for a model that's gone.
+🧩 That shiny mod you're about to install can approve tool calls for you.
 
-v2.1.283 added a command that goes looking for them:
+Mods landed in Claude Code v2.1.287 on October 1, on by default. They're JavaScript handlers that run inside Claude Code, so they can draw panes, restyle the interface, or step into a tool call before it runs.
 
-`/doctor prompt-audit`
+They aren't sandboxed. A mod can read your files, hit the network, and approve a call your `ask` rule would have stopped. So clone it first and run:
 
-It reads your CLAUDE.md files, skills, agents and commands, and flags prompting patterns aimed at older models. The report leads with the dull failures rather than the interesting ones: paths that moved, commands that no longer exist, instruction files that contradict each other. Thinking keywords Claude Code documents are left alone.
+`claude plugin validate ./some-mod`
 
-Don't confuse it with `/claude-api prompt-audit`, which audits the prompts inside your code. Same name, different target.
+The `calls:` line lists everything it reaches for. A token chart calling `$.http.fetch` is one I'd ask questions about.
 
-Every rule that survives it is one written for the model you're actually running.
-
-Source: Claude Code CHANGELOG v2.1.283
+Source: code.claude.com/docs/en/plugins/mods/overview
 
 🤖 Claude Code Daily, one practical tip a day
 👉 t.me/DailyClaudeTips
