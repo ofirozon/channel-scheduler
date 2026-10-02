@@ -1,0 +1,16 @@
+🧹 You're still loading instructions written for a model that's gone.
+
+v2.1.283 added a command that goes looking for them:
+
+`/doctor prompt-audit`
+
+It reads your CLAUDE.md files, skills, agents and commands, and flags prompting patterns aimed at older models. The report leads with the dull failures rather than the interesting ones: paths that moved, commands that no longer exist, instruction files that contradict each other. Thinking keywords Claude Code documents are left alone.
+
+Don't confuse it with `/claude-api prompt-audit`, which audits the prompts inside your code. Same name, different target.
+
+Every rule that survives it is one written for the model you're actually running.
+
+Source: Claude Code CHANGELOG v2.1.283
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
