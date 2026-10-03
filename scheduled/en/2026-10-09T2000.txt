@@ -1,0 +1,16 @@
+🔎 `/code-review` stops at a usual limit of findings, and on a big branch that limit decides what you get to read.
+
+Since v2.1.288 you can move it:
+
+`/code-review high --max-findings all`
+
+`all` reports every finding. A number works too, like `--max-findings 20`. Pair it with `high`, because at `low` and `medium` the review only keeps what it's most confident in.
+
+The flag sticks. Later reviews reuse your value until you type `--max-findings default`, so the cap you set for one huge branch follows you into the next two-line fix.
+
+Use it before a merge you're nervous about. For everyday diffs the short list is the useful one.
+
+Source: code.claude.com/docs/en/code-review
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
