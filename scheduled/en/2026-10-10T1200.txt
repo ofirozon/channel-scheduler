@@ -1,0 +1,14 @@
+🧱 If Claude Code runs on a Linux box, give its shell commands a memory ceiling.
+
+`CLAUDE_CODE_TOOL_MEMORY_LIMIT=4G claude`
+
+From v2.1.233 that puts the Bash tool's commands in a memory cgroup, on Linux and WSL, so one runaway build can't eat the memory the rest of the session needs. It's one cap shared by every command in the session, not 4G each.
+
+What'll confuse you later is how it fails. The kernel kills the command that went over, and nothing in the result mentions the cap. So when a build that passed yesterday just dies, check this before you go hunting.
+
+One build dies instead of everything around it.
+
+Source: code.claude.com/docs/en/tools-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
