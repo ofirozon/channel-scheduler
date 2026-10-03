@@ -1,0 +1,14 @@
+🧩 Skills you switched on at claude.ai follow you into the terminal.
+
+Sign in with `/login` and Claude Code downloads them into `~/.claude/skills/synced/`. Some of Anthropic's own, like `pdf` and `xlsx`, come along whether you switched them on or not. Run `/skills` and they're listed under `claude.ai sync`.
+
+Don't fix one in place. The sync only goes down, so your edit never reaches claude.ai and the next sync can overwrite it. Change it on claude.ai instead.
+
+If you'd rather keep this machine clean, set `"syncClaudeAiSkills": false` in `~/.claude/settings.json`.
+
+Thirty seconds in `/skills` tells you what Claude can already reach for.
+
+Source: code.claude.com/docs/en/skills
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
