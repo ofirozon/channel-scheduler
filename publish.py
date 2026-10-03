@@ -16,6 +16,9 @@ Env:
     MAX_LATE_HOURS         skip posts more than this many hours overdue
                            (default 20, so a dead week does not dump a
                            backlog into the channel at once)
+    MAX_PER_RUN            posts one run may send per channel (default 1)
+    MIN_GAP_MINUTES        minimum spacing between two posts in the same
+                           channel (default 45)
     DRY_RUN                if "1", print what would be sent and send nothing
 """
 
@@ -38,7 +41,43 @@ CHANNELS = {
 }
 
 MAX_LATE_HOURS = float(os.environ.get("MAX_LATE_HOURS", "20"))
+
+# MAX_LATE_HOURS stopped the week-long dump, but not the small one. Nine times
+# between 27.8 and 20.9.2026 the Hebrew 06:00 and 10:00 posts were sent in the
+# same second, because a delayed Actions run found both due and sent both. Two
+# posts arriving together in a Telegram channel means one notification for two
+# posts, and the first one is read as the older of two rather than on its own.
+# These are per channel: en and he are different audiences, and nothing is
+# wrong with both getting a post at the same minute.
+MAX_PER_RUN = int(os.environ.get("MAX_PER_RUN", "1"))
+MIN_GAP_MINUTES = float(os.environ.get("MIN_GAP_MINUTES", "45"))
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
+
+
+def last_sent_per_channel():
+    """Newest sent_utc per channel from the log, as {channel: datetime}.
+
+    Read from the log rather than from file mtimes, because every run starts
+    from a fresh checkout where every file is seconds old.
+    """
+    newest = {}
+    if not LOG.is_file():
+        return newest
+    for line in LOG.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+            when = datetime.fromisoformat(row["sent_utc"])
+            channel = row["channel"]
+        except Exception:
+            continue
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=timezone.utc)
+        if channel not in newest or when > newest[channel]:
+            newest[channel] = when
+    return newest
 
 
 def slot_time(path: pathlib.Path):
@@ -63,6 +102,7 @@ def send(token: str, chat_id: str, text: str) -> dict:
 def main() -> int:
     now = datetime.now(timezone.utc)
     published, failed = 0, 0
+    last_sent = last_sent_per_channel()
 
     for channel, cfg in CHANNELS.items():
         src = SCHEDULED / channel
@@ -89,6 +129,7 @@ def main() -> int:
         dest = PUBLISHED / channel
         dest.mkdir(parents=True, exist_ok=True)
 
+        sent_here = 0
         for when, path in sorted(due):
             text = path.read_text(encoding="utf-8").strip()
             late_hours = (now - when).total_seconds() / 3600
@@ -109,8 +150,22 @@ def main() -> int:
                 path.rename(dest / f"{path.stem}.skipped.txt")
                 continue
 
+            if sent_here >= MAX_PER_RUN:
+                print(f"deferred ({channel}: already sent {sent_here} this run): {path.name}")
+                break
+
+            previous = last_sent.get(channel)
+            if previous is not None:
+                gap = (now - previous).total_seconds() / 60
+                if gap < MIN_GAP_MINUTES:
+                    print(f"deferred ({channel}: {gap:.0f}min since the last post, "
+                          f"want {MIN_GAP_MINUTES:.0f}): {path.name}")
+                    break
+
             if DRY_RUN:
                 print(f"[dry-run] would send {channel}/{path.name} ({len(text)} chars)")
+                sent_here += 1
+                last_sent[channel] = now
                 continue
 
             try:
@@ -143,6 +198,8 @@ def main() -> int:
                     + "\n"
                 )
             published += 1
+            sent_here += 1
+            last_sent[channel] = now
             print(f"published {channel}/{path.name} -> message_id {msg_id}")
 
     print(f"done: {published} published, {failed} failed")
