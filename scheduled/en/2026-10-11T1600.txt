@@ -1,0 +1,18 @@
+🧾 Your agent asked the user a question. The user went home.
+
+In an Agent SDK app, a `canUseTool` callback can stay pending forever, so your process has to stay alive and hold the question open all night.
+
+For answers that take hours, have a `PreToolUse` hook return
+
+`permissionDecision: "defer"`
+
+The run exits with `stop_reason: "tool_deferred"`, and the pending call, question included, comes back in `deferred_tool_use`. When the answer arrives, resume the session and the hook returns `allow` with it in `updatedInput`.
+
+It only works when Claude made a single tool call in that turn.
+
+Your worker can restart overnight and the question is still there in the morning.
+
+Source: code.claude.com/docs/en/agent-sdk/user-input and /hooks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
