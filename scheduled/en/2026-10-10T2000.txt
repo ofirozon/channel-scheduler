@@ -1,0 +1,16 @@
+🔕 You turned the advisor on last week. You haven't once seen it advise.
+
+Check your environment before you blame the model:
+
+`env | grep -E 'DISABLE_TELEMETRY|DO_NOT_TRACK|NONESSENTIAL|GROWTHBOOK'`
+
+Claude Code switches the advisor on through a feature flag it fetches from Anthropic. Any of those variables stops the fetch, and the advisor stays off with it. `DO_NOT_TRACK` is the sneaky one, set once in a dotfile for every CLI and forgotten. And `DISABLE_TELEMETRY=0` still counts as set, so unset it instead.
+
+When it's really working, the transcript shows an `Advising` line at the moments Claude consults it.
+
+Five seconds of grep, and you're not debugging a feature that never started.
+
+Source: code.claude.com/docs/en/advisor and /env-vars
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
