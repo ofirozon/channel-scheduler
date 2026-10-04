@@ -1,0 +1,17 @@
+🎹 Reaching for Esc a few hundred times a day is vim mode's worst part.
+
+If your editor already maps `jj` to Escape, Claude Code's prompt can too. In `~/.claude/settings.json`:
+
+`"editorMode": "vim",`
+`"vimInsertModeRemaps": { "jj": "<Esc>" }`
+
+Hit both keys within a second and you're in NORMAL mode, with neither `j` left in your prompt. Pause between them and both stay as text.
+
+It has to be your user settings. A project's `.claude/settings.json` is ignored for this one, so a repo you clone can't remap your keys.
+
+Same fingers in the editor and the prompt box, no translating.
+
+Source: code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
