@@ -12,4 +12,4 @@
 מקור: מדריך הפרומפטים של Anthropic, סעיף Give Claude a role, platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
 
 🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
-👉 t.me/AIhebrew
+👉 t.me/AIhebrew · instagram.com/ai_il_core

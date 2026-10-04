@@ -12,4 +12,4 @@ make a mod that shows the current git branch above the prompt
 מקור: התיעוד הרשמי, code.claude.com/docs/en/plugins/mods/overview
 
 🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
-👉 t.me/AIhebrew
+👉 t.me/AIhebrew · instagram.com/ai_il_core
