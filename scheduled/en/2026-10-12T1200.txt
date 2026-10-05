@@ -1,0 +1,16 @@
+🧾 Claude just ran `sed -i` across three files. In default mode, you never see what it changed.
+
+Claude Code can record which files in a git repo changed while a Bash command ran and show you their diff right after. Left unset, it only does that in auto mode and `bypassPermissions`. In `~/.claude/settings.json`:
+
+`"bashEditDiffEnabled": true`
+
+Now every permission mode gets the diff, and your PostToolUse Bash hooks get the changed-file list too. Needs v2.1.269 or later.
+
+The list can include a file something else touched while the command ran. Read it as "changed during", not "changed by".
+
+Edits made through the shell stop being the ones nobody reviewed.
+
+Source: code.claude.com/docs/en/settings-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
