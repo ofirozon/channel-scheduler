@@ -1,0 +1,14 @@
+📂 Your CLAUDE.md says to stay out of `vendor/`. Claude's codebase search never saw that line.
+
+When Claude hands a search to the built-in Explore subagent, or researches in plan mode through Plan, that helper starts without your CLAUDE.md files or the git status snapshot. It keeps research fast and cheap. Custom subagents load them by default.
+
+Usually that's fine, because the main conversation still has your rules when it reads the results. For the one rule the search itself has to obey, say it when you ask:
+
+`Explore the auth flow. Skip vendor/ and generated/, we don't own them.`
+
+One extra sentence, and the search stops reading code you'd never change.
+
+Source: code.claude.com/docs/en/sub-agents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
