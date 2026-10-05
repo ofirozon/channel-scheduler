@@ -1,0 +1,16 @@
+🔑 Your commit skill ran git without one prompt. You replied "now commit the rest" and the prompts were back.
+
+That's how `allowed-tools` in a skill's frontmatter works:
+
+`allowed-tools: Bash(git add *) Bash(git commit *) Bash(git status *)`
+
+It pre-approves those tools only for the turn that invoked the skill. The grant clears with your next message. The skill's instructions stay in context, its permissions don't.
+
+Invoke the skill again rather than chatting with it, and the grant comes back for that turn. For git approved all session, use an allow rule in your permission settings.
+
+Once you know it's per turn, the second prompt stops looking like a bug.
+
+Source: code.claude.com/docs/en/skills
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
