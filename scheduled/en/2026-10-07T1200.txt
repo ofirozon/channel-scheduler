@@ -1,0 +1,14 @@
+📄 Claude said the migration guide never mentions your deprecated endpoint. It may never have reached that part.
+
+Before v2.1.290, WebFetch dropped any page text past 100,000 characters and didn't say so. Long API references and changelogs got cut, and the answer came from the top of the page as if that was all of it.
+
+v2.1.290, out October 5, fixes that. A cut page now says how much went unread, and WebFetch takes an `offset` so Claude can read on.
+
+`claude update`
+
+If an answer about a long doc felt confidently wrong, ask it again after you update.
+
+Source: Claude Code CHANGELOG v2.1.290
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
