@@ -1,0 +1,23 @@
+🛠️ A subagent you'll reuse in every project takes about three minutes.
+
+1. Ask Claude to write it, and say where:
+`Create a personal code-improver subagent in ~/.claude/agents/ that suggests readability and performance fixes. Make it read-only and have it use Sonnet.`
+
+2. Open `~/.claude/agents/code-improver.md`. You want a `name`, a `description` that says when to use it, `tools: Read, Grep, Glob` and `model: sonnet`. Everything under the frontmatter is its system prompt, so edit it like one.
+
+3. Try it:
+`Use the code-improver agent to suggest improvements in this project`
+You'll see a row like `code-improver(Suggest code improvements)` when Claude delegates.
+
+4. Claude can't find it? Restart once. A running session doesn't notice an `agents` folder that didn't exist when it started. After that, edits load within seconds.
+
+5. For one repo only, move the file to that project's `.claude/agents/` and commit it, so your team gets it too.
+
+Typing `/agents` won't open a wizard anymore. It just tells you to do this.
+
+The review then runs in its own context, and your main conversation only gets the findings.
+
+Source: code.claude.com/docs/en/sub-agents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
