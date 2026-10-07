@@ -1,0 +1,18 @@
+🔊 To a screen reader, a terminal UI full of boxes is mostly noise.
+
+Claude Code has a mode that prints plain, labelled lines instead, like `you:`, `claude:` and `Permission Required:`. Diffs read line by line with `+` and `-`, and menus become numbered lists you answer by typing a number.
+
+For one session:
+`claude --ax-screen-reader`
+For every session, put `"axScreenReader": true` in your user settings.
+
+Over SSH, set it on the remote machine, where Claude Code actually runs.
+
+The first line it prints confirms the mode, like `[Screen Reader Mode: on via flag]`.
+
+If someone you know gave up on terminal agents over the redraws, forward them this one.
+
+Source: code.claude.com/docs/en/accessibility
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
