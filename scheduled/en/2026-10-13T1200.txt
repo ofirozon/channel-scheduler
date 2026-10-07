@@ -1,0 +1,18 @@
+⏱️ Your CI job spends its first 30 seconds waiting on a server that never connects.
+
+In a headless `claude -p` run, the first turn waits for MCP servers that are still connecting. A stdio server that hangs holds it to `MCP_TIMEOUT`, 30 seconds by default, on every run.
+
+From v2.1.274 you can set that wait:
+
+`CLAUDE_CODE_MCP_STARTUP_WAIT_MS=0 claude -p "..."`
+
+`0` skips it. A number in milliseconds caps it for every pending server.
+
+If the job's first step needs that server's tools, I'd give it a short cap like `5000` instead of zero.
+
+A flaky server stops costing you half a minute per run.
+
+Source: code.claude.com/docs/en/env-vars and /headless
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
