@@ -300,3 +300,4 @@
 {"channel": "he", "slot_utc": "2026-10-10T06:00:00+00:00", "sent_utc": "2026-10-10T08:23:58.052446+00:00", "late_hours": 2.4, "message_id": 370, "file": "2026-10-10T0600.txt"}
 {"channel": "en", "slot_utc": "2026-10-10T12:00:00+00:00", "sent_utc": "2026-10-10T14:32:53.629992+00:00", "late_hours": 2.55, "message_id": 188, "file": "2026-10-10T1200.txt"}
 {"channel": "en", "slot_utc": "2026-10-10T16:00:00+00:00", "sent_utc": "2026-10-10T18:48:11.311035+00:00", "late_hours": 2.8, "message_id": 189, "file": "2026-10-10T1600.txt"}
+{"channel": "en", "slot_utc": "2026-10-10T20:00:00+00:00", "sent_utc": "2026-10-10T22:00:51.726359+00:00", "late_hours": 2.01, "message_id": 190, "file": "2026-10-10T2000.txt"}
