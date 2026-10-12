@@ -1,0 +1,18 @@
+🧱 Your safety hook has a typo in its path. Every Bash command still runs.
+
+By default, a hook that can't start, crashes or times out is a non-blocking error. You get a notice and the action goes ahead.
+
+Since v2.1.295, a command or HTTP hook can fail closed. Add this to the hook entry:
+
+`"onFailure": "block"`
+
+Now a failure does what `exit 2` does, so a broken PreToolUse guard blocks the tool call instead of waving it through.
+
+Return JSON decisions with exit 0, though. With block set, exit 1 counts as a failure even if your hook printed an allow.
+
+A broken guard now stops things.
+
+Source: code.claude.com/docs/en/hooks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
