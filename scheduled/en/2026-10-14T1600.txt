@@ -1,0 +1,16 @@
+🩺 How many of your installed skills has Claude actually used this month?
+
+Every skill in the listing costs context on every turn, used or not. To see which ones earn it, run
+
+`/skill-doctor`
+
+You get each skill's context cost and how often it's been invoked. Skills that were never invoked get flagged, with where to turn them off. Start with the never-used ones that cost the most.
+
+In a terminal it opens in the `/plugin` Stats tab, and with `claude -p` it prints plain text. It won't run over Remote Control, so use the machine itself.
+
+Every skill you switch off is context you get back on every turn.
+
+Source: code.claude.com/docs/en/skills
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
