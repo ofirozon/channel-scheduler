@@ -1,0 +1,16 @@
+🟢 A green run in your routines list tells you less than you'd think.
+
+It means the cloud session started and exited without an infrastructure error. Not whether your task got done.
+
+A blocked network request, a connector tool that wasn't there, a job Claude gave up on halfway: all of that lives inside the run, not in the status dot.
+
+So open each run and read the transcript. And make the prompt say what success looks like, ending with
+
+`Finish with DONE or FAILED and one line on why.`
+
+Then the last line of the transcript tells you what the green dot can't.
+
+Source: code.claude.com/docs/en/routines
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
