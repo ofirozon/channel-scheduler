@@ -1,0 +1,18 @@
+💡 בזמן שקלוד עובד, שורת ההמתנה מציגה טיפים. אפשר לשים שם את התזכורות שלכם.
+
+ההגדרה spinnerTipsOverride בקובץ ~/.claude/settings.json מוסיפה טיפים משלכם לסבב של הטיפים המובנים:
+
+{"spinnerTipsOverride": {"label": "Reminder", "tips": ["Run the tests before you commit"]}}
+
+השדה label מחליף את הקידומת Tip שמופיעה לפני הטיפ, והוספה של "excludeDefault": true מסתירה את הטיפים המובנים ומשאירה רק את שלכם. דורש גרסה 2.1.247 ומעלה.
+
+ובאותו קובץ, spinnerVerbs מוסיף פעלים משלכם לפעלים שמתחלפים בזמן העבודה (Baking, Architecting), או מחליף אותם לגמרי עם "mode": "replace".
+
+למה זה שווה את הזמן שלכם: הכלל שאתם תמיד שוכחים מופיע מול העיניים בדיוק כשאתם מחכים.
+
+מקור: code.claude.com/docs/en/settings-reference
+
+מכירים מישהו שזה יחסוך לו זמן? שלחו לו את הפוסט.
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew · instagram.com/ai_il_core
