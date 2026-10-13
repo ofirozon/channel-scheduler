@@ -1,4 +1,4 @@
-📋 You can copy one paragraph of Claude's answer, not the whole thing.
+📋 You can copy just the quote from Claude's answer, not the whole thing.
 
 When the last response has code blocks or blockquotes in it, `/copy` opens a picker. Pick one block, or the full response. Since v2.1.295 quoted text shows up there too, and it copies without the `>` markers.
 
