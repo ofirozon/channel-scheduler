@@ -1,0 +1,16 @@
+📋 You can copy one paragraph of Claude's answer, not the whole thing.
+
+When the last response has code blocks or blockquotes in it, `/copy` opens a picker. Pick one block, or the full response. Since v2.1.295 quoted text shows up there too, and it copies without the `>` markers.
+
+That makes drafting easy. Ask for the reply to your reviewer as a blockquote, then:
+
+`/copy`
+
+Pick the quote and paste it straight into GitHub. `/copy 2` reaches one response further back, and over SSH, `w` in the picker writes your pick to a file instead.
+
+No stray `>` at the start of every line to clean up by hand.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
