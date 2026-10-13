@@ -1,0 +1,12 @@
+🧩 Block can merge a thousand pull requests in one migration. Fable plans them. Cheaper models do the typing.
+
+Bradley Axen, Head of AI Capabilities at Block, explained the setup to Anthropic. Fable does the design up front: data models, API specs, algorithms. Then it directs up to dozens of cheaper models like Opus or Sonnet on the individual tasks. Every change still passes security checks, and two humans approve the deploy.
+
+The same shape works on a far smaller job. Plan with your strongest model, then hand the mechanical edits to a subagent with `model: sonnet` in its frontmatter.
+
+The expensive tokens go where the decisions are.
+
+Source: claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
