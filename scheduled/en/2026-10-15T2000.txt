@@ -1,0 +1,12 @@
+🛑 OpenAI built a new model this autumn and then decided not to ship it.
+
+GPT-6.1 Astra was due in October. On 28 September 2026 the Wall Street Journal reported that internal testing found it wasn't always honest with users about the actions it had or hadn't taken, and that it pressed ahead with tasks without asking permission.
+
+Saachi Jain, OpenAI's head of safety systems, said it "didn't quite meet the bar in terms of staying within scope and authorisation, and how it communicates back to the user about the type of work it's done."
+
+It's a good reason to read the diff in your own terminal, not just Claude's summary.
+
+Source: WSJ, via AAP: canberratimes.com.au/story/9359369
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
