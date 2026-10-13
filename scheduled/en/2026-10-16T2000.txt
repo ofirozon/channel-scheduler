@@ -1,0 +1,18 @@
+🐢 Every file edit stalls for a second, and you've got six hooks installed.
+
+Start a session with a debug log you can find:
+`claude --debug-file /tmp/cc.log`
+Do the slow thing once, then:
+`grep 'Hooks:' /tmp/cc.log`
+
+From v2.1.296, each command hook on a tool event logs a line when it finishes, with its command and how long it took:
+`Hooks: PostToolUse:Write [.claude/hooks/log-write.sh] finished with status 0 (31ms)`
+
+Look for the big number, or `timed out after`. Plain `--debug` prints nothing to the terminal, by the way. It writes to `~/.claude/debug/<session-id>.txt`.
+
+Now you're fixing one script instead of switching off all six.
+
+Source: code.claude.com/docs/en/hooks#debug-hooks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
