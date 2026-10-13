@@ -1,0 +1,16 @@
+📄 Point Claude at a huge generated file and you'll often watch it read the thing in pages.
+
+That's the default. One Read call returns at most 25,000 tokens and refuses a whole file over 256 KB, so Claude walks through it with `offset` and `limit`.
+
+Since v2.1.296 it can take the whole file in one call when it needs to. So ask:
+
+`Read all of src/legacy/billing.ts in one go, the entire file, before you change anything.`
+
+That read is sized against the room left in your context, so do it early in a session, not two hours in.
+
+One read, and Claude sees the file as one piece instead of stitched pages.
+
+Source: code.claude.com/docs/en/tools-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
