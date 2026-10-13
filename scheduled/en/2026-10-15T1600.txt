@@ -1,0 +1,16 @@
+✂️ Claude fixed the bug. It also renamed three helpers, reformatted a file and tidied your imports.
+
+You don't have to rewind all of it. The fix is good, the rest is noise. Type:
+
+`that is too much. keep only the changes to the validation logic in src/forms/ and undo your other edits`
+
+Swap in your own path. The boundary is what does the work, so make it concrete: a folder, a function, one file.
+
+I'd try this before `/rewind`, because rewinding throws away the part that was right too.
+
+A small fix stays a small fix.
+
+Source: code.claude.com/docs/en/prompt-library
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
