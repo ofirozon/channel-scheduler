@@ -1,0 +1,16 @@
+⏳ The script printed Claude's answer, then just sat there.
+
+A `claude -p` run stays open while background work Claude started is still going: a dev server, a subagent, a Monitor watch.
+
+To see what it's waiting on, run the same command by hand in a terminal. Since v2.1.295, after five seconds it prints a line to stderr starting with
+
+`Waiting for background work to finish`
+
+and names the work. Under cron or CI stderr isn't a terminal, which is why you never saw it there.
+
+Now you fix the one thing holding the run open, instead of wrapping the whole job in `timeout`.
+
+Source: code.claude.com/docs/en/headless
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
