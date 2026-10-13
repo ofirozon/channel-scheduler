@@ -1,0 +1,16 @@
+🔤 Claude refused to edit your old Windows-1252 config file. Good.
+
+Edit saves the whole file back as UTF-8, so on a file in a legacy encoding every byte it can't decode would become `�`. Before v2.1.296 that's what happened to your accented characters. Now Edit refuses and leaves the file untouched.
+
+Decide what the file should be, and say it:
+`keep settings.ini in Windows-1252 and make this change with a shell command`
+Or convert it once with `iconv`, if nothing that reads it cares.
+
+The one that can bite is Write. It can replace the file, and it saves the result as UTF-8.
+
+Pick one on purpose and your `é` survives.
+
+Source: code.claude.com/docs/en/tools-reference#non-utf-8-files
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
