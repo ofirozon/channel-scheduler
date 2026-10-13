@@ -1,0 +1,12 @@
+🔖 "Summarize the last 24 hours" is the wrong line for a scheduled agent's prompt.
+
+A late run leaves a gap, and an early one reports the same items twice. Lance Martin and CJ Avilla's fix is a bookmark per source. Keep a file like `bookmarks.json`, have the agent read each source from its last timestamp, and move the bookmark only after the report has gone out.
+
+When a source fails, leave its bookmark alone and say so at the end of the report, like `pull requests unavailable this run`. A failed read shouldn't look like a quiet day.
+
+The next run picks up where the last one stopped.
+
+Source: claude.dev/blog/building-effective-agent-automations
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
