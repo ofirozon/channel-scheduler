@@ -1,0 +1,15 @@
+🔐 The security plugin reviews every commit Claude makes. Not the ones you make.
+
+Install it once:
+`/plugin install security-guidance@claude-plugins-official`
+
+Then it checks at three depths. Each file edit gets a pattern match for things like `eval(` or `.innerHTML =`, with no model call. Each turn's diff goes to a separate Claude review in the background. And a `git commit` or `git push` that Claude runs gets a deeper review that reads the surrounding code.
+
+That last one only fires through Claude's Bash tool. Commit from your own shell, or with `!` inside the session, and nothing reviews it.
+
+On anything touching auth, let Claude make the commit.
+
+Source: code.claude.com/docs/en/security-guidance
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
