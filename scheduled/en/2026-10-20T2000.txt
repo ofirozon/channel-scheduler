@@ -1,0 +1,15 @@
+🔌 A broken entry in `--mcp-config` won't stop a `claude -p` run.
+
+A `url` server with no `type` is skipped at startup, and the run exits cleanly without it. In a terminal you'd see `Warning: 1 MCP server skipped due to invalid config:`. Under CI, with stderr captured, nothing prints.
+
+The skip still lands in the stream's init event. Save it and fail on it:
+
+`claude -p "$TASK" --mcp-config mcp.json --output-format stream-json --verbose > run.jsonl`
+`jq -s -e '[.[] | select(.subtype == "init") | .mcp_server_errors // [] | .[]] | length == 0' run.jsonl`
+
+So a missing database tool fails the job, instead of quietly making the answer worse.
+
+Source: code.claude.com/docs/en/headless
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
