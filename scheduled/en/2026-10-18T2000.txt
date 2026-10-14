@@ -1,0 +1,14 @@
+🔬 Claude found a plausible cause for your bug, and now every check it runs seems to agree.
+
+That's anchoring. One agent tends to stop at the first good theory. With agent teams turned on (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`, still experimental), make them argue:
+
+`Users report the app exits after one message. Spawn 5 agent teammates to investigate different hypotheses. Have them try to disprove each other's theories, like a scientific debate. Update the findings doc with whatever consensus emerges.`
+
+Each teammate is a full Claude instance with its own bill, so I'd save this for the bug that's beaten you once.
+
+The theory still standing after five skeptics is usually the real one.
+
+Source: code.claude.com/docs/en/agent-teams
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
