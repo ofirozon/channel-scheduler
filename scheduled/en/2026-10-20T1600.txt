@@ -1,0 +1,16 @@
+🏷️ Your team's Claude-written PRs may already be labelled in GitHub.
+
+On Teams or Enterprise with contribution metrics on (a public beta), every merged PR with lines matched to a Claude Code session gets the label `claude-code-assisted`. So the list is one command away:
+
+`gh pr list --state merged --label claude-code-assisted`
+
+The matching is cautious on purpose. A line you rewrote by more than 20% stops counting, and only sessions from 21 days before to 2 days after the merge are checked.
+
+I'd read the number as a floor, not a score.
+
+When someone asks which PRs Claude touched, you hand them a list instead of a guess.
+
+Source: code.claude.com/docs/en/analytics
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
