@@ -1,0 +1,18 @@
+🧪 Your plugin passed every eval. That doesn't prove it did anything.
+
+`claude plugin eval` runs each case twice, once with your plugin loaded and once with no plugin at all. From the plugin root:
+
+`claude plugin eval .`
+
+You get `WITH`, `W/OUT` and `Δ`, the gap. A case at 1.0 in both columns passes on Claude alone.
+
+The usual first surprise is a `Δ` near zero because Claude never picked your skill. That's a `description` problem, not a code problem.
+
+Every run is a real model call on your account, three per arm by default.
+
+Now you know which parts earn their place.
+
+Source: code.claude.com/docs/en/plugin-evals
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
