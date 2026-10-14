@@ -1,0 +1,15 @@
+📸 The bug only shows up on your real phone, and the session's on your laptop?
+
+Run `/remote-control` in that session, then open the Claude app on your phone, tap Code and pick the session.
+
+Now attach the screenshot right there. Claude sees the photo as part of your message, and Claude Code also saves it under `~/.claude/uploads/`, so Claude can copy it into the bug report it writes.
+
+The code still runs on your machine, so the laptop has to stay on.
+
+The screenshot goes straight from the phone with the bug to the session that can fix it.
+
+Source: code.claude.com/docs/en/mobile
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
+
