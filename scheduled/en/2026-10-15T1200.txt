@@ -1,0 +1,16 @@
+⏸️ Leave a big session alone for an hour and your next message pays to re-read all of it.
+
+That's the one-hour prompt cache running out. Since v2.1.299, Claude Code gets there first. Once a terminal conversation is past 200,000 tokens and has sat idle about 54 minutes, it compacts, and you come back to
+
+`Compacted while idle, before the prompt cache expired`
+
+Your machine has to be awake at that point, though. Close the lid and nothing happens.
+
+I'd leave it on. If you'd rather keep the full history and pay for the re-read, put `"idleCompaction": false` in settings.json.
+
+Lunch stops costing you the whole session.
+
+Source: code.claude.com/docs/en/settings-reference#idlecompaction
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
