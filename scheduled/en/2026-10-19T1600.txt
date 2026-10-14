@@ -1,0 +1,17 @@
+⏱️ Five minutes decides whether your cloud sessions start fast or slow.
+
+A cloud environment's setup script runs as root on Ubuntu 24.04 before Claude Code launches. Finish in roughly five minutes and Anthropic snapshots the filesystem, so later sessions skip the script. Run longer and nothing's cached, and you pay for every install again next time.
+
+So run independent installs in parallel:
+
+`apt update && apt install -y shellcheck & pip install sqlfluff & wait`
+
+The snapshot keeps files, not running processes. A database your script starts is gone next session, so start it from a SessionStart hook instead.
+
+Your next session starts with everything already on disk.
+
+Source: code.claude.com/docs/en/cloud-environments
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
+
