@@ -1,0 +1,17 @@
+📱 If you build iOS apps, the Claude Desktop app is worth opening just for this.
+
+Start a Code tab session on your app's project and ask:
+
+`Build the app and run it in the simulator to check the onboarding flow.`
+
+An iOS Simulator pane opens next to the conversation and streams the device live. Claude taps through and reads the screen to check its own change. You can tap too, just wait while it shows `Claude is using this device`.
+
+It's in public beta and needs a Mac with Xcode's iOS simulators.
+
+You watch the fix land instead of taking Claude's word for it.
+
+Source: code.claude.com/docs/en/desktop-ios-simulator
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
+
