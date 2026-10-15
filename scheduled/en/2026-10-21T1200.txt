@@ -1,0 +1,16 @@
+💸 A hook that checks your tests doesn't need your most expensive model.
+
+An agent hook (`"type": "agent"`) spawns a subagent that can Read and Grep before an action goes through, like a Stop hook that confirms the tests passed. It takes a `model` field, and until v2.1.300 Claude Code ignored it: `haiku` didn't resolve, and inside a subagent the subagent's model won.
+
+Now this line does what it says:
+
+`"model": "haiku"`
+
+If you can't use that model, the hook falls back to the caller's and still checks. Before, it just allowed the action.
+
+Agent hooks are still experimental. I'd keep the big model for writing the code, not for checking it.
+
+Source: Claude Code v2.1.300 changelog, code.claude.com/docs/en/hooks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
