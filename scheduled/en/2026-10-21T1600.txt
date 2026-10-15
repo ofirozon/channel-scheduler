@@ -1,0 +1,14 @@
+🌙 Your 9am scheduled task can run at 11pm.
+
+Claude Desktop's local scheduled tasks only fire while the app's open and the computer's awake. On wake, Desktop starts one catch-up run for the latest miss and drops anything older, so six missed days become a single run, whenever you open the lid.
+
+So put the clock in the prompt itself:
+
+`Only review today's commits. If it's after 5pm, skip the review and post a summary of what was missed.`
+
+A late run then does something sensible instead of pretending it's morning.
+
+Source: code.claude.com/docs/en/desktop-scheduled-tasks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
