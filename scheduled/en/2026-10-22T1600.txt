@@ -1,0 +1,12 @@
+🧾 Your company's LLM gateway might be making auto mode cost more.
+
+In auto mode, a classifier checks commands before they run. When the server does those checks, they're free. A gateway that strips request fields it doesn't recognize blocks that, so Claude Code makes its own classifier requests instead, and those count toward your token usage.
+
+The sign is a notice saying the session "isn't eligible". Run `/status` and read the `Auto mode server` row: `Enabled` means the free path, `Disabled` means it fell back.
+
+Pro, Max and Team plans never see this. Everyone else, send the gateway owner one ask: pass headers and body fields through unchanged.
+
+Source: code.claude.com/docs/en/auto-mode-classifier-billing
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
