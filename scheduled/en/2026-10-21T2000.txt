@@ -1,0 +1,16 @@
+🧩 You can ask Claude to change Claude Code's own interface.
+
+That's a mod. In an interactive session, try:
+
+`make a mod that shows the current git branch above the prompt`
+
+Claude uses its built-in `plugin-authoring` skill, writes the files, and asks to enable hot reloading. Say yes and the mod loads when the turn ends. Ask for changes and it reloads after each turn.
+
+Once you like it, move it. It only loads in the session that wrote it, so copy its folder to `~/mods/git-branch` and start with `claude --plugin-dir ~/mods/git-branch`.
+
+Your prompt box ends up showing what you actually check all day.
+
+Source: code.claude.com/docs/en/plugins/mods/create
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
