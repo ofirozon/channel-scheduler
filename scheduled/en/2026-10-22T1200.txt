@@ -1,0 +1,16 @@
+🔄 You updated Claude Code this morning. Your background sessions are still on the old build.
+
+A session that was already running doesn't pick up the new binary until it restarts. You don't have to stop and redispatch each one:
+
+`claude respawn --all`
+
+That restarts every running session, and any session with a saved conversation resumes it, so nothing loses its place. A session-only `/model` switch survives the respawn too.
+
+For a single session it's `claude respawn <id>`.
+
+I'd make it the second half of every update. Otherwise the fix you updated for never reaches the sessions doing the work.
+
+Source: code.claude.com/docs/en/agent-view
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
