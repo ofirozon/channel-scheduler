@@ -1,0 +1,20 @@
+⏱️ You hit `/exit` and your cleanup hook dies mid-upload.
+
+`SessionEnd` hooks get 1.5 seconds by default, all of them together. That covers exit, `/clear`, and switching sessions with `/resume`.
+
+Give the slow hook its own limit, in seconds:
+
+`"timeout": 10`
+
+The shared budget rises to match the highest per-hook `timeout` in your settings, up to 60 seconds. Hooks without one still get 1.5.
+
+Timeouts on plugin hooks don't raise it. For those, set the budget when you launch:
+
+`CLAUDE_CODE_SESSIONEND_HOOKS_TIMEOUT_MS=5000 claude`
+
+Ten seconds of config, and the log you meant to save actually gets saved.
+
+Source: code.claude.com/docs/en/hooks#sessionend
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
