@@ -1,0 +1,17 @@
+🧩 If Claude Code acts like a different version in each terminal, it might be one.
+
+List every `claude` on your PATH:
+`which -a claude`
+
+More than one line means more than one install. The native one is `~/.local/bin/claude`, a symlink into `~/.local/share/claude/versions/`. The usual extras are an old npm global install, a Homebrew cask, or a legacy `~/.claude/local/` folder from older versions.
+
+Keep the native one and remove the rest:
+`npm uninstall -g @anthropic-ai/claude-code`
+`rm -rf ~/.claude/local`
+
+It's a ten-second check, and I'd run it before blaming any update for "not taking".
+
+Source: code.claude.com/docs/en/troubleshoot-install#check-for-conflicting-installations
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
