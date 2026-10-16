@@ -1,0 +1,18 @@
+🔒 Denying `Read(./.env)` stops `cat .env`. It doesn't stop Python.
+
+Deny rules cover Claude's file tools and the Bash commands that name the file. They don't cover a `grep -r` run over the folder, or a script that opens files on its own.
+
+The sandbox closes that gap:
+
+`/sandbox`
+
+With it on, Claude Code copies your `Read` deny rules into the sandbox's `denyRead` list, and the OS enforces it for every command and every process it starts.
+
+If a command fails and Claude offers to retry it outside the sandbox, say no. That retry is the way around.
+
+Now your `.env` rule means what you thought it meant.
+
+Source: code.claude.com/docs/en/permissions, code.claude.com/docs/en/settings-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
