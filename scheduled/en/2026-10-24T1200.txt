@@ -1,0 +1,18 @@
+🐧 Your repo lives inside WSL, and Claude Desktop crawls through it from Windows.
+
+That's because Windows reaches those files over a network filesystem. It's slow, and file watching breaks.
+
+The Code tab can run the session inside the distribution instead. Start a new session, open the environment picker and pick your distro from the WSL section. Then choose the folder by its Linux path:
+
+`/home/you/project`
+
+Claude Code, its tools and git now all run in Linux, on your Linux toolchain. You need WSL 2 and git installed in the distro.
+
+The integrated terminal and plugins don't work there yet, so I'd keep a WSL terminal open next to it.
+
+Same project, minus the network filesystem in the middle.
+
+Source: code.claude.com/docs/en/desktop-wsl
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
