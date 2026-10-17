@@ -1,0 +1,18 @@
+🍴 The best subagent is the one you don't have to brief.
+
+Mid-task, type:
+
+`/subtask draft unit tests for the parser changes so far`
+
+That starts a fork. It inherits the whole conversation, same system prompt, tools and model, so you explain nothing. It runs in a panel below your prompt while you keep working, and only its final result comes back.
+
+It's cheaper than it sounds. Its first request reuses your prompt cache, where a fresh subagent builds its own.
+
+Select its row and press `Enter` to send it a follow-up. `x` stops it.
+
+Use it whenever briefing a new subagent would take longer than the task.
+
+Source: code.claude.com/docs/en/sub-agents#fork-the-current-conversation
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
