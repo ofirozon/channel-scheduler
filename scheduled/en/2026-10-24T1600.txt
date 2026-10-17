@@ -1,13 +1,13 @@
 🏢 Claude Code will happily sign in to a personal account on a work laptop.
 
-That session sits outside your company's org. Your server-managed settings don't reach it, and neither does zero data retention.
+That session sits outside your company's org. Your server-managed settings don't reach it, nor does zero data retention if you have it.
 
 Admins on Teams or Enterprise can close that in managed settings:
 
 `"forceLoginMethod": "claudeai",`
 `"forceLoginOrgUUID": "<your org ID>"`
 
-The ID is in claude.ai admin settings. A claude.ai login to any other org now gets an error, and an `ANTHROPIC_API_KEY` in the environment is blocked at startup.
+The ID is in claude.ai admin settings. A claude.ai login to any other org gets an error, and an `ANTHROPIC_API_KEY` env var is blocked at startup.
 
 Deploy it through device management. Server-managed settings only reach people already in your org, so they can't catch the first login.
 
