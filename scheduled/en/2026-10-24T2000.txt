@@ -1,0 +1,16 @@
+🧯 Your SDK agent botched a refactor. You can roll the files back.
+
+Set `enableFileCheckpointing: true` (Python: `enable_file_checkpointing=True`) and the SDK backs up each file before Write, Edit or NotebookEdit changes it. Every user message in the stream then carries a UUID, and that's your restore point:
+
+`await response.rewindFiles(checkpointId)`
+
+Here's what trips people up. Those UUIDs only appear if you also pass `extraArgs: { "replay-user-messages": null }`. Without it the backups exist and you've got nothing to point at.
+
+Bash edits aren't tracked either, so a `sed -i` stays put.
+
+Set it up before the first run, not after the bad one.
+
+Source: code.claude.com/docs/en/agent-sdk/file-checkpointing
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
