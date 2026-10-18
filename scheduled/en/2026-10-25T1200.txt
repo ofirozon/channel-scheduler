@@ -1,14 +1,14 @@
 🗂️ Running five cloud sessions means briefing five sessions. A project lets you brief once.
 
-Claude Code Projects is in public beta on Pro and Max and rolling out gradually. If **Projects** shows in your sidebar at claude.ai/code, here's a first one:
+Claude Code Projects is in public beta on Pro and Max and rolling out gradually. If Projects shows in your sidebar at claude.ai/code, here's a first one:
 
-1. Select **Projects**, then **New project**. Only the name is required. Add a one-line goal and the GitHub repos most tasks need.
+1. Select Projects, then New project. Only the name is required. Add a one-line goal and the GitHub repos most tasks need.
 2. Install the Claude GitHub App on those repos. A `/web-setup` token isn't enough for project threads.
 3. Write project instructions: target branch, how a thread checks its work, what needs your go-ahead.
-4. In **Project settings > General**, check **Thread model** and **Thread effort**. New projects run every thread on Opus at high effort, which burns through your plan fastest.
+4. In Project settings > General, check Thread model and Thread effort. New projects run every thread on Opus at high effort, which burns through your plan fastest.
 5. Send one small real task and read how its thread reports back before you send a batch.
 
-Each task becomes a parallel cloud thread on its own branch, and **Overview** shows what finished, which PRs are ready, and which thread is waiting on you.
+Each task becomes a parallel cloud thread on its own branch, and Overview shows what finished, which PRs are ready, and which thread is waiting on you.
 
 I'd start with the service you keep pasting stack traces about.
 
