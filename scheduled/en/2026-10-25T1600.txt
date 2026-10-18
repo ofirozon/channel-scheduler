@@ -1,0 +1,21 @@
+🎯 You want one commit reviewed, not the whole branch.
+
+Type the target after the command:
+
+`/code-review abc1234^..abc1234`
+
+That's a single commit. The same slot takes a range, a branch comparison, a directory or a PR number:
+
+`/code-review HEAD~15..HEAD`
+`/code-review main...my-feature`
+`/code-review src/auth`
+`/code-review 1234`
+
+With no target, it reviews your commits ahead of upstream plus whatever's uncommitted, and compares against `main` when there's no upstream.
+
+The single-commit form is the one people miss. It's how you get a second look at the hotfix that went in last night without dragging the rest of the branch into the review.
+
+Source: code.claude.com/docs/en/code-review-local
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
