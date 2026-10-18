@@ -50,6 +50,9 @@ jobs:
         run: python3 publish.py
 
       - name: Check buffer depth
+        # always(): publish.py exits 1 when any single post fails, and the
+        # queue alarm must not go quiet just because one send hit a 429.
+        if: always()
         env:
           ALERT_BOT_TOKEN: ${{ secrets.ALERT_BOT_TOKEN }}
           # A secret, not a variable: this repo went public on 20.9.2026 and
@@ -60,6 +63,11 @@ jobs:
         run: python3 buffer_check.py
 
       - name: Commit what was published
+        # always(): publish.py exits 1 if any post failed (a network blip, or an
+        # em-dash file that fails on every run), even when other posts in the
+        # same run went out. Without this the moves to published/ and the log
+        # rows were thrown away, so those posts were sent again 10 min later.
+        if: always()
         run: |
           if [ -z "$(git status --porcelain)" ]; then
             echo "nothing to commit"
