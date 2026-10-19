@@ -1,0 +1,18 @@
+💰 Read `usage` on your SDK agent's result and you'll undercount the moment it spawns a subagent.
+
+That field only counts the top-level loop. Tokens burned inside subagents never land in it.
+
+Two fields on the same result message do include them: `total_cost_usd`, and the per-model breakdown:
+
+`message.modelUsage`
+
+It's `model_usage` in Python. It also shows where the tokens went, so a Haiku subagent and an Opus main loop come out as separate rows.
+
+The dollar figure is a client-side estimate from a bundled price table. Fine for budgeting, wrong for invoicing.
+
+If you log cost per run, log `modelUsage`. It's the only one that sees the whole tree.
+
+Source: code.claude.com/docs/en/agent-sdk/cost-tracking
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
