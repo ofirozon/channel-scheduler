@@ -1,0 +1,16 @@
+🔔 Your migration runs in another terminal, and you keep tabbing over to check it.
+
+Stay where you are and ask the session you're in:
+
+`Tell me when the migration session finishes what it's working on`
+
+Claude subscribes to that session and gets one notice when it next goes idle or exits. The notice can include when its turn ended and a one-line status. Subscribing on its own starts no turn and spends no tokens in the session you're watching.
+
+Both sessions have to be on this machine, on v2.1.236 or later. If no notice comes within 12 hours, Claude Code drops the subscription and tells Claude.
+
+You get told when it's done instead of checking.
+
+Source: code.claude.com/docs/en/cross-session-messaging
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
