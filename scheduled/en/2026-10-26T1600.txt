@@ -1,0 +1,16 @@
+⏳ A CI run that waits forever isn't reliable. It's just quietly stuck.
+
+`CLAUDE_CODE_RETRY_WATCHDOG=1` makes an unattended job retry 429 and 529 capacity errors with no limit. That's what you want overnight, right up until the outage outlasts your runner.
+
+Put a ceiling on it, in milliseconds:
+
+`CLAUDE_CODE_RETRY_WATCHDOG_MAX_WAIT_MS=1800000`
+
+That's 30 minutes per request. Once it's spent, the next 429 or 529 ends the request, so the job fails on the API error instead of sitting there until the runner kills it. Needs v2.1.295 or later.
+
+I'd set it a bit under your job timeout, so the failure that lands in the log is the one that says why.
+
+Source: code.claude.com/docs/en/errors#tune-retry-behavior
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
