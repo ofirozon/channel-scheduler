@@ -1,0 +1,14 @@
+🌿 Switched branches inside a `--worktree` session? Update before you exit.
+
+On exit, Claude Code checks the worktree for changes and new commits, and asks before removing one that has work in it. Until v2.1.304 it skipped that question when HEAD was detached or on another branch. It just removed the worktree and its branch, and commits could go with them.
+
+`claude update`
+
+The other surprise is by design. A clean worktree from an unnamed session is deleted at exit, branch included. Run `/rename fix-login` once and you'll get asked first.
+
+Cheap insurance for the session you meant to come back to.
+
+Source: Claude Code v2.1.304 changelog, code.claude.com/docs/en/worktrees
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
