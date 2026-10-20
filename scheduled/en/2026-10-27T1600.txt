@@ -1,0 +1,14 @@
+🧊 Yesterday's long conversation is the expensive one to pick back up.
+
+The prompt cache expires after a gap, five minutes or an hour depending on the TTL. Resume after that and the first request recomputes the whole conversation.
+
+Since v2.1.304, Pro and Max plans warn you when a resume would take a noticeable share of your 5-hour limit. You get two choices: resume anyway, or start a new conversation.
+
+Most of the time, start new. Claude can look up the old conversation when you refer to it, so you don't lose the thread.
+
+You keep the context you need without paying to reload all of it.
+
+Source: Claude Code v2.1.304 changelog, code.claude.com/docs/en/prompt-caching
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
