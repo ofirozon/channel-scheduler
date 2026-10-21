@@ -1,0 +1,16 @@
+🧷 Half your prompt is a pasted JSON blob you no longer want.
+
+In vim mode, press `Esc`, put the cursor on its opening `{` and type:
+
+`d%`
+
+That deletes through the matching `}`, nested braces and all. `c%` does the same and drops you into INSERT, and `y%` yanks it instead. Plain `%` just jumps between the pair. If the cursor isn't on a bracket, it starts from the next one on the line.
+
+It works on `()` and `[]` too. You need v2.1.301 or later, and vim mode switched on in `/config` under Editor mode.
+
+Beats holding `x` and counting.
+
+Source: code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
