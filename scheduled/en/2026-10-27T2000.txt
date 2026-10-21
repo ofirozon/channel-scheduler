@@ -1,14 +1,14 @@
 🧾 The usage tips you keep reading and ignoring now take one key.
 
-Run `/usage` on a Pro, Max, Team or Enterprise plan and the breakdown lists recommendations, one per row:
+On a Claude plan, `/usage` lists recommendations, one per row:
 
 `25%  Trim ~/code/api/CLAUDE.md · 49k tokens per request`
 
-Since v2.1.305 the footer can show a hint like `f to fix 2 of 3`. Press `f`. A row ending in an `/effort` command gets run for you. For the other rows it can handle, Claude gets one prompt and shows you each change before making it. A row ending in `run /compact` is still yours to type.
+Since v2.1.305 the footer can show a hint like `f to fix 2 of 3`. Press `f`. Rows ending in an `/effort` command get run for you. For the others it can handle, Claude gets one prompt and shows you each change before making it. `run /compact` rows stay yours to type.
 
-No hint at all? Remote Control is connected. Disconnect it and reopen `/usage`.
+No hint? Remote Control is connected. Disconnect, then reopen `/usage`.
 
-It's the shortest path from reading the advice to taking it.
+Shortest path I know from reading the advice to taking it.
 
 Source: Claude Code v2.1.305 changelog, code.claude.com/docs/en/costs
 
