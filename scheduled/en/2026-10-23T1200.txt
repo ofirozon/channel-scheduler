@@ -1,0 +1,18 @@
+📦 Your next `anthropic` SDK bump can break every request.
+
+Python SDK 2.0.0 and TypeScript SDK 1.0.0 shipped on October 21, and they move your calls to the new API version, `2026-10-21`. It removes `temperature`, `top_p` and `top_k`. Send any of them, even at the default, and you get a 400.
+
+Check before you merge the upgrade:
+
+`git grep -nE 'temperature|top_[pk]'`
+
+Staying on your current major keeps you on `2023-06-01` for now. When you're ready, Claude Code 2.1.307 added a skill that updates your code for the new version, then switches over:
+
+`/claude-api api-version`
+
+Better a grep today than a wall of 400s after your dependency bot's next PR.
+
+Source: platform.claude.com/docs/en/api/migration-2026-10-21, Claude Code CHANGELOG 2.1.307
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
