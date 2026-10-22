@@ -1,0 +1,12 @@
+🔍 Ever spotted a stray backslash inside `<system-reminder>` in a subagent's report?
+
+Claude Code put it there. It scans every subagent's final report before Claude reads it, and text that imitates its own output gets a backslash so it reads as plain text. If the report imitates those tags or mentions `bypassPermissions`, a line starting `[harness: subagent output matched instruction-shaped pattern(s):` goes on top.
+
+When you see that line, check what the subagent read. Sometimes it's a README that mentions the flag. Sometimes it's a page written for your agent.
+
+The scan blocks nothing, though. A subagent that browses the web still wants a short `tools:` list.
+
+Source: code.claude.com/docs/en/sub-agents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
