@@ -1,0 +1,16 @@
+🛑 You subscribed one PR to Code Review on every push. Now every fixup commit gets reviewed too.
+
+If your org runs Claude's Code Review on GitHub, open a new top-level PR comment with:
+
+`@claude review stop`
+
+That ends the subscription `@claude review always` started. A review that's already running keeps going. Put the command on the first line, and spell it right: a typo in `stop` reads as a plain `@claude review`, which starts one more.
+
+In a repo set to review after every push, a comment can't stop it. Mark the PR as a draft instead.
+
+WIP pushes stop paying for reviews nobody reads.
+
+Source: code.claude.com/docs/en/code-review-pull-requests, Claude Code CHANGELOG v2.1.307
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
