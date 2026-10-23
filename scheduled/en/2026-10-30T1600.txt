@@ -1,0 +1,18 @@
+🚧 Claude in CI won't run `npm test`. The allow rule is right there in the repo.
+
+Allow rules in a project's `.claude/settings.json` only apply once someone accepts the workspace trust dialog for that folder. `claude -p` never shows that dialog, so CI skips them, with one stderr line:
+
+`Ignoring 1 permissions.allow entries from .claude/settings.json: this workspace has not been trusted.`
+
+The full message prints the exact key to set in the runner's `~/.claude.json`:
+
+`"projects": { "/path/to/repo": { "hasTrustDialogAccepted": true } }`
+
+Deny and ask rules apply either way, so this only switches on what your team already allowed.
+
+I'd grep your CI logs for `has not been trusted` first.
+
+Source: code.claude.com/docs/en/permissions, code.claude.com/docs/en/errors
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
