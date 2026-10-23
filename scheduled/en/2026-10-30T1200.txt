@@ -1,0 +1,18 @@
+📊 Your OTel cost dashboard says `custom` is the big spender. That's probably your own subagent, renamed.
+
+Claude Code redacts names on its cost and token counters by default. Your own agents and MCP servers come through as `"custom"`, third-party plugin skills as `"third-party"`. Ask which agent eats the budget and every row says the same word.
+
+Next to `CLAUDE_CODE_ENABLE_TELEMETRY=1`, set:
+
+`OTEL_LOG_TOOL_DETAILS=1`
+
+On v2.1.273 or later, the counters then carry the real names.
+
+It's not only names. The same flag sends full Bash commands and tool input to your collector, so check what it stores before a team-wide rollout.
+
+Then the expensive agent finally has a name.
+
+Source: code.claude.com/docs/en/monitoring-usage
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
