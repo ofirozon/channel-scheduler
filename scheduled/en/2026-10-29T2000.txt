@@ -1,0 +1,16 @@
+📏 40,000 characters. Past that, Claude only sees the top of your `src/` CLAUDE.md.
+
+Since v2.1.309, a CLAUDE.md in a subdirectory, the files it imports with `@path`, and path-scoped rules each get a size cap when they load on demand. Claude gets the start of the file and a note telling it to Read the rest. Until it does, the rest is out of its context.
+
+The cap is 40,000 characters on a 200K context window, 150,000 on 1M with recent models. Check yours:
+
+`wc -m packages/api/CLAUDE.md`
+
+Over it? Move the tail into `.claude/rules/` files, each with its own cap.
+
+Put the rule you'd hate to lose at the top.
+
+Source: code.claude.com/docs/en/memory, Claude Code CHANGELOG v2.1.309
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
