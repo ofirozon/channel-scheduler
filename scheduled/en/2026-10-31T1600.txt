@@ -1,0 +1,16 @@
+📌 You froze the team on one Claude Code version with `DISABLE_AUTOUPDATER=1`. Anyone can still run `claude update`.
+
+That variable only stops the background check. `claude update` and `claude install` work as before, so one curious teammate is off your version in ten seconds.
+
+If the version really has to hold, set the stricter one:
+
+`DISABLE_UPDATES=1`
+
+It blocks every update path, manual ones included. Put it in the `env` key of the settings file you hand out, and ship new versions with your own tooling.
+
+Pick the variable by who you're stopping: the updater, or the people.
+
+Source: code.claude.com/docs/en/setup, code.claude.com/docs/en/env-vars
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
