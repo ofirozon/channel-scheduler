@@ -1,0 +1,19 @@
+🧩 Two repos, two `verify` skills. Before v2.1.309, you couldn't reach the second one.
+
+Say you work in your app and pull in the CLI repo:
+
+`claude --add-dir ../cli`
+
+Now the clashing skill from the added folder gets a prefix instead of going dark. Your project keeps the short name:
+
+`/verify` runs the app's
+`/cli:verify` runs the one from `../cli`
+
+The prefix is the added folder's name, and the `/` menu lists it, so there's nothing to guess. Add two folders that both ship a `verify` and the first one you added keeps the short name.
+
+You can stop renaming everything `verify-cli` just to dodge a collision.
+
+Source: code.claude.com/docs/en/skills, Claude Code CHANGELOG v2.1.309
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
