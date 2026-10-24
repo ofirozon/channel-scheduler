@@ -1,0 +1,16 @@
+🗄️ That session from five weeks ago isn't in `/resume`. Claude Code deleted it, and it didn't tell you.
+
+Transcripts are kept 30 days by default. A background sweep after a session starts removes anything older, quietly, and plan files, file-history snapshots and debug logs go with them.
+
+Want longer? In `~/.claude/settings.json`:
+
+`"cleanupPeriodDays": 365`
+
+`0` doesn't mean forever. It fails validation, so pick a big number. If you go really big, be on v2.1.310 or later: before that, a huge value could make the sweep delete recent files like pasted images.
+
+A year costs some disk and keeps the session you'll want to dig up in March.
+
+Source: code.claude.com/docs/en/settings-reference, Claude Code CHANGELOG v2.1.310
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
