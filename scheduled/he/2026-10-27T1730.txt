@@ -1,0 +1,14 @@
+📂 ב-22 באוקטובר 2026 הודיעה Anthropic שהיא מעבירה את Agent Skills לקרן Agentic AI Foundation, שפועלת תחת Linux Foundation.
+
+Skill הוא תיקייה עם קובץ SKILL.md שמלמדת סוכן AI משימה או תחום, לפעמים יחד עם סקריפטים וחומרי עזר. Anthropic פיתחה את הפורמט תוך כדי בניית Claude Code, ולפי החברה יותר מ-70 פלטפורמות כבר תומכות בו, ביניהן ChatGPT, Cursor, GitHub Copilot ו-VS Code.
+
+מה עובר לקרן: השם, הלוגו, ארגון ה-GitHub והדומיין agentskills.io. מהנדסים מ-Anthropic, Google, OpenAI ועוד יתחזקו את התקן. זו אותה קרן שקיבלה לפני כן את MCP.
+
+למה זה חשוב לכם: Skill שאתם כותבים ל-Claude Code בנוי על תקן פתוח שנתמך בעשרות כלים, ומעכשיו הוא לא בבעלות של חברה אחת.
+
+מקור: anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation
+
+מכירים מישהו שזה יחסוך לו זמן? שלחו לו את הפוסט.
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew · instagram.com/ai_il_core
