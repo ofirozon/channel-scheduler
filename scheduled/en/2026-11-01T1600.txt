@@ -1,0 +1,20 @@
+🔇 Your test script has no idea Claude is the one running it. It can.
+
+When Claude Code runs a command through its Bash tool, a hook or a status line, it sets `CLAUDE_CODE_CHILD_SESSION=1` in that process. So a script can go quiet just for Claude:
+
+```
+if [ -n "$CLAUDE_CODE_CHILD_SESSION" ]; then
+  pytest -q
+else
+  pytest
+fi
+```
+
+There's an older variable, `CLAUDECODE`, and I'd skip it. VS Code and other IDE extensions set it in their integrated terminals too, so your own runs there would go quiet as well. The child-session one needs v2.1.172 or later.
+
+Shorter output for Claude to read, the full version for you.
+
+Source: code.claude.com/docs/en/env-vars, code.claude.com/docs/en/plugins/cli-hints
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
