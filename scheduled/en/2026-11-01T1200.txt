@@ -1,0 +1,32 @@
+📟 Five minutes, and your 5-hour usage limit sits on screen while you work.
+
+`/statusline` can write this for you, but building it once by hand shows you what's going on. macOS or Linux:
+
+1. Install `jq`, the script parses JSON with it.
+
+2. Save this as `~/.claude/statusline.sh`:
+```
+#!/bin/bash
+input=$(cat)
+M=$(echo "$input" | jq -r '.model.display_name')
+C=$(echo "$input" | jq -r '.context_window.used_percentage // 0' | cut -d. -f1)
+L=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty' | cut -d. -f1)
+echo "[$M] ${C}% context${L:+ | 5h ${L}%}"
+```
+
+3. `chmod +x ~/.claude/statusline.sh`
+
+4. Test it without Claude:
+`echo '{"model":{"display_name":"Opus"},"context_window":{"used_percentage":25}}' | ~/.claude/statusline.sh`
+You should see `[Opus] 25% context`.
+
+5. Add to `~/.claude/settings.json`:
+`"statusLine": {"type": "command", "command": "~/.claude/statusline.sh"}`
+It appears as soon as you save.
+
+The 5h number only shows on Pro and Max, after Claude's first reply, so the script just skips it until then. It runs locally and costs no tokens, and you stop finding out about the limit when you hit it.
+
+Source: code.claude.com/docs/en/statusline
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
