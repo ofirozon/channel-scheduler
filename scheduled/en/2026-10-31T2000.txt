@@ -1,0 +1,16 @@
+👀 You don't need a second terminal to watch your dev server's log.
+
+Ask Claude:
+
+`Tail logs/dev.log and tell me when an error shows up`
+
+That's the Monitor tool. Claude writes a small script, runs it in the background and gets each new line as it lands, so it can interject while you keep working. Same idea for a CI job, a folder or a WebSocket feed. On Bedrock, Vertex or Foundry it needs v2.1.310 or later.
+
+The surprise is the clock. A watch ends after 5 minutes by default, 30 at most, and Claude gets one notice when it does. Want it watching all afternoon? Say so, and it can start the watch again.
+
+One less window to babysit.
+
+Source: code.claude.com/docs/en/tools-reference#monitor-tool, Claude Code CHANGELOG v2.1.310
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
