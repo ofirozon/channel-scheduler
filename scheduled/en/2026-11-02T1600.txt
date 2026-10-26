@@ -1,0 +1,18 @@
+🔁 `Autocompact is thrashing` sounds like compaction broke. It didn't.
+
+The summary worked, then one file or tool output filled the window back up, again and again. So Claude Code stopped retrying rather than burn API calls on a loop.
+
+I'd compact with a focus that drops the big thing:
+
+`/compact keep only the plan and the diff`
+
+Then ask for that file in pieces, a line range or one function, or hand it to a subagent with its own context window.
+
+Back after `/clear`? Run `/context`. If the other rows add up to more than `Messages`, it's your startup load, not the file.
+
+Beats watching it compact in circles.
+
+Source: code.claude.com/docs/en/troubleshooting
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
