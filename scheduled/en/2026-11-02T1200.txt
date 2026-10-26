@@ -1,0 +1,16 @@
+📦 A teammate sends you `/plugin install deploy-helper@acme-tools`. You get `Marketplace "acme-tools" not found`.
+
+The line names a marketplace but not where it lives, and Claude Code has no index to look the name up in. Ask them for the source: a GitHub `owner/repo`, a git URL or a path.
+
+Then add and install in one go, from a session on v2.1.275 or later:
+
+`/plugin install deploy-helper --marketplace acme/tools`
+
+Plugin name alone, no `@` suffix. Claude Code shows the source it resolved and asks before adding it. It's third-party code, so look at the plugin before you say yes.
+
+Next time, send the `--marketplace` line and they skip the error.
+
+Source: code.claude.com/docs/en/plugins/troubleshooting, code.claude.com/docs/en/plugins/install
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
