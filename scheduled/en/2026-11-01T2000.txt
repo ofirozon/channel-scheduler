@@ -1,0 +1,18 @@
+🗂️ Claude Code reads MCP servers from two files. `~/.claude/mcp.json` isn't one.
+
+It's `~/.claude.json` for your own servers and `.mcp.json` in the project root for shared ones. Not `~/.claude/mcp.json`, not `~/.claude/config/mcp.json`. Put a server there and `/mcp` says none are configured.
+
+For a personal server, let the CLI write the entry:
+
+`claude mcp add --scope user --transport http docs https://code.claude.com/docs/mcp`
+
+It lands under `mcpServers` in `~/.claude.json` and shows up in every project.
+
+Writing `.mcp.json` by hand? Run `claude mcp list` afterwards. A malformed entry gets skipped while the rest load, and that's where the warning naming the bad field shows up.
+
+Two files. Anything else is a note to yourself.
+
+Source: code.claude.com/docs/en/mcp-quickstart
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
