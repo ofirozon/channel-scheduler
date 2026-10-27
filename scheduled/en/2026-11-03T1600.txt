@@ -1,0 +1,22 @@
+🔗 Claude prints `PROJ-1234` and you copy it into the browser. It could just be a link.
+
+In your user `~/.claude/settings.json` (project settings don't take this key):
+
+```
+"footerLinksRegexes": [{
+  "type": "regex",
+  "pattern": "\\b(?<key>PROJ-\\d+)\\b",
+  "url": "https://issues.example.com/browse/{key}"
+}]
+```
+
+Now every `PROJ-1234` in a tool result or in Claude's reply becomes a clickable badge below the input box. The named group fills `{key}`, and up to five badges show at once.
+
+Mind the regex. It runs on the main thread after every turn, so a nested quantifier like `(a+)+` can freeze the session. Keep it linear.
+
+Ticket numbers stop being something you retype.
+
+Source: code.claude.com/docs/en/settings-reference#footerlinksregexes
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
