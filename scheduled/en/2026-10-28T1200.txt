@@ -1,0 +1,14 @@
+⏱️ Your test suite takes four minutes. Claude's default Bash timeout is two.
+
+Claude Code doesn't kill the run at two. It moves the command to the background, the output keeps going to a file, and the suite finishes.
+
+What v2.1.311 changed is what Claude gets back at that moment. Until now it was a note with a task ID and an output file path. Now the result carries the output so far and says the command is still running in the background.
+
+So the three tests that failed in minute one are already in front of Claude while the rest run.
+
+`claude update` gets you there.
+
+Source: Claude Code CHANGELOG v2.1.311, code.claude.com/docs/en/tools-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
