@@ -1,0 +1,16 @@
+🔬 Want ultrareview findings in your CI log? `claude -p` is the wrong door.
+
+`claude -p '/code-review ultra'` starts the cloud review and exits without waiting, so the findings never reach the job. This one waits:
+
+`claude ultrareview 1234 --trust-workspace`
+
+Findings go to stdout, progress to stderr, and it exits 0 once the review completes, findings or not. Failure or timeout is 1, and the default wait is 45 minutes.
+
+CI can't answer the trust prompt, and without the flag the run dies on `Error: Workspace not trusted`. The flag needs v2.1.309 or later. Only pass it on code you'd trust.
+
+Your pipeline gets the findings, not a launch receipt.
+
+Source: code.claude.com/docs/en/ultrareview
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
