@@ -8,7 +8,7 @@ Drop both from `settings.json`:
 
 Just for one session? Launch with `CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS=1`, which beats the setting.
 
-The snapshot goes too, so Claude starts without knowing your branch and has to run `git status` to find out. If your skill already does that, you lose nothing.
+The snapshot goes too, so Claude starts without knowing your branch and has to run `git status` to find out.
 
 One set of commit rules, and it's yours.
 
