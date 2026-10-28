@@ -1,0 +1,18 @@
+🧹 Your commit skill has its own rules. Claude Code's built-in ones are still loaded.
+
+Every session starts with two pieces of git context: the default instructions for writing commits and PRs, and a snapshot of your repo with the branch, the main branch, `git status` and recent commits. Two sets of commit rules in one context is one too many.
+
+Drop both from `settings.json`:
+
+`"includeGitInstructions": false`
+
+Just for one session? Launch with `CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS=1`, which beats the setting.
+
+The snapshot goes too, so Claude starts without knowing your branch and has to run `git status` to find out. If your skill already does that, you lose nothing.
+
+One set of commit rules, and it's yours.
+
+Source: code.claude.com/docs/en/settings-reference#includegitinstructions
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
