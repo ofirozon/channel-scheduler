@@ -1,0 +1,16 @@
+🖥️ Full-screen terminal on a wide monitor, and Claude's paragraphs run 200 characters across.
+
+You can cap them. In `~/.claude/settings.json`:
+
+`"maxProseWidth": 80`
+
+Paragraphs, headings, lists and quotes now wrap at 80 columns. Tables and code blocks still get the whole terminal, so a wide diff or a long log line doesn't get chopped. That split is the part I like: readable text, and the stuff that needs the width keeps it.
+
+The value is a whole number of columns, 40 or more. Claude Code ignores anything else, so if nothing changed, check the number. Needs v2.1.282 or later.
+
+Your eyes stop making the long trip back to the left margin.
+
+Source: code.claude.com/docs/en/settings-reference#maxprosewidth
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
