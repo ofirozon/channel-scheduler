@@ -1,0 +1,16 @@
+🏷️ If your Bedrock model ID is an inference profile ARN, Claude Code now sends it the shorter system prompt.
+
+Since v2.1.312, model names it doesn't recognize on Bedrock, Vertex, Foundry and Mantle get the short version, custom deployment names included. That holds even when the model behind the name is a Sonnet or Haiku that would normally get the full one.
+
+Nothing gets switched off. Tools, hooks, MCP servers and CLAUDE.md all still load. What shrinks is the tool descriptions.
+
+Want the full prompt back? Set this in the `env` key of the settings file your team shares:
+
+`CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT=0`
+
+Same model, and the prompt it got before you updated.
+
+Source: Claude Code CHANGELOG v2.1.312, code.claude.com/docs/en/env-vars
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
