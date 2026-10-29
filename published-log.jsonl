@@ -403,3 +403,4 @@
 {"channel": "he", "slot_utc": "2026-10-28T17:30:00+00:00", "sent_utc": "2026-10-28T17:34:19.976450+00:00", "late_hours": 0.07, "message_id": 418, "file": "2026-10-28T1730.txt"}
 {"channel": "en", "slot_utc": "2026-10-28T20:00:00+00:00", "sent_utc": "2026-10-28T20:04:23.669347+00:00", "late_hours": 0.07, "message_id": 245, "file": "2026-10-28T2000.txt"}
 {"channel": "he", "slot_utc": "2026-10-29T06:00:00+00:00", "sent_utc": "2026-10-29T06:04:22.219268+00:00", "late_hours": 0.07, "message_id": 419, "file": "2026-10-29T0600.txt"}
+{"channel": "he", "slot_utc": "2026-10-29T10:00:00+00:00", "sent_utc": "2026-10-29T10:04:25.215184+00:00", "late_hours": 0.07, "message_id": 420, "file": "2026-10-29T1000.txt"}
