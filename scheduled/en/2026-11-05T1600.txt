@@ -1,0 +1,18 @@
+🔕 You've approved `git log` a dozen times this week. Claude can look back and stop asking.
+
+In the project, run:
+
+`/fewer-permission-prompts`
+
+It reads your recent transcripts, picks out the read-only Bash and MCP calls you keep saying yes to, and proposes a prioritized allowlist for `.claude/settings.json`.
+
+That's the project file, usually the one your team commits. Read what it adds before you push, and cut anything you wouldn't want auto-approved on someone else's machine.
+
+It only looks at read-only calls, so I'd try it before switching to a looser permission mode.
+
+The prompts you keep are the ones worth reading.
+
+Source: code.claude.com/docs/en/commands, code.claude.com/docs/en/best-practices
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
