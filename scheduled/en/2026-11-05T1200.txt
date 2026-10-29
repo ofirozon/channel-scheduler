@@ -1,0 +1,25 @@
+🎒 A plugin doesn't need any code. A name and a list of dependencies is enough.
+
+That's how you give a new teammate your whole plugin set in one install. Publish this as `.claude-plugin/plugin.json` in your team's marketplace:
+
+```
+{
+  "name": "backend-standard",
+  "version": "1.0.0",
+  "dependencies": [
+    "deploy-kit",
+    { "name": "db-migrate", "version": "^3.0" }
+  ]
+}
+```
+
+Installing `backend-standard` installs everything on the list. The `^3.0` keeps `db-migrate` on 3.x, as long as its maintainer tags releases.
+
+Watch the marketplace, though. By default, every dependency has to come from the same one as the bundle.
+
+One install line in the onboarding doc, instead of a list.
+
+Source: code.claude.com/docs/en/plugins/dependencies
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
