@@ -1,0 +1,16 @@
+🎓 Let Claude write all of it, and in six months you can't explain your own code.
+
+The Learning output style splits the work. Claude writes the routine parts, and when it hits a real design call, like error handling or business logic with more than one right answer, it leaves a `TODO(human)` in the file and stops.
+
+`/output-style Learning`
+
+You get a short note: what's built, what to write, what to weigh. Write those lines, tell Claude you're done, and it comments on your code and carries on.
+
+Setting it in a file instead? `"outputStyle": "Learning"` works. Lowercase `learning` gives you the default style.
+
+The task still ships, and the hard ten lines are yours.
+
+Source: code.claude.com/docs/en/output-styles
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
