@@ -1,0 +1,19 @@
+🟢 A green CI step that printed nothing is the worst kind of green.
+
+Until v2.1.314, that's what `claude -p` gave you when it failed to start: no output, exit code 0. The job carried on. Now it prints the error and exits 1, so a plain `set -e` catches it.
+
+Still pinned to an older version in CI? Guard it yourself:
+
+```
+out=$(claude -p "$PROMPT")
+[ -n "$out" ] || { echo "claude printed nothing"; exit 1; }
+```
+
+I'd keep that check after upgrading too. It also catches a run that started fine and still came back empty.
+
+A failed run should look failed.
+
+Source: Claude Code CHANGELOG v2.1.314
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
