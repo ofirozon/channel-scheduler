@@ -1,0 +1,16 @@
+✂️ Renaming a call across 200 files isn't one job. It's twenty small ones that don't overlap.
+
+That's what `/batch` is for. In a git repo:
+
+`/batch migrate src/ from JavaScript to TypeScript`
+
+Claude researches the codebase, splits the change into 5 to 30 independent units and shows you the plan. Nothing runs until you approve it. Then each unit gets a background subagent in its own worktree that implements it, runs the tests and publishes the change.
+
+Read that plan. If two units edit the same file, they weren't independent, and that's what to fix before you say yes.
+
+Twenty small diffs to review, not one you'd never finish.
+
+Source: code.claude.com/docs/en/commands, code.claude.com/docs/en/agents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
