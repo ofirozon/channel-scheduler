@@ -1,0 +1,22 @@
+🧱 Bypass mode skips every prompt. Since v2.1.314, one setting still decides where Claude's file tools can write.
+
+```
+{
+  "permissions": {
+    "blockWritesOutsideWorkingDirectories": true
+  }
+}
+```
+
+With it on, Write, Edit and NotebookEdit refuse any path outside your working directories, in every permission mode, `bypassPermissions` included. Need a sibling repo too? `--add-dir ../other`.
+
+It's the write twin of `blockReadsOutsideWorkingDirectories`, and for unattended runs the two belong together.
+
+It doesn't fence the shell. A `sed -i` through Bash isn't one of those three tools, so that part is still the sandbox's job.
+
+Your file tools stay inside the repo, whatever mode you're in.
+
+Source: Claude Code CHANGELOG v2.1.314, code.claude.com/docs/en/settings-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
