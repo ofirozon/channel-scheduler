@@ -1,0 +1,18 @@
+⏳ Running fast mode on Opus 4.8? It has an end date now: November 30, 2026.
+
+It was deprecated on October 30. After the 30th, a fast mode request on Opus 4.8 doesn't quietly drop to standard speed. It errors.
+
+Check which model you're on with `/status`. If it says 4.8, open
+
+`/model`
+
+and pick Opus 5.5. If your saved preference is on, fast mode comes back by itself. If not, `/fast`.
+
+You won't pay more for the move, either. Fast mode on Opus 5.5 is $8/$40 per million input/output tokens, against $10/$50 on 4.8.
+
+Five minutes now beats a session that errors out on December 1.
+
+Source: Claude Code CHANGELOG v2.1.316, code.claude.com/docs/en/fast-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
