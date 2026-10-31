@@ -1,0 +1,18 @@
+🛡️ `/security-review` only reads what you're about to push, not the whole repo.
+
+It diffs your branch against origin's default and checks those changes for injection, auth holes and data exposure. Run it before you open the PR:
+
+`/security-review`
+
+On a single-branch clone, or a repo that got its remote after `git init`, the first run can stop at `fatal: ambiguous argument 'origin/HEAD...'`. Nothing's broken. Your clone never recorded origin's default branch:
+
+`git fetch origin && git remote set-head origin --auto`
+
+If that can't work out the default, name it: `git remote set-head origin main`.
+
+Your changes get a security pass before a reviewer finds the problem.
+
+Source: code.claude.com/docs/en/commands, code.claude.com/docs/en/errors
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
