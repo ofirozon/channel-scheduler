@@ -1,0 +1,16 @@
+🎚️ Your session runs at `xhigh`. So does every subagent it sends off to search the repo.
+
+Subagents inherit the session's effort by default. Since v2.1.316 they can have their own:
+
+`export CLAUDE_CODE_SUBAGENT_EFFORT=medium`
+
+Shell profile or the `env` block in `settings.json` both work. The conversation you're in keeps `xhigh` for the hard reasoning, and the helpers stop thinking that hard about where a function lives.
+
+It only fills the gap. A subagent with `effort:` in its frontmatter keeps that level, and so does one Claude launches with an explicit effort for that run.
+
+Save the deep thinking for the work you're actually watching.
+
+Source: Claude Code CHANGELOG v2.1.316, code.claude.com/docs/en/subagents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
