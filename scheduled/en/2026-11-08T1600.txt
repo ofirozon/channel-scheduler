@@ -1,0 +1,16 @@
+⏰ Hit your usage limit halfway through a refactor at 11pm? Don't close the terminal.
+
+On a claude.ai subscription, Claude Code waits in the open session and picks the task back up once the limit resets. The bottom of the screen says when:
+
+`Continuing automatically at 3:45pm · Esc to cancel`
+
+It's on by default. Exiting, `/clear` or `/resume` ends the wait, and so does typing a new prompt. It still asks for permissions too, so one approval can park it until you're back.
+
+If you want nothing running unattended, turn off Continue automatically at usage limit in `/config`.
+
+Otherwise leave it open, and the refactor's further along by morning.
+
+Source: code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
