@@ -420,3 +420,4 @@
 {"channel": "en", "slot_utc": "2026-10-31T16:00:00+00:00", "sent_utc": "2026-10-31T16:04:09.852831+00:00", "late_hours": 0.07, "message_id": 253, "file": "2026-10-31T1600.txt"}
 {"channel": "he", "slot_utc": "2026-10-31T17:30:00+00:00", "sent_utc": "2026-10-31T17:34:18.572667+00:00", "late_hours": 0.07, "message_id": 427, "file": "2026-10-31T1730.txt"}
 {"channel": "en", "slot_utc": "2026-10-31T20:00:00+00:00", "sent_utc": "2026-10-31T20:04:16.624588+00:00", "late_hours": 0.07, "message_id": 254, "file": "2026-10-31T2000.txt"}
+{"channel": "he", "slot_utc": "2026-11-01T06:00:00+00:00", "sent_utc": "2026-11-01T06:15:18.114516+00:00", "late_hours": 0.26, "message_id": 428, "file": "2026-11-01T0600.txt"}
