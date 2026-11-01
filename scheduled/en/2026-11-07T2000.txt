@@ -1,0 +1,14 @@
+🧭 A new teammate's first week mostly goes on asking how you set Claude Code up.
+
+You can hand them the answer instead. Open the project you know best and run:
+
+`/team-onboarding`
+
+Claude looks at your last 30 days there, the sessions, commands and MCP servers you actually lean on, and writes a markdown guide. Your teammate pastes it as their first message and starts from your setup, not the defaults. On Team and Enterprise plans you also get a share link they can open straight in Claude Code.
+
+Pick a project with real history behind it. The guide is only as good as what you've actually done there.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
