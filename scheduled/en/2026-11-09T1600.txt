@@ -1,0 +1,21 @@
+📣 The team convention someone posted in Slack in March is three hundred messages up by now.
+
+Put it where people actually look. In the project's `.claude/settings.json`:
+
+```
+"companyAnnouncements": [
+  "Run make check before asking Claude to commit",
+  "Agents get the staging DB read-only, ask in #infra"
+]
+```
+
+Every Claude Code session in that repo starts by showing one of them, picked at random. On someone's very first launch it's always the first entry, so lead with the one a new hire needs.
+
+Keep the list short. With five entries rotating, each one shows up about one session in five.
+
+The reminder lands in the terminal, right where the work happens.
+
+Source: code.claude.com/docs/en/settings-reference#companyannouncements
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
