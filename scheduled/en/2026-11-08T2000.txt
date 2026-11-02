@@ -1,0 +1,27 @@
+🗂️ Your monorepo probably has a file index already. Claude Code's `@` picker doesn't use it.
+
+It can. Point it at your own command in `settings.json`:
+
+```
+"fileSuggestion": {
+  "type": "command",
+  "command": "~/.claude/file-suggestion.sh"
+}
+```
+
+The script gets JSON on stdin with what you've typed after `@`, and prints matching paths, one per line. Claude Code shows up to 15. The simplest index is git itself:
+
+```
+#!/bin/bash
+q=$(jq -r '.query')
+cd "$CLAUDE_PROJECT_DIR" && git ls-files | grep -iF -- "$q" | head -15
+```
+
+`chmod +x` it, and keep it fast. After five seconds Claude Code stops waiting, and you get no suggestions at all.
+
+Now `@` only offers files your repo actually tracks.
+
+Source: code.claude.com/docs/en/settings-reference#filesuggestion
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
