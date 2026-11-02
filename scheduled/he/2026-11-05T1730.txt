@@ -1,0 +1,16 @@
+🚧 נותנים לקלוד לעבוד לבד, וחוששים שיערוך קובץ מחוץ לפרויקט?
+
+מגרסה 2.1.314 יש ב-Claude Code הגדרה שעוצרת את זה בכל מצב הרשאות, כולל bypassPermissions. מוסיפים לקובץ settings.json:
+
+"permissions": { "blockWritesOutsideWorkingDirectories": true }
+
+מעכשיו הכלים Write, Edit ו-NotebookEdit מסרבים לכתוב מחוץ לתיקיות העבודה. צריכים תיקייה אחת נוספת? מוסיפים אותה עם /add-dir והנתיב שלה.
+
+שני סייגים מהתיעוד: ההגדרה לא מגבילה פקודות טרמינל, כלים של MCP או הוקים (לזה יש sandboxing), והיא מסירה את הכלים EnterWorktree ו-ExitWorktree.
+
+למה זה שווה את הזמן שלכם: שורה אחת, וקבצי ההגדרות בתיקיית הבית כבר לא בטווח של כלי העריכה של קלוד.
+
+מקור: התיעוד הרשמי, code.claude.com/docs/en/settings-reference
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew
