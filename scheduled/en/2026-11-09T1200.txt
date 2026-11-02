@@ -1,0 +1,16 @@
+📝 Claude writes a long reply, you hit `Ctrl+G` to answer in your editor, and the reply you're answering is gone from view.
+
+Turn on Show last response in external editor in `/config`. Or set it in `~/.claude.json`:
+
+`"externalEditorContext": true`
+
+Now the editor opens with Claude's last response at the top as `#` comment lines, and you write under the marker. Claude Code strips the comments when you save, so only your text gets sent. A long response keeps its last 50 lines.
+
+Put the key in `settings.json` and nothing happens. Claude Code ignores it there, and that's the mistake I'd expect most people to make.
+
+Answering point three no longer means remembering what point three said.
+
+Source: code.claude.com/docs/en/settings-reference#externaleditorcontext
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
