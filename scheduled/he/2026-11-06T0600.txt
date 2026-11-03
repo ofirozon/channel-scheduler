@@ -1,0 +1,20 @@
+⌨️ במק, Option+P ב-Claude Code לא עושה כלום? הטרמינל בולע את המקש.
+
+לפי התיעוד, רוב הטרמינלים במק לא שולחים את Option כמקש שינוי כברירת מחדל, ולכן כמה קיצורים לא עובדים:
+• Option+P: החלפת מודל בלי למחוק את מה שכבר הקלדתם
+• Option+B ו-Option+F: קפיצה מילה אחורה או קדימה
+• Option+Enter: שורה חדשה בפרומפט
+
+הפתרון הוא הגדרה אחת בטרמינל:
+• Terminal של אפל: Settings, Profiles, Keyboard, ומסמנים Use Option as Meta Key
+• iTerm2: Settings, Profiles, Keys, General, ומגדירים את שני מקשי Option ל-Esc+
+• הטרמינל של VS Code: מוסיפים להגדרות "terminal.integrated.macOptionIsMeta": true
+
+אישרתם בהפעלה הראשונה את הצעת /terminal-setup? בטרמינל של אפל זה כבר מוגדר.
+
+למה זה שווה את הזמן שלכם: מחליפים מודל באמצע ניסוח, בלי להקליד הכל מחדש.
+
+מקור: code.claude.com/docs/en/terminal-config
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew · instagram.com/ai_il_core
