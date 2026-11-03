@@ -1,0 +1,16 @@
+☕ Five minutes. On an API key, that's how long Claude Code's prompt cache waits for you.
+
+Step away longer and the next turn recomputes the whole conversation. On a Claude subscription the main conversation already gets an hour, but only within your plan. Once you're on usage credits, an API key or a cloud provider, it's five minutes.
+
+You can pick the hour yourself, in `settings.json`:
+
+`"promptCacheTtl": "1h"`
+
+It isn't free. Cache writes bill at a higher rate on the hour, so if you never pause longer than five minutes, you just pay more.
+
+Take a lot of breaks mid-task? Then the first turn back stops reloading everything.
+
+Source: code.claude.com/docs/en/prompt-caching, code.claude.com/docs/en/settings-reference#promptcachettl
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
