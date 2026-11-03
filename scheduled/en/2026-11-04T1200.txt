@@ -1,0 +1,12 @@
+📧 Claude Code just stopped a shell command to ask about your email address. Read that prompt before you hit yes.
+
+Since v2.1.317, it checks web and shell tool calls and asks first when one is about to send your account email to the network.
+
+Asked for it yourself, say for an API call that needs your address? Allow it. Were you reviewing a PR or summarising a web page when it fired? Deny it and look at what Claude just read. That's what instructions hidden in a page or a README look like when they work.
+
+One extra prompt, and your address doesn't leave quietly.
+
+Source: Claude Code CHANGELOG v2.1.317
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
