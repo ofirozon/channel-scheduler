@@ -1,0 +1,16 @@
+🌱 Your new worktree doesn't have the commits you made this morning.
+
+That's the default. Claude Code branches new worktrees from `origin/<default-branch>`, a clean tree that matches the remote, so anything unpushed stays behind.
+
+Usually that's what you want. When it isn't, say a parallel session that has to build on the feature you're halfway through, set this in `settings.json`:
+
+`"worktree": { "baseRef": "head" }`
+
+New worktrees now branch from your local `HEAD`, unpushed commits included. Inside a linked worktree it's that worktree's `HEAD`, not the main checkout's.
+
+Then the second session starts from your branch, not from main.
+
+Source: code.claude.com/docs/en/settings-reference#worktree-baseref
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
