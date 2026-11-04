@@ -1,0 +1,14 @@
+🔑 My cron jobs went quiet three times this summer. Each time, the claude.ai login behind them had expired.
+
+Since v2.1.318 you can see the date coming. `claude auth status` now includes `loginExpiresAt`, so a script can check it:
+
+`claude auth status | jq -r .loginExpiresAt`
+
+And `claude -p` starts printing a one-line warning to stderr 10 days before a stored sign-in ends. That only helps if your job's stderr lands somewhere you actually read, so point cron's output at a log you open.
+
+Ten days of notice beats finding out from a dead job.
+
+Source: Claude Code changelog, v2.1.318
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
