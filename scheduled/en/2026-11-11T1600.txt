@@ -1,0 +1,14 @@
+🛡️ Your Bash safety hook used to miss one kind of shell command.
+
+When Claude tails a log or polls a build in the background, it often uses the Monitor tool, and Monitor runs its own shell commands. Until v2.1.314, a hook matching `Bash` never saw them.
+
+Now the hook you already wrote fires on them too. Your permission rules were covering both all along: a `Bash(npm run *)` rule applies to Monitor as well.
+
+Hooks get less power there, though. They can block or ask on a Monitor command, but they can't approve or rewrite it, so an auto-approve hook won't wave one through.
+
+One guard, both tools.
+
+Source: Claude Code changelog v2.1.314, code.claude.com/docs/en/tools-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
