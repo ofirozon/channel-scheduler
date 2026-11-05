@@ -1,0 +1,20 @@
+🏷️ Four sessions running in parallel, and tomorrow you need the third one back.
+
+Name it when you start it:
+
+`claude -n auth-refactor`
+
+The name sits on the prompt bar and the terminal tab, and tomorrow you skip the picker:
+
+`claude --resume auth-refactor`
+
+That finds it from any worktree of the same repo. An exact match resumes straight away. If two sessions share the name, the picker opens with it already typed in.
+
+Forgot at launch? `/rename auth-refactor` does the same thing mid-session.
+
+Name it like you'd search for it later. A ticket number beats "fix stuff" every time.
+
+Source: code.claude.com/docs/en/sessions, code.claude.com/docs/en/settings-reference#terminaltitlefromrename
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
