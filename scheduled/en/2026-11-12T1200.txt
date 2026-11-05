@@ -1,0 +1,18 @@
+🧹 Another team's CLAUDE.md can end up in your context mid-task.
+
+Subdirectory CLAUDE.md files load on demand, the moment Claude reads a file in that folder. One peek into `packages/web` and the frontend's conventions ride along with your API work.
+
+For code you never touch, switch that off. In `.claude/settings.local.json`:
+
+`"claudeMdExcludes": ["**/packages/web/**"]`
+
+Every CLAUDE.md and rules file under that package stops loading. The root file and your own packages load as before. Patterns match absolute paths, so start yours with `**/`.
+
+I'd keep the list short and boring. In the frontend tomorrow? Start Claude from that package rather than editing exclusions.
+
+Your tasks stop carrying someone else's rulebook.
+
+Source: code.claude.com/docs/en/large-codebases, code.claude.com/docs/en/memory
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
