@@ -1,0 +1,18 @@
+🗺️ Auto mode keeps blocking pushes to your team's other repos.
+
+It isn't paranoid. By default the classifier trusts your working directory and this repo's remotes, nothing else. Your company's GitHub org and your staging bucket both count as outside.
+
+Skip writing that list by hand. Run:
+
+`/auto-mode-setup`
+
+It asks how you use the project, then reads your CLAUDE.md, config files, git remotes and the hosts your recent sessions touched, never your messages, and drafts `autoMode.environment` entries for `~/.claude/settings.json`.
+
+Read the draft before you accept it. Whatever it lists, the classifier stops treating as a possible leak.
+
+Then the blocks you get are the ones worth stopping for.
+
+Source: code.claude.com/docs/en/auto-mode-config
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
