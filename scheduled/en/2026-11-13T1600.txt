@@ -1,0 +1,14 @@
+📝 Every plan Claude writes in plan mode lands in `~/.claude/plans`, outside your repo.
+
+That's fine until you want last Tuesday's plan in a PR description, or a teammate asks why the refactor went the way it did. Point it at the project instead, in `.claude/settings.json`:
+
+`"plansDirectory": "./plans"`
+
+The path resolves from the project root, and it has to stay inside it. Something like `"../plans"` quietly falls back to `~/.claude/plans`, so if new plans aren't showing up in the repo, that's the first thing to check.
+
+I'd commit the folder. A plan sitting next to the diff it produced is the best review note you'll get.
+
+Source: code.claude.com/docs/en/settings-reference#plansdirectory
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
