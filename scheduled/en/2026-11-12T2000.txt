@@ -1,0 +1,16 @@
+⌨️ The slash command you type all day deserves its own key.
+
+Claude Code will bind a key to any command. Run `/keybindings` and add this to `~/.claude/keybindings.json`:
+
+`{"bindings":[{"context":"Chat","bindings":{"meta+g":"command:compact"}}]}`
+
+Now Option+G on a Mac, Alt+G elsewhere, runs `/compact`. The file reloads when you save it, no restart.
+
+Swap `compact` for whatever you reach for most. Just leave `meta+p`, `meta+o` and `meta+t` alone. Those already open the model picker, toggle fast mode and toggle thinking.
+
+Ten seconds of setup, and the habit stops costing keystrokes.
+
+Source: code.claude.com/docs/en/keybindings
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
