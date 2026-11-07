@@ -1,10 +1,10 @@
-💸 Before you move your app to a smaller model to save money, find out where the money actually goes.
+💸 Before you move your app to a smaller model to save money, find out where the money goes.
 
-If the project calls the Claude API, open Claude Code in it and run:
+In a project that calls the Claude API, run:
 
 `/claude-api cost-optimize`
 
-It profiles your project's API spend, then proposes savings one change at a time: prompt caching, trimming input and output tokens you don't need, batch processing, effort, and model choice. The smaller model is one lever on that list, not the only one.
+It profiles your project's API spend, then proposes savings one change at a time: prompt caching, trimming input and output tokens you don't need, batch processing, effort, and model choice.
 
 One change at a time is the part I'd keep. Change three things at once and you can't tell which one saved money or which one hurt quality. Got an eval already? Run it after each.
 
