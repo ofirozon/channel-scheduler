@@ -1,6 +1,6 @@
 🔁 Ever needed one more answer from a subagent that already finished?
 
-A subagent that succeeds drops out of `/tasks` about 30 seconds later, and with it the easy way back in. Since v2.1.319 there's a way back. Run:
+A subagent that succeeds drops out of `/tasks` about 30 seconds later. Since v2.1.319 there's a way back. Run:
 
 `/tasks`
 
