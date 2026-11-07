@@ -39,6 +39,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Check out the branch tip, not the SHA the event was created at.
+          # On 2026-11-07 two kicks landed 3s apart; the concurrency group
+          # queued the second, but it then checked out the pre-publish SHA,
+          # saw the 12:00 EN post still in scheduled/ and sent it again
+          # (msg 274 duplicated msg 273).
+          ref: ${{ github.ref_name }}
 
       - name: Publish due posts
         env:
