@@ -1,0 +1,14 @@
+🔁 Ever needed one more answer from a subagent that already finished?
+
+A subagent that succeeds drops out of `/tasks` about 30 seconds later, and with it the easy way back in. Since v2.1.319 there's a way back. Run:
+
+`/tasks`
+
+and open the "Earlier in this session" row. It lists finished subagents. Pick one and message it, even after a restart, once you resume the session. It keeps its full history, so "now check the auth module too" costs one line instead of a fresh agent rereading your repo.
+
+Explore and Plan are one-shot and can't be resumed. For work you'll want to continue, use general-purpose or a custom subagent.
+
+Source: Claude Code changelog v2.1.319, code.claude.com/docs/en/sub-agents
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
