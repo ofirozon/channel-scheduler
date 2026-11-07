@@ -1,14 +1,16 @@
-📝 Every plan Claude writes in plan mode lands in `~/.claude/plans`, outside your repo.
+🚦 You leave Claude on a long task, come back an hour later, and it's sat on one permission prompt since minute three.
 
-That's fine until you want last Tuesday's plan in a PR description, or a teammate asks why the refactor went the way it did. Point it at the project instead, in `.claude/settings.json`:
+Claude Code 2.1.319 adds a setting for that. In your settings file:
 
-`"plansDirectory": "./plans"`
+`"permissions": { "denyInsteadOfPrompting": true }`
 
-The path resolves from the project root, and it has to stay inside it. Something like `"../plans"` quietly falls back to `~/.claude/plans`, so if new plans aren't showing up in the repo, that's the first thing to check.
+Now any call that would wait on a prompt gets denied straight away, Claude is told, and the turn keeps going. Subagents and teammates too, not just `claude -p`.
 
-I'd commit the folder. A plan sitting next to the diff it produced is the best review note you'll get.
+Your allow rules still decide what runs, so write those first. I'd only switch it on for long unattended runs. On a normal day you want to be asked.
 
-Source: code.claude.com/docs/en/settings-reference#plansdirectory
+A denied step beats a stalled hour.
+
+Source: Claude Code CHANGELOG, v2.1.319
 
 🤖 Claude Code Daily, one practical tip a day
 👉 t.me/DailyClaudeTips
