@@ -1,0 +1,31 @@
+📒 A subagent reads forty files, hands Claude three sentences, and you never see the rest.
+
+Five minutes gets you a log of every subagent run, with a pointer to its full transcript.
+
+1. Save this as `~/.claude/hooks/log-subagent.sh`:
+```
+#!/bin/bash
+jq -c 'select(.agent_type != "") | {t: (now|todate), agent: .agent_type, transcript: .agent_transcript_path}' >> ~/.claude/subagents.log
+```
+2. Make it runnable:
+`chmod +x ~/.claude/hooks/log-subagent.sh`
+3. Add this to `~/.claude/settings.json`:
+```
+"hooks": {
+  "SubagentStop": [
+    { "hooks": [ { "type": "command", "command": "$HOME/.claude/hooks/log-subagent.sh" } ] }
+  ]
+}
+```
+4. Start a new session and run `/hooks`. It should be listed under user settings.
+5. After a task that used subagents:
+`tail ~/.claude/subagents.log`
+
+Don't drop the empty `agent_type` filter. Claude Code's own internal agents, like `/btw` side questions, fire this event too, and they'd fill your log.
+
+Each line points at a transcript with everything the subagent read, not just what it reported.
+
+Source: code.claude.com/docs/en/hooks (SubagentStop)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
