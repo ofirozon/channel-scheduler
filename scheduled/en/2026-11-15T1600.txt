@@ -1,0 +1,14 @@
+🧩 Running `claude` in VS Code's terminal used to update the extension too. Not anymore.
+
+Since v2.1.318, starting Claude Code in an IDE's integrated terminal doesn't install or update the IDE extension. The extension now only moves when you move it.
+
+So if the chat panel is missing something your terminal session has, check the extension's version before you file a bug. Update it from the editor's Extensions view, or open a terminal outside the editor, start `claude`, and run:
+
+`/ide`
+
+I'd use the Extensions view. It's one click and it shows the version you're on.
+
+Source: Claude Code CHANGELOG v2.1.318, code.claude.com/docs/en/vs-code
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
