@@ -1,0 +1,16 @@
+🧪 Something in your setup broke Claude Code, and you changed five things this week.
+
+Before you start uninstalling, run:
+
+`claude --safe-mode`
+
+That session starts with your customizations off: CLAUDE.md, skills, plugins, hooks, MCP servers, custom agents, status line, keybindings, auto memory. Login, model choice, built-in tools and your permission rules still work as normal.
+
+Problem gone? It's one of yours, so turn things back on one at a time. Still there? Stop blaming your config.
+
+The one thing it won't switch off is a hook or status line your company pushes through managed settings.
+
+Source: code.claude.com/docs/en/cli-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
