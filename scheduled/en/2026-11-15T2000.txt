@@ -1,0 +1,16 @@
+⏳ Stop flipping to the other terminal to see if the migration's done.
+
+Ask the session you're in instead:
+
+`Tell me when the migration session finishes what it's working on`
+
+Claude sets up a one-shot notice on that other session. Watching it costs nothing over there: no turn, no tokens. When it finishes a turn with nothing queued, or exits, a line lands in your session naming it, usually with a one-line status. If your session is idle, Claude starts a new turn and picks it up.
+
+Both sessions need v2.1.236 or later, on the same machine. If nothing arrives in 12 hours, the request expires and Claude is told.
+
+You get to stop being the polling loop.
+
+Source: code.claude.com/docs/en/cross-session-messaging
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
