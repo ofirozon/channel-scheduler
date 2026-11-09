@@ -1,0 +1,16 @@
+🛰️ `claude --settings strict.json remote-control` refuses to start. On purpose.
+
+A global flag placed before the `remote-control` verb never reaches the sessions the server spawns, so Claude Code stops rather than quietly drop it.
+
+Since v2.1.321 the flag has a proper home, after the verb:
+
+`claude remote-control --settings strict.json`
+
+Every session the server starts, the ones you open from your phone or the browser, gets that file. It's the clean way to run tighter permissions or sandboxing only when you're away from the keyboard.
+
+Edit the file while the server's up and it stops starting new sessions until you restart it.
+
+Source: Claude Code changelog v2.1.321, code.claude.com/docs/en/errors
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
