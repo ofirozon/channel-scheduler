@@ -1,0 +1,14 @@
+🦉 Claude Fable 5.2 came out on November 9, and in Claude Code it's one command away.
+
+Update to v2.1.321 or later, then:
+
+`/model fable`
+
+Look at the picker row before you settle in. On some plans Fable bills to usage credits instead of your included limits, and when it does the row says "Requires usage credits".
+
+On the API it's $8 in and $40 out per million tokens, double Opus 5.5. I'd save it for the bug you can't pin down or the job you'd normally split in three, not for renaming variables.
+
+Source: Claude Code changelog v2.1.321, code.claude.com/docs/en/model-config, platform.claude.com/docs/en/about-claude/models/overview
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
