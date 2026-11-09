@@ -1,0 +1,17 @@
+🔁 סוכן משנה סיים לבדוק משהו, ועכשיו צריך עוד שלב באותו נושא?
+
+ב-Claude Code כל קריאה לסוכן משנה יוצרת מופע חדש שמתחיל מאפס. אבל אפשר פשוט לבקש מקלוד להמשיך את הסוכן הקודם, והוא חוזר עם כל ההיסטוריה שלו: הקבצים שקרא, הכלים שהריץ והמסקנות שהגיע אליהן.
+
+הדוגמה מהתיעוד. קודם:
+Use the code-reviewer subagent to review the authentication module
+ואחרי שסיים:
+Continue that code review and now analyze the authorization logic
+
+שימו לב: הסוכנים המובנים Explore ו-Plan הם חד פעמיים, ואי אפשר להמשיך אותם. לעבודה בהמשכים השתמשו ב-general-purpose או בסוכן משלכם.
+
+למה זה שווה: הסוכן לא צריך לקרוא שוב את אותם קבצים, ואתם לא מסבירים הכל מחדש.
+
+מקור: code.claude.com/docs/en/sub-agents
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew · instagram.com/ai_il_core
