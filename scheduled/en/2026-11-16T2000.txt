@@ -1,0 +1,14 @@
+🗣️ Claude Code's voice dictation assumes you're speaking English.
+
+Dictate in German and you'll get garbled text. Dictation reads the same `language` setting Claude uses for its replies, and when that's empty it falls back to English. Fix it in `~/.claude/settings.json`:
+
+`"language": "german"`
+
+Then run `/voice`. Twenty languages work for dictation, Spanish, Hindi, Japanese and Ukrainian among them, and you'll need a Claude.ai login rather than an API key.
+
+That one value changes Claude's replies too. So you talk in German and you read in German. If you want English answers back, leave the setting empty.
+
+Source: code.claude.com/docs/en/voice-dictation, code.claude.com/docs/en/settings-reference#language
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
