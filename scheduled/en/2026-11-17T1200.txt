@@ -1,0 +1,14 @@
+🧪 Your headless Chromium test dies inside Claude Code on Linux with `No usable sandbox!`
+
+Two sandboxes are colliding. Claude Code's sandbox won't let commands create user namespaces, and Chromium's own sandbox needs one.
+
+The quick fix is launching the browser with `--no-sandbox`: Claude's sandbox stays, Chromium's goes. To keep Chromium's instead, add this to `~/.claude/settings.json` (v2.1.305+, a project file can't turn it on):
+
+`"sandbox": { "allowNestedUserNamespaces": true }`
+
+That one isn't free. It turns off a security boundary, and code from a sandboxed command can end up running outside the sandbox. For a repo you don't fully trust, stick with `--no-sandbox`.
+
+Source: code.claude.com/docs/en/sandboxing
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
