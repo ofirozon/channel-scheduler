@@ -1,0 +1,16 @@
+🔗 Your team reviews PRs in an internal tool, but every PR link Claude Code shows still opens github.com.
+
+One setting reroutes them:
+
+`"prUrlTemplate": "https://reviews.example.com/{owner}/{repo}/pull/{number}"`
+
+It works from any settings file, so put it in `.claude/settings.json` if the whole team should get it. Claude Code fills in `{host}`, `{owner}`, `{repo}`, `{number}` or the full `{url}` from the PR, and rewrites the links it renders itself: the footer badge and tool-result summaries.
+
+A `#123` Claude types in a message stays as written, and GitLab merge request links keep their GitLab URL.
+
+Commit it once and nobody detours through GitHub to reach the real review again.
+
+Source: code.claude.com/docs/en/settings-reference#prurltemplate
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
