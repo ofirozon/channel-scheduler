@@ -1,0 +1,22 @@
+🪟 Claude's halfway through a long refactor, and you want this terminal back.
+
+Don't open another window. Type:
+
+`/bg run the full test suite when you're done`
+
+The session detaches and keeps working with no terminal attached. The text after `/bg` reaches Claude as one last instruction, and you can leave it off.
+
+Later, from any shell:
+
+`claude agents`
+
+Your session's there with the others. Press Enter on its row and you're back in, with a short recap of what happened while you were gone.
+
+If you'd rather keep working here and send a copy off instead, that's `/fork`.
+
+One long task stops costing you a terminal.
+
+Source: code.claude.com/docs/en/agent-view, code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
