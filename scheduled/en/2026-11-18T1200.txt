@@ -1,0 +1,16 @@
+🔄 Esc won't stop a `/loop` you gave an interval to.
+
+`/loop 5m check if the deployment finished and tell me what happened`
+
+That reruns the prompt every five minutes while the session's open and idle. Handy. But a fixed-interval loop ignores Esc and Ctrl+C. To end it, ask in plain words:
+
+`cancel the deploy check loop`
+
+Forget, and it keeps firing until the session closes or seven days pass.
+
+Leave the interval out and Claude picks the gap each round. That self-paced version stops with Esc while it's waiting, and Claude can end it on its own once the job's done. For most polling I'd skip the interval.
+
+Source: code.claude.com/docs/en/scheduled-tasks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
