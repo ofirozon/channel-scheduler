@@ -1,0 +1,16 @@
+🧹 A script that runs Claude in a fresh clone trusts that repo blindly.
+
+Without a flag, `claude -p` runs the hooks in the project's `.claude/settings.json` and connects every server in its `.mcp.json`. No trust dialog. Add one flag:
+
+`claude --bare -p "Summarize README.md" --allowedTools "Read"`
+
+Bare mode skips hooks, skills, plugins, MCP servers, CLAUDE.md and auto memory, so it starts faster and behaves the same on every machine. Claude keeps Bash, read and edit. Anything else you pass in explicitly, like `--mcp-config` or `--settings`.
+
+It won't touch your subscription login either, so set `ANTHROPIC_API_KEY` first.
+
+It's slated to become the default for `-p`. Better to learn now what your scripts were quietly leaning on.
+
+Source: code.claude.com/docs/en/headless#start-faster-with-bare-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
