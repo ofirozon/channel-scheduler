@@ -1,0 +1,16 @@
+🔇 Most of what scrolls past while Claude works, you never read.
+
+So hide it. In fullscreen rendering, run:
+
+`/focus`
+
+Each turn shrinks to your prompt, a one-line summary of the tool calls with edit diffstats, and Claude's final answer. Subagents launched in the turn get counted, and finished background-task notices collapse into a single count.
+
+It sticks across sessions. Run `/focus` again for the full transcript. Still on the classic renderer? `/tui fullscreen` switches mid-conversation and keeps it intact.
+
+I'd leave it on for long refactors and turn it off the moment something breaks. A one-line summary won't tell you why.
+
+Source: code.claude.com/docs/en/commands, code.claude.com/docs/en/fullscreen
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
