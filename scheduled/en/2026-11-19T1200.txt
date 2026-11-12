@@ -1,0 +1,14 @@
+🙈 You type `@logs/` to point Claude at last night's build log, and the picker comes up empty.
+
+It's not broken. The `@` file picker leaves out anything that matches `.gitignore`, and build output usually does. Flip "Respect .gitignore in file picker" off in `/config`, or set it in a settings file:
+
+`"respectGitignore": false`
+
+Expect a noisier picker, since `node_modules` is usually ignored too. If only one repo needs it, put the line in that project's `.claude/settings.local.json` and leave your user settings alone.
+
+Your ignored logs are one `@` away again.
+
+Source: code.claude.com/docs/en/settings-reference#respectgitignore
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
