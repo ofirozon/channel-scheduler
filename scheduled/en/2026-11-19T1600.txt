@@ -1,0 +1,14 @@
+💬 The tips that rotate in Claude Code's spinner don't have to be the built-in ones. They can be your team's.
+
+Add them to `.claude/settings.json` and commit it with the repo:
+
+`"spinnerTipsOverride": { "tips": ["Run the integration suite before you push", "Staging deploys freeze at 16:00 on Fridays"] }`
+
+Project settings only take plain strings, though. A custom label, a tips file, or `"excludeDefault": true` to hide the built-in tips all have to live in your user settings or managed settings.
+
+I think it's the one onboarding doc people actually read, because they're staring at it while Claude works.
+
+Source: code.claude.com/docs/en/settings-reference#spinnertipsoverride
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
