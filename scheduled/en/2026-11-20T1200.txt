@@ -1,0 +1,12 @@
+🧮 Ten tool calls, ten round trips. Code Mode folds them into one script.
+
+It's an experimental, off-by-default mode in Claude Code. Instead of calling Bash, Read and Edit one at a time and reading every result, Claude writes a short piece of JavaScript that makes the calls, runs independent ones in parallel, and hands back only the output it needs. Try it for one session:
+
+`CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude`
+
+Press `Ctrl+O` to read the code it wrote. Keep the variable set when you resume that session later, or Claude Code won't open it. Point it at a change that repeats across many files, that's where it earns its keep.
+
+Source: code.claude.com/docs/en/code-mode, Claude Code CHANGELOG v2.1.323
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
