@@ -493,3 +493,4 @@
 {"channel": "he", "slot_utc": "2026-11-13T06:00:00+00:00", "sent_utc": "2026-11-13T06:11:36.131476+00:00", "late_hours": 0.19, "message_id": 464, "file": "2026-11-13T0600.txt"}
 {"channel": "he", "slot_utc": "2026-11-13T10:00:00+00:00", "sent_utc": "2026-11-13T10:05:13.854837+00:00", "late_hours": 0.09, "message_id": 465, "file": "2026-11-13T1000.txt"}
 {"channel": "en", "slot_utc": "2026-11-13T16:00:00+00:00", "sent_utc": "2026-11-13T16:32:16.100633+00:00", "late_hours": 0.54, "message_id": 293, "file": "2026-11-13T1600.txt"}
+{"channel": "he", "slot_utc": "2026-11-13T17:30:00+00:00", "sent_utc": "2026-11-13T18:01:06.102829+00:00", "late_hours": 0.52, "message_id": 466, "file": "2026-11-13T1730.txt"}
