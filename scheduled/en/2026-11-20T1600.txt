@@ -1,0 +1,14 @@
+🎨 Three Claude Code sessions open, and you just typed into the wrong repo.
+
+Give each one its own prompt bar color. In the session that touches production, run:
+
+`/color red`
+
+You get red, blue, green, yellow, purple, orange, pink and cyan. `/color default` resets it, and no argument picks a random one. It only holds for the current session, so set it when you open the window that matters.
+
+Sounds cosmetic. It's also the cheapest guard there is against approving the right command in the wrong terminal.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
