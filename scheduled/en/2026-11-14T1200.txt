@@ -1,0 +1,16 @@
+🔍 One missing space in an allow rule, and `lsof` runs without asking.
+
+In a Bash permission rule, `*` matches any text, and the space in front of it counts. So:
+
+`"Bash(ls *)"`
+
+approves `ls` and `ls -la`, but not `lsof`. Write `Bash(ls*)` and anything starting with those two letters gets through.
+
+Claude Code 2.1.323, out November 12, also fixed glued-on wildcards like that skipping the prompt in some cases. And a rule built on a variable name, such as `Bash(NODE_ENV*)`, now asks instead of allowing.
+
+Open your settings and search for a `*` stuck to a word. It's a one-minute check.
+
+Source: Claude Code CHANGELOG v2.1.323, code.claude.com/docs/en/permissions#wildcard-patterns
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
