@@ -12,4 +12,4 @@ CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude
 מקור: code.claude.com/docs/en/code-mode
 
 🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
-👉 t.me/AIhebrew
+👉 t.me/AIhebrew · instagram.com/ai_il_core
