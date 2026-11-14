@@ -1,0 +1,16 @@
+🗑️ You deleted the client repo. Every session you ran in it is still in `~/.claude`.
+
+Transcripts, auto memory, file-edit history, the prompts you typed. One command clears all of it for that project. Look first:
+
+`claude purge ~/work/client-repo --dry-run`
+
+That prints each item it would delete and why. Drop `--dry-run` and it asks once before removing anything.
+
+It also deletes the project's entry in `~/.claude.json`, which is where its trust decision and any local-scope MCP servers live. Purge a repo you still use and you'll be setting those up again.
+
+Worth running before you hand back a work laptop or close out a contract.
+
+Source: code.claude.com/docs/en/claude-directory (Clear local data)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
