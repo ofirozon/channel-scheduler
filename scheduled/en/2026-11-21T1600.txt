@@ -1,0 +1,16 @@
+📜 Don't leave the terminal to find out what an update changed.
+
+Something behaves differently since yesterday? Type:
+
+`/release-notes`
+
+You get a version picker. Pick the release you're on, or show all of them, and the notes print right in your transcript. `claude --version` tells you which one that is.
+
+They don't enter the conversation Claude sees, either. Checking costs you no context and doesn't nudge what Claude does next.
+
+It's the first place to look when a command that worked last week suddenly doesn't.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
