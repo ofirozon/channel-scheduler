@@ -1,0 +1,17 @@
+📲 הרצתם משימה ארוכה ב-Claude Code והלכתם להכין קפה. איך תדעו שהיא נגמרה?
+
+כשהשיחה מחוברת ל-Remote Control (הפקודה /remote-control בטרמינל, דורש מנוי claude.ai), קלוד יכול לשלוח התראה לטלפון: כשמשימה ארוכה מסתיימת, כשהוא צריך החלטה מכם, או כשביקשתם בפרומפט, למשל "notify me when the tests finish".
+
+ההגדרה:
+1. מתקינים את אפליקציית Claude ומתחברים עם אותו חשבון של Claude Code.
+2. מאשרים התראות בטלפון.
+3. בטרמינל מריצים /config ומדליקים את Push when Claude decides, את Push when actions required, או את שתיהן.
+
+לא מגיע כלום? אם /config מציג No mobile registered, פתחו את האפליקציה בטלפון. ובזמן שאתם מקלידים בטרמינל המחובר, התראות לא נשלחות.
+
+למה זה שווה את הזמן שלכם: לא חוזרים למחשב כל חמש דקות רק כדי לבדוק.
+
+מקור: code.claude.com/docs/en/remote-control
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew · instagram.com/ai_il_core
