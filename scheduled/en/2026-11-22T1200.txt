@@ -1,0 +1,16 @@
+🎛️ You picked Sonnet in `/model`, and the next session opened on Opus anyway.
+
+Check your shell profile for `ANTHROPIC_MODEL`. That variable wins at every launch, so whatever you saved with `/model` gets outranked the moment you restart.
+
+If you only wanted a starting point, there's a softer variable (v2.1.236+):
+
+`export ANTHROPIC_DEFAULT_MODEL=sonnet`
+
+New sessions start there, but once you save a choice with `/model`, that choice wins from the next launch on. `--model` and a `model` in any settings file still beat it.
+
+Swap one for the other and your picker stops getting ignored.
+
+Source: code.claude.com/docs/en/model-config (Set a default model for new sessions)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
