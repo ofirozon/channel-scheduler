@@ -1,0 +1,19 @@
+🧠 Claude Code has probably been taking notes on you. Here's a five-minute look at what it kept.
+
+1. In a session, run `/memory` and open the auto memory folder. There's one per git repo, at `~/.claude/projects/<project>/memory/`, shared by all its worktrees.
+2. Open `MEMORY.md` first. It's the index, and only its first 200 lines or 25KB load into each session. Past that, Claude never sees it.
+3. Read the topic files it points to. Each carries a `type` in its frontmatter (`user`, `feedback`, `project` or `reference`), and usually a `modified` timestamp, so stale ones are easy to spot.
+4. Fix or delete anything wrong. It's plain markdown, and transcript cleanup never touches these files, so a bad note stays until you remove it.
+5. Want the notes somewhere you back up? Add this to `~/.claude/settings.json`:
+
+`"autoMemoryDirectory": "~/notes/claude-memory"`
+
+It has to be an absolute path or start with `~/`.
+6. For a repo Claude shouldn't remember anything about, put `"autoMemoryEnabled": false` in that project's settings.
+
+Next time you correct Claude, say "remember that", then check the folder. It's the cheapest way to stop repeating yourself.
+
+Source: code.claude.com/docs/en/memory (Auto memory)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
