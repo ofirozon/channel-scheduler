@@ -1,0 +1,16 @@
+🔌 My first debugging step in Claude Code is one flag, and it isn't `--debug`.
+
+A plugin hook that rewrites commands, or a project hook you forgot about, can look exactly like a Claude Code bug. So start one session with every hook off:
+
+`claude --settings '{"disableAllHooks": true}'`
+
+It beats the project's own settings and doesn't touch any file. Bug gone? It was a hook. Back in a normal session, `/hooks` shows which ones are loaded.
+
+Your custom status line disappears in that session too. That's the flag, not a second bug. Hooks your organization set in managed settings keep running.
+
+There's no switch for a single hook, so this is how you find out fast.
+
+Source: code.claude.com/docs/en/hooks (Disable or remove hooks), code.claude.com/docs/en/settings-reference#disableallhooks
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
