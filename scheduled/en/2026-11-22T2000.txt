@@ -1,0 +1,16 @@
+⏳ That usage-limit message mid-task doesn't mean the task is dead.
+
+On a claude.ai subscription, Claude Code (v2.1.234+) waits in the open session and picks the task up on its own once the limit resets. The bottom of the screen tells you when:
+
+`Continuing automatically at 3:45pm · Esc to cancel`
+
+So leave the window open. Quit Claude Code and the wait's gone, and resuming the session later won't bring it back.
+
+It still asks for permissions as usual, so a prompt can stall it while you're away. Approve the risky stuff before you walk off.
+
+The limit costs you the wait, not the task.
+
+Source: code.claude.com/docs/en/interactive-mode (Wait for a usage limit to reset)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
