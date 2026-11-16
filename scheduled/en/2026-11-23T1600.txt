@@ -1,0 +1,12 @@
+🕵️ Your scheduled review ran at 9am, opened no PR and said nothing. Skip the clicking around for a log. Ask:
+
+`/schedule why did my nightly review do nothing this morning?`
+
+Claude lists that task's recent runs with their status and a link to open each one, then reads the run's log and tells you what happened: a tool error, a permission denial, or what the final result actually said.
+
+It needs v2.1.227 or later. Once you've fixed whatever it was, `/schedule run` starts the task right away, so you're not waiting until tomorrow at 9 to find out if it worked.
+
+Source: code.claude.com/docs/en/routines (Manage scheduled tasks from the CLI)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
