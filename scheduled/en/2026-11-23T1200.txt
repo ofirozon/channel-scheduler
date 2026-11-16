@@ -1,0 +1,18 @@
+🚦 Your CI job went green. One of its plugins never loaded, and the run carried on without it.
+
+Same for a `--mcp-config` server that fails validation: skipped, clean exit, and no warning if your runner captures stderr.
+
+Both land in the `system/init` event, so gate on it:
+
+`claude -p "Fix the lint errors" --output-format stream-json --verbose > run.jsonl`
+
+`jq -e 'select(.type=="system" and .subtype=="init") | ((.plugin_errors // []) + (.mcp_server_errors // [])) == []' run.jsonl`
+
+Any entry in either array and `jq -e` exits non-zero. Leave out `--verbose` and `-p` refuses stream-json.
+
+A red build beats a green one that quietly ran without its tools.
+
+Source: code.claude.com/docs/en/headless (Fail CI when a plugin or MCP server doesn't load)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
