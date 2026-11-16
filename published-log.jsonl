@@ -512,3 +512,4 @@
 {"channel": "en", "slot_utc": "2026-11-16T12:00:00+00:00", "sent_utc": "2026-11-16T12:04:24.412940+00:00", "late_hours": 0.07, "message_id": 301, "file": "2026-11-16T1200.txt"}
 {"channel": "en", "slot_utc": "2026-11-16T16:00:00+00:00", "sent_utc": "2026-11-16T16:04:13.141192+00:00", "late_hours": 0.07, "message_id": 302, "file": "2026-11-16T1600.txt"}
 {"channel": "he", "slot_utc": "2026-11-16T17:30:00+00:00", "sent_utc": "2026-11-16T17:34:15.287738+00:00", "late_hours": 0.07, "message_id": 475, "file": "2026-11-16T1730.txt"}
+{"channel": "en", "slot_utc": "2026-11-16T20:00:00+00:00", "sent_utc": "2026-11-16T20:05:14.821160+00:00", "late_hours": 0.09, "message_id": 303, "file": "2026-11-16T2000.txt"}
