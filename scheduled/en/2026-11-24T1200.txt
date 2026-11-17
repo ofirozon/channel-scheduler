@@ -1,0 +1,14 @@
+🗜️ Forty minutes of stack traces in, and your context is nearly full.
+
+`/compact` would summarize the whole conversation, including the careful setup you typed at the start. You can squeeze just the noisy part instead.
+
+Press Esc twice on an empty prompt, pick the message where the debugging began, and arrow down to "Summarize from here". Don't hit its number key, that summarizes with no guidance. Type in the "add context" row first:
+
+`keep the root cause and the fix that worked, drop the dead ends`
+
+Then Enter. Everything before that message stays word for word, and no file on disk changes.
+
+Source: code.claude.com/docs/en/checkpointing
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
