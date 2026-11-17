@@ -1,0 +1,16 @@
+⏪ Every Claude Code wrapper script should set one variable it probably doesn't.
+
+When a session ends, Claude Code prints `claude --resume <session-id>`. Your team copies that line, and it skips the wrapper and everything it sets up. Have the wrapper export this before it launches Claude:
+
+`export CLAUDE_CODE_RESUME_HINT_COMMAND=mytool`
+
+Now local sessions end with `mytool --resume <session-id>` instead.
+
+It has to come from the wrapper's environment. Put it in a settings file's `env` block and Claude Code ignores it. A path like `./bin/mytool` gets ignored too, since it only takes a plain name. Needs v2.1.323 or later.
+
+It's the line people paste without reading, so make it the right one.
+
+Source: code.claude.com/docs/en/env-vars
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
