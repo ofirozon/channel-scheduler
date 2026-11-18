@@ -1,0 +1,20 @@
+🔐 הדבקתם טוקן של שרת MCP ישר בתוך הפקודה, ועכשיו הוא יושב בהיסטוריה של הטרמינל?
+
+הפקודה claude mcp add-json מוסיפה ל-Claude Code שרת MCP מתוך הגדרות JSON. עד עכשיו ה-JSON, כולל הטוקן או מפתח ה-API, נכתב בתוך שורת הפקודה עצמה, והמעטפת שומרת בדרך כלל כל שורה כזו בהיסטוריה.
+
+מגרסה 2.1.327 (17.11.2026) כותבים מקף במקום ה-JSON, ו-Claude Code קורא אותו מהקלט:
+
+claude mcp add-json my-server - < server.json
+
+או במק, אחרי שהעתקתם את ה-JSON:
+
+pbpaste | claude mcp add-json my-server -
+
+לפי הצ'יינג'לוג זה עובד מטרמינל רגיל, לא מתוך סשן של Claude Code. ואם שמרתם קובץ עם הטוקן, מחקו אותו בסוף.
+
+למה זה שווה את הזמן שלכם: הסוד לא נשאר בהיסטוריה של הטרמינל.
+
+מקור: github.com/anthropics/claude-code/blob/main/CHANGELOG.md
+
+🤖 בינה בקטנה, כלי AI פרקטי אחד ביום, בעברית
+👉 t.me/AIhebrew · instagram.com/ai_il_core
