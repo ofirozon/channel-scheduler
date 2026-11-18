@@ -1,0 +1,16 @@
+⬆️ The footer says an update installed. Are you really quitting mid-task for it?
+
+You don't have to lose your place. Type:
+
+`/restart`
+
+Claude Code comes back up on the new version and resumes the same session, conversation and all. `/update` is the same command.
+
+It needs v2.1.288 or later, a Pro, Max or Ultra plan, and the native install on macOS or Linux. On WSL it isn't available.
+
+It's easy to leave an update pending for days when restarting means rebuilding context. Now it doesn't.
+
+Source: code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
