@@ -1,0 +1,16 @@
+🏢 Works at home, dies on the office Wi-Fi with `UNABLE_TO_GET_ISSUER_CERT_LOCALLY`.
+
+That's your company's proxy opening HTTPS traffic and re-signing it with its own certificate, one Claude Code doesn't trust. Ask IT for the root CA as a PEM file, then add this to your shell profile:
+
+`export NODE_EXTRA_CA_CERTS="$HOME/certs/corp-root.pem"`
+
+Claude Code reads it once at startup, so restart the session after.
+
+Whatever a forum thread tells you, don't set `NODE_TLS_REJECT_UNAUTHORIZED=0`. That doesn't fix trust. It switches certificate checking off for everything.
+
+One file, and you stop thinking about the proxy.
+
+Source: code.claude.com/docs/en/network-config, code.claude.com/docs/en/errors (SSL certificate errors)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
