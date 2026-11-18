@@ -1,0 +1,16 @@
+📲 Pulling a cloud session into your terminal makes a copy. Your phone doesn't follow it.
+
+From a checkout of the same repo, run:
+
+`claude --teleport`
+
+Pick the session, and Claude Code checks out its branch and loads the conversation. Already inside a session? `/tp` opens the same picker.
+
+From then on there are two copies. Nothing you do locally shows up in the cloud session on claude.ai or in the mobile app. If you still want to steer from your phone, start `/remote-control` in the local session.
+
+That way the phone in your pocket is driving the session you're actually working in.
+
+Source: code.claude.com/docs/en/claude-code-on-the-web (From cloud to terminal)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
