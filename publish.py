@@ -26,6 +26,8 @@ import json
 import os
 import pathlib
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -95,8 +97,22 @@ def send(token: str, chat_id: str, text: str) -> dict:
     req = urllib.request.Request(
         f"https://api.telegram.org/bot{token}/sendMessage", data=data
     )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read().decode())
+    # Retry only when the request never finished going out. urllib wraps
+    # errors from the send phase (connect, TLS, writing the body) in a bare
+    # URLError; anything after the request was fully sent surfaces as a raw
+    # exception or an HTTPError, and retrying those could post twice.
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode())
+        except urllib.error.HTTPError:
+            raise
+        except urllib.error.URLError as exc:
+            if attempt == 2:
+                raise
+            print(f"send phase failed ({exc.reason}), retrying in 5s",
+                  file=sys.stderr)
+            time.sleep(5)
 
 
 def main() -> int:
