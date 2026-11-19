@@ -1,0 +1,14 @@
+🛑 You told Claude "don't push until I've reviewed it" and went for coffee.
+
+In auto mode that sentence actually binds. The classifier blocks matching actions, even ones its defaults would allow, until you lift it in a later message. Claude deciding the condition was met doesn't count.
+
+There's a hole, though. The boundary isn't saved anywhere. The classifier re-reads it from the transcript, so if compaction drops that message, the boundary goes with it. For anything you'd regret, write it into `.claude/settings.json`:
+
+`"permissions": { "deny": ["Bash(git push *)"] }`
+
+Say it for today. Write it down for always.
+
+Source: code.claude.com/docs/en/permission-modes
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
