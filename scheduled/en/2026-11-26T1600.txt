@@ -1,0 +1,14 @@
+🔌 One hung MCP server can freeze your turn for half an hour.
+
+When a stdio server stops answering and sends no progress, Claude Code waits up to 30 minutes before giving up on that tool call. Network servers get 5. That's a long time to stare at a spinner.
+
+Shorten it in your shell profile:
+
+`export CLAUDE_CODE_MCP_TOOL_IDLE_TIMEOUT=60000`
+
+Now a call that's silent for a minute aborts with an error instead of hanging. It's an idle check, not a total limit, so a slow tool that keeps reporting progress still gets to finish.
+
+Source: code.claude.com/docs/en/env-vars
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
