@@ -1,0 +1,14 @@
+🔍 Your path-scoped rule file might never have loaded at all.
+
+A `.claude/rules/*.md` file with `paths:` frontmatter only enters context when Claude touches a matching file. Nothing on screen tells you it happened. So log it. In `.claude/settings.json`:
+
+`"hooks": {"InstructionsLoaded": [{"hooks": [{"type": "command", "command": "jq -c '{load_reason, file_path}' >> ~/.claude/instructions.log"}]}]}`
+
+Every CLAUDE.md or rule that loads writes one line. Yours shows up as `path_glob_match`, a subfolder's CLAUDE.md as `nested_traversal`, and reloads after compaction as `compact`.
+
+It's watch-only, the hook can't block or change what loads. Next time Claude ignores a rule, `tail` that log before you rewrite the rule.
+
+Source: code.claude.com/docs/en/hooks (InstructionsLoaded)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
