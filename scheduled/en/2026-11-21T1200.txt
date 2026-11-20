@@ -1,0 +1,14 @@
+🔍 `/code-review 1234` could quietly review the wrong code.
+
+Give it a PR number while another branch is checked out, and before v2.1.329 it sometimes reviewed that branch instead. No warning. The report looked normal, it just wasn't about your pull request.
+
+Since the November 19 release it reads the PR with `gh pr diff`, or says it can't. So update, and make sure the GitHub CLI is signed in:
+
+`claude update && gh auth status`
+
+Then rerun any PR-number review you trusted while sitting on a different branch. A clean report on the wrong diff is worse than no report.
+
+Source: Claude Code changelog v2.1.329, code.claude.com/docs/en/code-review-local
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
