@@ -1,0 +1,16 @@
+🧩 Frontend in one repo, API in the next folder over, and one session for both.
+
+Launch from the frontend and add the other one:
+
+`claude --add-dir ../api`
+
+Claude can now read and edit both, so "the endpoint changed, update the client" happens in one conversation. Already mid-session? `/add-dir ../api` does the same.
+
+What it won't pick up is the API repo's CLAUDE.md. An added directory gets file access, not configuration, so the conventions you wrote for that repo quietly don't apply. If you want them:
+
+`CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1 claude --add-dir ../api`
+
+Source: code.claude.com/docs/en/permissions#working-directories
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
