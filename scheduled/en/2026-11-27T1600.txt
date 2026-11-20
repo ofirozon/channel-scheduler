@@ -1,0 +1,14 @@
+🧹 By the time you approve a plan, your context is full of the digging that produced it.
+
+Every file Claude opened, every dead end. All of it rides along while it implements. One setting adds a cleaner exit to the approval menu. In `.claude/settings.json`:
+
+`"showClearContextOnPlanAccept": true`
+
+The menu then opens with "Yes, clear context and …", followed by the mode Claude continues in and how much of your context the planning used. Pick it and Claude starts building from the plan alone.
+
+I'd turn it on and decide per plan. If the exploration turned up something the plan doesn't spell out, take the regular yes.
+
+Source: code.claude.com/docs/en/settings-reference#showclearcontextonplanaccept
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
