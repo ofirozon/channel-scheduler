@@ -1,0 +1,14 @@
+🚀 Your app won't start without Postgres, an env file and a build.
+
+That's where `/run` and `/verify` start guessing. Out of the box they read your README, `package.json` or `Makefile` and infer a launch, which works for a plain server or CLI and gets shaky past that. So teach them once:
+
+`/run-skill-generator`
+
+It gets the app running from a clean environment, then commits what worked (install commands, env vars, launch script) as a skill in `.claude/skills/run-<name>/`. After that, `/run`, `/verify` and every other agent in the repo follow the recipe instead of rediscovering it.
+
+Rerun it when your build changes, or the recipe quietly goes stale.
+
+Source: code.claude.com/docs/en/skills (Run and verify your app)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
