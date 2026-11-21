@@ -1,0 +1,16 @@
+📈 You can ask Claude Code for a chart now, and it'll draw one.
+
+It's a built-in mod called easel, announced in the November 20 release (v2.1.330). Just ask:
+
+`chart p95 latency per hour from logs/access.log`
+
+It also draws one by itself under MCP results in a time-series format, like a Prometheus range query. Too noisy? Turn off Auto charts in `/config`, and asking still works.
+
+Missing? Open `/plugin`, go to Installed, and look for `cc-plugin-easel` under Built-in. It needs a claude.ai subscription and macOS or Linux, not WSL.
+
+For a quick look at numbers, I'd take that over pasting a CSV into a spreadsheet.
+
+Source: Claude Code CHANGELOG v2.1.330, code.claude.com/docs/en/plugins/mods/overview (Mods built into Claude Code)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
