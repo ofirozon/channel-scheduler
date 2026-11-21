@@ -1,16 +1,12 @@
-⏳ That usage-limit message mid-task doesn't mean the task is dead.
+🕒 `/usage` says `rate limited until 3:14am`. Your session is fine.
 
-On a claude.ai subscription, Claude Code (v2.1.234+) waits in the open session and picks the task up on its own once the limit resets. The bottom of the screen tells you when:
+That line is about the usage page, not about you. Claude Code couldn't fetch your plan limits, most often because the usage endpoint itself is rate limited, and it can't ask again until that time. Your work with Claude isn't limited by it.
 
-`Continuing automatically at 3:45pm · Esc to cancel`
+If it loaded your bars on this machine in the past 60 minutes, you get those instead, with a `Showing last-known usage` note saying how old they are.
 
-So leave the window open. Quit Claude Code and the wait's gone, and resuming the session later won't bring it back.
+I'd check that note's age before stopping a task halfway out of panic.
 
-It still asks for permissions as usual, though, so it can sit on a prompt while you're away.
-
-The limit costs you the wait, not the task.
-
-Source: code.claude.com/docs/en/interactive-mode (Wait for a usage limit to reset)
+Source: code.claude.com/docs/en/costs
 
 🤖 Claude Code Daily, one practical tip a day
 👉 t.me/DailyClaudeTips
