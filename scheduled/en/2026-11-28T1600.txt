@@ -1,0 +1,14 @@
+✏️ Added a rule to CLAUDE.md mid-task, and Claude still breaks it?
+
+It isn't ignoring you. Your project-root and user-level CLAUDE.md are read when the session starts and kept in memory, so an edit you make halfway through never reaches the conversation you're in. To pick it up, run:
+
+`/compact`
+
+That reloads the files and keeps a summary of where you were. `/clear` or a restart works too, if you're fine starting over.
+
+There's an upside to the delay. The edit doesn't touch the prompt cache, so you can tweak the file mid-task and reload once, when it suits you.
+
+Source: code.claude.com/docs/en/prompt-caching (Editing CLAUDE.md mid-session)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
