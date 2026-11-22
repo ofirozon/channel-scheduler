@@ -543,3 +543,4 @@
 {"channel": "he", "slot_utc": "2026-11-21T17:30:00+00:00", "sent_utc": "2026-11-21T17:34:09.073344+00:00", "late_hours": 0.07, "message_id": 490, "file": "2026-11-21T1730.txt"}
 {"channel": "en", "slot_utc": "2026-11-21T20:00:00+00:00", "sent_utc": "2026-11-21T20:04:16.850949+00:00", "late_hours": 0.07, "message_id": 318, "file": "2026-11-21T2000.txt"}
 {"channel": "he", "slot_utc": "2026-11-22T06:00:00+00:00", "sent_utc": "2026-11-22T06:04:18.116559+00:00", "late_hours": 0.07, "message_id": 491, "file": "2026-11-22T0600.txt"}
+{"channel": "he", "slot_utc": "2026-11-22T10:00:00+00:00", "sent_utc": "2026-11-22T10:04:13.100248+00:00", "late_hours": 0.07, "message_id": 492, "file": "2026-11-22T1000.txt"}
