@@ -1,0 +1,19 @@
+🧵 Claude's subagents start in the background by default. Here's how to stay in charge of one.
+
+1. Ask for one in plain words:
+`use a subagent to find every test in src/ that sleeps instead of waiting`
+It shows up in a panel below your prompt. Keep working.
+2. When it needs permission, the prompt lands in your session with the subagent's name on it. Esc denies that one tool call, and the subagent carries on.
+3. Think twice before answering one of those with a grant for the rest of the session. It applies to the whole session, your main conversation included.
+4. Don't bother polling. Its result arrives as a notification in a later turn, and asking early just gets you "still running".
+5. Want everything stopped? Press `Ctrl+X Ctrl+K` twice within 3 seconds. That ends every running background subagent in the session, even with one of their permission prompts open.
+6. Rather have Claude wait for a subagent? Add this to `settings.json` and restart `claude`:
+`"env": { "CLAUDE_CODE_FORK_SUBAGENT": "0" }`
+Then ask it to "run the reviewer subagent and wait for its report".
+
+Learn step 5 before the day you need it.
+
+Source: code.claude.com/docs/en/sub-agents (Run subagents in foreground or background), code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
