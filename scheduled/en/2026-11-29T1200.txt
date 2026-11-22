@@ -1,0 +1,16 @@
+⚠️ The key that gets you out of plan mode can also approve the plan.
+
+With no prompt open, `Shift+Tab` just leaves plan mode. Once Claude has shown the plan and asked how to proceed, the same key approves it, and Claude starts editing. If you meant to back out, press Esc first.
+
+Going in, skip the cycling:
+
+`/plan fix the auth bug`
+
+That enters plan mode and starts on the task in one line. After you approve, your next prompt is a normal one again, so put `/plan` in front of it to plan once more.
+
+Esc costs you nothing. A plan you didn't mean to approve starts writing files.
+
+Source: code.claude.com/docs/en/permission-modes (Analyze before you edit with plan mode), code.claude.com/docs/en/commands
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
