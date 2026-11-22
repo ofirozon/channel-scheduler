@@ -1,0 +1,14 @@
+↩️ Nothing you delete from the prompt is actually gone.
+
+`Ctrl+U` wipes back to the start of the line, `Ctrl+K` to the end, `Ctrl+W` back to the last space. All three keep what they removed. Bring it back with:
+
+`Ctrl+Y`
+
+That pastes the most recent deletion. Press `Alt+Y` straight after to step through older ones, which on a Mac only works once your terminal sends Option as Meta.
+
+`Ctrl+W` is the one worth learning first. One press takes a whole path like `src/utils/foo.ts`, so you can cut it, ask the question you actually meant, and `Ctrl+Y` it back where it belongs.
+
+Source: code.claude.com/docs/en/interactive-mode
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
