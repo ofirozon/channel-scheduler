@@ -1,0 +1,14 @@
+💸 Your CI job has a $5 cap. Resumed three times, it can spend $20.
+
+Nothing's broken. `--max-budget-usd` only counts what the current run spends:
+
+`claude -p --continue --max-budget-usd 5.00 "finish the migration"`
+
+When you come back with `--continue` or `--resume`, totals restored from earlier runs don't count toward the cap. Every resume gets the full five dollars again.
+
+So if your pipeline retries by resuming, the real ceiling is the cap times the number of attempts. Limit the attempts, or shrink each cap to fit. Limiting attempts is the easier fix, and it's the one I'd reach for.
+
+Source: code.claude.com/docs/en/cli-reference
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
