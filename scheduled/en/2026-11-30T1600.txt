@@ -1,0 +1,16 @@
+🧨 I'd never put `Bash(devbox run *)` in an allow list.
+
+Before matching a Bash rule, Claude Code strips a few wrappers: `timeout`, `time`, `nice`, `nohup`, `stdbuf`. So `Bash(npm test *)` already covers `timeout 30 npm test`, no extra rule needed.
+
+Environment runners aren't on that list. `devbox run`, `direnv exec`, `mise exec`, `npx`, `docker exec` all run whatever follows them, so a wildcard after one matches anything, `devbox run rm -rf .` included.
+
+Name the runner and the inner command together:
+
+`Bash(devbox run npm test)`
+
+One rule per command you actually want. More typing, but it's the version that doesn't quietly hand over a shell.
+
+Source: code.claude.com/docs/en/permissions#wrappers
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
