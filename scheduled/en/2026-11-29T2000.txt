@@ -1,0 +1,14 @@
+🔤 Mistype a model name and the session runs with it anyway.
+
+Set an ID that nearly spells a real one, in `/model`, `--model`, `ANTHROPIC_MODEL` or a settings file, and Claude Code warns you:
+
+`⚠ Model "<model>" isn't recognized · did you mean "<suggestion>"?`
+
+It's a warning, not a block. The session sends the ID exactly as you wrote it. If it's a typo, change it to the suggestion wherever you set it. If it's deliberate, say your gateway's own alias, leave it, and only check the context window Claude Code assumes for it.
+
+It's the one warning worth reading every time you change models.
+
+Source: code.claude.com/docs/en/model-config (Fix a mistyped model name)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
