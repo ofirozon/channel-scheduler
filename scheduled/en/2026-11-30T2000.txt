@@ -1,0 +1,16 @@
+🩺 Requests keep failing, and you can't tell if it's your Wi-Fi, the proxy, or the API.
+
+Stop guessing. From your shell, run:
+
+`claude doctor`
+
+Since v2.1.331 it has an API connectivity section. It tells you whether the API could be reached, and shows the HTTP status or the error it hit. If it skipped the test, it says why.
+
+It runs from the shell, so it still works on the days `claude` won't even start a session. Got an error instead of a status? Then the request never got an answer, and the network side is where you start: VPN, proxy, firewall.
+
+Thirty seconds, and you know which end to debug.
+
+Source: Claude Code CHANGELOG 2.1.331, code.claude.com/docs/en/troubleshooting
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
