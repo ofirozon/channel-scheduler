@@ -6,7 +6,7 @@ Stop guessing. From your shell, run:
 
 Since v2.1.331 it has an API connectivity section. It tells you whether the API could be reached, and shows the HTTP status or the error it hit. If it skipped the test, it says why.
 
-It runs from the shell, so it still works on the days `claude` won't even start a session. Got an error instead of a status? Then the request never got an answer, and the network side is where you start: VPN, proxy, firewall.
+It runs from the shell, so it works even when `claude` won't start. Got an error instead of a status? Then the request never got an answer, and the network side is where you start: VPN, proxy, firewall.
 
 Thirty seconds, and you know which end to debug.
 
