@@ -1,0 +1,14 @@
+📵 Your other session can drop a message into this one mid-refactor.
+
+Claude Code sessions can message each other, and when you haven't picked a rule, Claude Code decides per message from the two sessions' permission modes. If you'd rather keep this conversation on track, put this in `~/.claude/settings.json`:
+
+`"crossSessionInbound": "hold"`
+
+Now each incoming message shows up as a notice and isn't delivered to Claude. `"refuse"` drops them outright. Prefer a menu? It's the Messages from your other sessions row in `/config`.
+
+I'd pick hold over refuse. You still see what came in, and Claude keeps its head in the refactor.
+
+Source: code.claude.com/docs/en/cross-session-messaging (Control inbound messages), code.claude.com/docs/en/settings-reference#crosssessioninbound
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
