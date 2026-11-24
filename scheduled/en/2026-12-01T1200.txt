@@ -1,0 +1,14 @@
+🧯 One teammate ends every prompt with the same word, out of habit.
+
+That word is `ultrathink`. It asks for deeper reasoning on that turn, and typed in the terminal it can raise the turn to `xhigh` effort. Fine on a genuinely hard bug. On every prompt, it's spend nobody actually chose. To switch it off for the whole repo, commit this in `.claude/settings.json`:
+
+`"env": { "CLAUDE_CODE_DISABLE_ULTRATHINK": "1" }`
+
+From then on the word is plain text, and Claude Code adds no extra instruction for it. Needs v2.1.316 or later.
+
+Anyone who really needs a harder turn still has `/effort`. Deep thinking becomes a decision, not a tic.
+
+Source: code.claude.com/docs/en/model-config (Use ultrathink for one-off deep reasoning), code.claude.com/docs/en/env-vars
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
