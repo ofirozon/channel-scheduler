@@ -1,0 +1,16 @@
+🧾 An MCP server can now hand Claude a skill, and in auto mode you won't see it load.
+
+Skills over MCP is in public beta. Type `/` and they show up as `<server>:<skill>`, like `/docs:pdf report.pdf`. In auto mode the classifier decides whether one loads without reading it, and the server can change that skill whenever it likes.
+
+For a server you don't fully trust, make it ask. In `/permissions`, add this to the ask list:
+
+`Skill(mcp__docs__*)`
+
+Swap `docs` for the server's name. Now every load needs your yes, auto mode included. Typing the command yourself still runs without a prompt.
+
+Skills can tell Claude to run code. That's worth one click.
+
+Source: code.claude.com/docs/en/mcp (Use skills from MCP servers)
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
