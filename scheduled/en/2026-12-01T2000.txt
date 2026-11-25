@@ -1,8 +1,8 @@
 🧾 An MCP server can now hand Claude a skill, and in auto mode you won't see it load.
 
-Skills over MCP is in public beta. Type `/` and they show up as `<server>:<skill>`, like `/docs:pdf report.pdf`. In auto mode the classifier decides whether one loads without reading it, and the server can change that skill whenever it likes.
+It's a public beta. Type `/` and those skills show up as `<server>:<skill>`, like `/docs:pdf report.pdf`. In auto mode the classifier decides whether one loads without reading it, and the server can change that skill whenever it likes.
 
-For a server you don't fully trust, make it ask. In `/permissions`, add this to the ask list:
+Don't fully trust the server? Make it ask. In `/permissions`, add this to the ask list:
 
 `Skill(mcp__docs__*)`
 
