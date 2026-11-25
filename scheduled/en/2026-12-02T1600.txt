@@ -1,0 +1,14 @@
+✂️ Claude was halfway through a long file and the reply just stopped.
+
+You'll see something like `Claude's response exceeded the ... output token maximum`. It's a cap on one reply, not a crash, and the text Claude already wrote stays in the conversation. So type:
+
+`continue`
+
+That asks for the rest. If the message names `CLAUDE_CODE_MAX_OUTPUT_TOKENS`, you can raise the limit there, up to the model's cap. If it says `a request sent without streaming`, the env var won't help: that retry is fixed at 64,000 tokens.
+
+The habit that avoids all of it is asking for one file or one section per reply.
+
+Source: code.claude.com/docs/en/errors (Response exceeded the output token maximum), code.claude.com/docs/en/env-vars
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
