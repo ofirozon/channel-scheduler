@@ -1,0 +1,14 @@
+🧮 Does the cost in `/usage` match your invoice, or is it a list-price guess?
+
+If your org pays contracted rates, it's the guess. Claude Code prices everything at list unless an admin sets `modelPricing` in managed settings. A flat discount is one line:
+
+`{"modelPricing": {"multiplier": 0.85}}`
+
+That scales `/usage`, the status line, OpenTelemetry cost and even the `--max-budget-usd` cap. Per-model rates go under `overrides`, all four of `input`, `output`, `cacheRead`, `cacheWrite`. User and project settings ignore the key, so it ships as policy. Needs v2.1.242+.
+
+Then check `/usage`: Estimated cost should say `at your organization's configured rates`. It changes what you see, not what Anthropic bills.
+
+Source: code.claude.com/docs/en/settings-reference (modelPricing), code.claude.com/docs/en/costs
+
+🤖 Claude Code Daily, one practical tip a day
+👉 t.me/DailyClaudeTips
